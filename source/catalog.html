@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>«Погнали?» - подбор идеального попутчика</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-img" src="http://placehold.it/150x100" width="150" height="100" alt="Погнали?">
+      </a>
+      <nav class="page-header__nav main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list main-menu">
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="index.html">О сервисе</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="form.html">Направления</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link">Попутчики</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="page-header__login-btn login-btn" href="login.html">Авторизация</a>
+      <section class="page-header__contacts contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <a class="contacts__tel" href="tel:+78005558628">8 800 555-86-28</a>
+        <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </section>
+      <section class="page-header__social social">
+        <h2 class="visually-hidden">«Погнали?» в социальных сетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Vkontakte</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <p class="page-header__current-page">Попутчики</p>
+    </header>
+
+    <main class="page-main">
+
+      <h1 class="visually-hidden">Подбор попутчиков для путешествий</h1>
+
+      <!-- Фильтры -->
+
+      <section class="companions-catalog companions"> <!-- Я пока без понятия как "модульность" тут сыграет, получится ли селекторы не больше 2х уровней писать и тд - нет, придется переписывать классы тут или на главной с попутчиками -->
+        <h2 class="companions__title">Попутчики<span class="visually-hidden"> для путешествий</span></h2>
+        <ul class="companions__list">
+          <li class="companions__item">
+            <h3 class="companions__name">
+              <a class="companions__name-link" href="id104.html">Таня Фирсова</a>
+            </h3>
+            <div class="companions__status">
+              <span class="companions__status--online"></span>
+              <span class="companions__status--afk"></span>
+              <span class="companions__status--offline"></span>
+            </div>
+            <a class="companions__img-link" href="id104.html"> <!-- Тут тоже пока не знаю, нужно ли делать фото ссылкой(это по сути как карточка товара-профиль), задумано ли иметь отдельные страницы как профиль в соц.сетях или нет \ из минусов - на моб.версии фото и кнопка лайков накладываются, можно промазать -->
+              <img class="companions__img" src="http://placehold.it/150x100" width="100" height="50" alt="Таня Фирсова">
+            </a>
+            <div class="companions__likes"> <!-- По поводу этой реализации тоже не уверен -->
+              <button class="companions__likes-btn" type="button">
+                <svg class="companions__likes-svg companions__likes-svg--checked"></svg>
+              </button>
+              <p class="companions__likes-text">1,5 М</p>
+            </div>
+            <ul class="companions__destination-list destination-icon">
+              <p class="destination-icon__text">Хочет посетить:</p>
+              <li class="destination-icon__item destination-icon__item--lanka">
+                <p class="destination-icon__tooltip">Шри-Ланка</p>
+              </li>
+              <li class="destination-icon__item destination-icon__item--thai">
+                <p class="destination-icon__tooltip">Тайланд</p>
+              </li>
+              <li class="destination-icon__item destination-icon__item--chelles">
+                <p class="destination-icon__tooltip">Сейшелы</p>
+              </li>
+            </ul>
+            <p class="companions__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <ul class="companions__travel-mode travel-mode">
+              <p class="travel-mode__text">Транспорт:</p>
+              <li class="travel-mode__item travel-mode__item--plane travel-mode__item--checked">
+                <p class="travel-mode__tooltip">Авиаперелет</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--car">
+                <p class="travel-mode__tooltip">Автотранспорт</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--bicycle">
+                <p class="travel-mode__tooltip">Велосипед</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--on-foot">
+                <p class="travel-mode__tooltip">Пешком</p>
+              </li>
+            </ul>
+            <p class="companions__level">99</p>
+            <button class="companions__invite-btn" type="button">Позвать</button>
+          </li>
+          <li class="companions__item">
+            <h3 class="companions__name">
+              <a class="companions__name-link" href="id2579.html">Петя Демин</a>
+            </h3>
+            <div class="companions__status">
+              <span class="companions__status--online"></span>
+              <span class="companions__status--afk"></span>
+              <span class="companions__status--offline"></span>
+            </div>
+            <a class="companions__img-link" href="id2579.html">
+              <img class="companions__img" src="http://placehold.it/150x100" width="100" height="50" alt="Петя Демин">
+            </a>
+            <div class="companions__likes">
+              <button class="companions__likes-btn" type="button">
+                <svg class="companions__likes-svg"></svg>
+              </button>
+              <p class="companions__likes-text">150</p>
+            </div>
+            <ul class="companions__destination-list destination-icon">
+              <p class="destination-icon__text">Хочет посетить:</p>
+              <li class="destination-icon__item destination-icon__item--belg">
+                <p class="destination-icon__tooltip">Бельгия</p>
+              </li>
+              <li class="destination-icon__item destination-icon__item--chech">
+                <p class="destination-icon__tooltip">Чехия</p>
+              </li>
+            </ul>
+            <p class="companions__tags">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="companions__travel-mode travel-mode">
+              <p class="travel-mode__text">Транспорт:</p>
+              <li class="travel-mode__item travel-mode__item--plane travel-mode__item--checked">
+                <p class="travel-mode__tooltip">Авиаперелет</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--car travel-mode__item--checked">
+                <p class="travel-mode__tooltip">Автотранспорт</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--bicycle">
+                <p class="travel-mode__tooltip">На велосипеде</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--on-foot travel-mode__item--checked">
+                <p class="travel-mode__tooltip">Пешком</p>
+              </li>
+            </ul>
+            <p class="companions__level">80</p>
+            <button class="companions__invite-btn" type="button">Позвать</button>
+          </li>
+          <li class="companions__item">
+            <h3 class="companions__name">
+              <a class="companions__name-link" href="id5755.html">Марк Смолов</a>
+            </h3>
+            <div class="companions__status">
+              <span class="companions__status--online"></span>
+              <span class="companions__status--afk"></span>
+              <span class="companions__status--offline"></span>
+            </div>
+            <a class="companions__img-link" href="id5755.html">
+              <img class="companions__img" src="http://placehold.it/150x100" width="100" height="50" alt="Марк Смолов">
+            </a>
+            <div class="companions__likes">
+              <button class="companions__likes-btn" type="button">
+                <svg class="companions__likes-svg"></svg>
+              </button>
+              <p class="companions__likes-text">1700</p>
+            </div>
+            <ul class="companions__destination-list destination-icon">
+              <p class="destination-icon__text">Хочет посетить:</p>
+              <li class="destination-icon__item destination-icon__item--usa">
+                <p class="destination-icon__tooltip">США</p>
+              </li>
+              <li class="destination-icon__item destination-icon__item--australia">
+                <p class="destination-icon__tooltip">Австралия</p>
+              </li>
+              <li class="destination-icon__item destination-icon__item--dominic">
+                <p class="destination-icon__tooltip">Доминикана</p>
+              </li>
+            </ul>
+            <p class="companions__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <ul class="companions__travel-mode travel-mode">
+              <p class="travel-mode__text">Транспорт:</p>
+              <li class="travel-mode__item travel-mode__item--plane travel-mode__item--checked">
+                <p class="travel-mode__tooltip">Авиаперелет</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--car">
+                <p class="travel-mode__tooltip">Автотранспорт</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--bicycle travel-mode__item--checked">
+                <p class="travel-mode__tooltip">На велосипеде</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--on-foot">
+                <p class="travel-mode__tooltip">Пешком</p>
+              </li>
+            </ul>
+            <p class="companions__level">25</p>
+            <button class="companions__invite-btn" type="button">Позвать</button>
+          </li>
+          <li class="companions__item">
+            <h3 class="companions__name">
+              <a class="companions__name-link" href="id4777.html">Лариса Роговая</a>
+            </h3>
+            <div class="companions__status">
+              <span class="companions__status--online"></span>
+              <span class="companions__status--afk"></span>
+              <span class="companions__status--offline"></span>
+            </div>
+            <a class="companions__img-link" href="id4777.html">
+              <img class="companions__img" src="http://placehold.it/150x100" width="100" height="50" alt="Лариса Роговая">
+            </a>
+            <div class="companions__likes">
+              <button class="companions__likes-btn" type="button">
+                <svg class="companions__likes-svg"></svg>
+              </button>
+              <p class="companions__likes-text">23</p>
+            </div>
+            <ul class="companions__destination-list destination-icon">
+              <p class="destination-icon__text">Хочет посетить:</p>
+              <li class="destination-icon__item destination-icon__item--uk">
+                <p class="destination-icon__tooltip">Великобритания</p>
+              </li>
+              <li class="destination-icon__item destination-icon__item--germ">
+                <p class="destination-icon__tooltip">Германия</p>
+              </li>
+            </ul>
+            <p class="companions__tags">#образование #карьера #учеба #линкедин</p>
+            <ul class="companions__travel-mode travel-mode">
+              <p class="travel-mode__text">Транспорт:</p>
+              <li class="travel-mode__item travel-mode__item--plane travel-mode__item--checked">
+                <p class="travel-mode__tooltip">Авиаперелет</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--car travel-mode__item--checked">
+                <p class="travel-mode__tooltip">Автотранспорт</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--bicycle">
+                <p class="travel-mode__tooltip">На велосипеде</p>
+              </li>
+              <li class="travel-mode__item travel-mode__item--on-foot">
+                <p class="travel-mode__tooltip">Пешком</p>
+              </li>
+            </ul>
+            <p class="companions__level">50</p>
+            <button class="companions__invite-btn" type="button">Позвать</button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="companions__pagination pagination">
+        <h2 class="visually-hidden">Навигация по каталогу</h2>
+        <a class="pagination__load-more" href="catalog-2.html">Показать еще</a>
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a class="pagination__btn pagination__btn--back">Показать предыдущую страницу</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__btn pagination__btn--forward" href="catalog-2.html">Показать следующую страницу</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p class="page-footer__logo">
+        <img class="page-footer__logo-img" src="http://placehold.it/150x100" width="150" height="100" alt="Погнали?">
+      </p>
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">«Погнали?» в социальных сетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Vkontakte</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <p class="page-footer__copyright copyright">
+        <b class="copyright__title">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
