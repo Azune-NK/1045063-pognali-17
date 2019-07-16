@@ -27,33 +27,33 @@
             <a class="main-menu__link" href="catalog.html">Попутчики</a>
           </li>
         </ul>
+        <a class="page-header__login-btn login-btn" href="login.html">Авторизация</a>
+        <section class="page-header__contacts contacts">
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <a class="contacts__tel" href="tel:+78005558628">8 800 555-86-28</a>
+          <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </section>
+        <section class="page-header__social social">
+          <h2 class="visually-hidden">«Погнали?» в социальных сетях</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Vkontakte</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </section>
       </nav>
-      <a class="page-header__login-btn login-btn" href="login.html">Авторизация</a>
-      <section class="page-header__contacts contacts">
-        <h2 class="visually-hidden">Наши контакты</h2>
-        <a class="contacts__tel" href="tel:+78005558628">8 800 555-86-28</a>
-        <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </section>
-      <section class="page-header__social social">
-        <h2 class="visually-hidden">«Погнали?» в социальных сетях</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
-              <span class="visually-hidden">Facebook</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Vkontakte</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
-              <span class="visually-hidden">Instagram</span>
-            </a>
-          </li>
-        </ul>
-      </section>
     </header>
 
     <main class="page-main">
@@ -72,7 +72,7 @@
           </a>
         </section>
         <a class="intro__login-btn login-btn" href="login.html">Авторизация</a>
-        <blockquote class="intro_review review">
+        <blockquote class="intro__review review">
           <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
           <cite class="review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
@@ -96,122 +96,118 @@
       <section class="destination">
         <h2 class="destination__title">Направления<span class="visually-hidden"> для путешествий</span></h2>
         <p class="destination__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
-        <ul class="destination__list"> <!-- Возможно тут стоит добавить модификаторы по странам -->
+        <ul class="destination__list">
           <li class="destination__item">
             <a class="destination__img-link" href="thailand.html">
               <img class="destination__img" src="http://placehold.it/150x100" width="100" height="50" alt="Тайланд">
             </a>
-            <a class="destination__link" href="thailand.html">
-              <h3 class="destination__name">Тайланд</h3>
-              <p class="destination__text">Джунгли зовут!</p>
-            </a>
-            <p class="destination__visitors">18321</p>
+            <div class="destination__description-wrapper">
+              <a class="destination__link" href="thailand.html">
+                <h3 class="destination__name">Тайланд</h3>
+                <p class="destination__text">Джунгли зовут!</p>
+              </a>
+              <p class="destination__visitors">18321</p>
+            </div>
           </li>
           <li class="destination__item">
             <a class="destination__img-link" href="france.html">
               <img class="destination__img" src="http://placehold.it/150x100" width="100" height="50" alt="Франция">
             </a>
-            <a class="destination__link" href="france.html">
-              <h3 class="destination__name">Франция</h3>
-              <p class="destination__text">Трэ бьен, манифик!</p>
-            </a>
-            <p class="destination__visitors">12518</p>
+            <div class="destination__description-wrapper">
+              <a class="destination__link" href="france.html">
+                <h3 class="destination__name">Франция</h3>
+                <p class="destination__text">Трэ бьен, манифик!</p>
+              </a>
+              <p class="destination__visitors">12518</p>
+            </div>
           </li>
           <li class="destination__item">
             <a class="destination__img-link" href="chech.html">
               <img class="destination__img" src="http://placehold.it/150x100" width="100" height="50" alt="Чехия">
             </a>
-            <a class="destination__link" href="chech.html">
-              <h3 class="destination__name">Чехия</h3>
-              <p class="destination__text">Закоулки старой Европы</p>
-            </a>
-            <p class="destination__visitors">5326</p>
+            <div class="destination__description-wrapper">
+              <a class="destination__link" href="chech.html">
+                <h3 class="destination__name">Чехия</h3>
+                <p class="destination__text">Закоулки старой Европы</p>
+              </a>
+              <p class="destination__visitors">5326</p>
+            </div>
           </li>
         </ul>
         <a class="destination__btn btn-with-arrow" href="form.html">Показать все</a>
       </section>
 
-      <section class="companions-index companions">
+      <section class="companions companions--index">
         <h2 class="companions__title">Попутчики<span class="visually-hidden"> для путешествий</span></h2>
         <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
         <b class="companions__lead">Теперь можно легко найти единомышленников!</b>
         <ul class="companions__list">
-          <li class="companions__item">
-            <h3 class="companions__name">
-              <a class="companions__name-link" href="id104.html">Таня Фирсова</a>
+          <li class="companions__item user user--index status status--afk">
+            <h3 class="user__name">
+              <a class="user__name-link" href="id104.html">Таня Фирсова</a>
             </h3>
-            <div class="companions__status">  <!-- Не уверен как стоит размечать индикатор онлайна,чтобы не просто визуально было, а чтобы удобно было прикручивать js -->
-              <span class="companions__status--online"></span>
-              <span class="companions__status--afk"></span>
-              <span class="companions__status--offline"></span>
-            </div>
-            <a class="companions__img-link" href="id104.html">
-              <img class="companions__img" src="http://placehold.it/150x100" width="100" height="50" alt="Таня Фирсова">
+            <a class="user__img-link" href="id104.html">
+              <img class="user__img" src="http://placehold.it/150x100" width="100" height="50" alt="Таня Фирсова">
             </a>
-            <ul class="companions__destination-list destination-icon">
-              <li class="destination-icon__item destination-icon__item--lanka">
+            <ul class="user__destination-list destination-icon destination-icon--has-tooltip">
+              <li class="destination-icon__item">
                 <p class="destination-icon__tooltip">Шри-Ланка</p>
               </li>
-              <li class="destination-icon__item destination-icon__item--thai">
+              <li class="destination-icon__item">
                 <p class="destination-icon__tooltip">Тайланд</p>
               </li>
-              <li class="destination-icon__item destination-icon__item--chelles">
+              <li class="destination-icon__item">
                 <p class="destination-icon__tooltip">Сейшелы</p>
               </li>
             </ul>
-            <p class="companions__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <ul class="companions__travel-mode travel-mode">
-              <li class="travel-mode__item travel-mode__item--plane travel-mode__item--checked">
+            <p class="user__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <ul class="user__travel-mode travel-mode">
+              <li class="travel-mode__item travel-mode__item--checked">
                 <p class="travel-mode__tooltip">Авиаперелет</p>
               </li>
-              <li class="travel-mode__item travel-mode__item--car">
+              <li class="travel-mode__item">
                 <p class="travel-mode__tooltip">Автотранспорт</p>
               </li>
-              <li class="travel-mode__item travel-mode__item--bicycle">
+              <li class="travel-mode__item">
                 <p class="travel-mode__tooltip">Велосипед</p>
               </li>
-              <li class="travel-mode__item travel-mode__item--on-foot">
+              <li class="travel-mode__item">
                 <p class="travel-mode__tooltip">Пешком</p>
               </li>
             </ul>
-            <p class="companions__level">99</p>
+            <p class="user__level">99</p>
           </li>
-          <li class="companions__item">
-            <h3 class="companions__name">
-              <a class="companions__name-link" href="id2579.html">Петя Демин</a>
+          <li class="companions__item user user--index status status--online">
+            <h3 class="user__name">
+              <a class="user__name-link" href="id2579.html">Петя Демин</a>
             </h3>
-            <div class="companions__status">
-              <span class="companions__status--online"></span>
-              <span class="companions__status--afk"></span>
-              <span class="companions__status--offline"></span>
-            </div>
-            <a class="companions__img-link" href="id2579.html">
-              <img class="companions__img" src="http://placehold.it/150x100" width="100" height="50" alt="Петя Демин">
+            <a class="user__img-link" href="id2579.html">
+              <img class="user__img" src="http://placehold.it/150x100" width="100" height="50" alt="Петя Демин">
             </a>
-            <ul class="companions__destination-list destination-icon">
-              <li class="destination-icon__item destination-icon__item--belg">
+            <ul class="user__destination-list destination-icon destination-icon--has-tooltip">
+              <li class="destination-icon__item">
                 <p class="destination-icon__tooltip">Бельгия</p>
               </li>
-              <li class="destination-icon__item destination-icon__item--chech">
+              <li class="destination-icon__item">
                 <p class="destination-icon__tooltip">Чехия</p>
               </li>
             </ul>
-            <p class="companions__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <ul class="companions__travel-mode travel-mode">
-              <li class="travel-mode__item travel-mode__item--plane travel-mode__item--checked">
+            <p class="user__tags">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="user__travel-mode travel-mode">
+              <li class="travel-mode__item travel-mode__item--checked">
                 <p class="travel-mode__tooltip">Авиаперелет</p>
               </li>
-              <li class="travel-mode__item travel-mode__item--car travel-mode__item--checked">
+              <li class="travel-mode__item travel-mode__item--checked">
                 <p class="travel-mode__tooltip">Автотранспорт</p>
               </li>
-              <li class="travel-mode__item travel-mode__item--bicycle">
+              <li class="travel-mode__item">
                 <p class="travel-mode__tooltip">На велосипеде</p>
               </li>
-              <li class="travel-mode__item travel-mode__item--on-foot travel-mode__item--checked">
+              <li class="travel-mode__item travel-mode__item--checked">
                 <p class="travel-mode__tooltip">Пешком</p>
               </li>
             </ul>
-            <p class="companions__level">80</p>
+            <p class="user__level">80</p>
           </li>
         </ul>
         <a class="companions__btn btn-with-arrow" href="catalog.html">Показать всех</a>
@@ -220,7 +216,7 @@
       <section class="pricing">
         <h2 class="visually-hidden">Тарифы</h2>
         <b class="pricing__lead">Добавьте свой профиль</b>
-        <dl class="pricing__list"> <!-- почему dl - в модалке написал -->
+        <dl class="pricing__list">
           <dt class="pricing__service">Базовое размещение</dt>
           <dd class="pricing__offer">Бесплатно</dd>
           <dt class="pricing__service">Вывод на первых позициях</dt>
@@ -228,10 +224,10 @@
           <dt class="pricing__service">Кастомный цвет карточки</dt>
           <dd class="pricing__offer">59 руб./мес</dd>
         </dl>
-        <button class="pricing__btn" type="button">Показать тарифы для бизнеса</bu>
+        <a class="pricing__btn" href="biz-pricing.html">Показать тарифы для бизнеса</a>
       </section>
 
-      <section class="registration">
+      <section class="registration" id="registration">
         <h2 class="visually-hidden">Регистрация и авторизация</h2>
         <b class="registration__lead">Заинтересовались?</b>
         <p class="registration__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="registration__auth-link" href="login.html">авторизуйтесь.</a></p>
@@ -261,9 +257,9 @@
     </main>
 
     <footer class="page-footer">
-      <p class="page-footer__logo">
+      <a class="page-footer__logo" href="#registration">
         <img class="page-footer__logo-img" src="http://placehold.it/150x100" width="150" height="100" alt="Погнали?">
-      </p>
+      </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">«Погнали?» в социальных сетях</h2>
         <ul class="social__list">
@@ -294,21 +290,6 @@
 
     <section class="modal biz-pricing">
       <h2 class="biz-pricing__title">Бизнес-тарифы</h2>
-      <!-- <ul class="biz-pricing__list">
-        <li class="biz-pricing__item">
-          <p class="biz-pricing__offer">Реклама у блоггера 300 000 руб./пост</p>
-        </li>
-        <li class="biz-pricing__item">
-          <p class="biz-pricing__offer">Накрутка подписчиков от 1 руб./шт.</p>
-        </li>
-        <li class="biz-pricing__item">
-          <p class="biz-pricing__offer">Лайки от ботов от 20 коп./лайк</p>
-        </li>
-        <li class="biz-pricing__item">
-          <p class="biz-pricing__offer">Ваш продакт-плейсмент Индивидуально</p>
-        </li>
-      </ul> -->
-      <!-- Второй вариант мне нравится больше, так проще к админке прикрутить мне кажется, у варианта выше надо отдельно офер тогда оборачивать, чтобы поменять цены - не уверен правда семантичен ли 2й вариант -->
       <dl class="biz-pricing__list">
         <dt class="biz-pricing__service">Реклама у блоггера</dt>
         <dd class="biz-pricing__offer">300 000 руб./пост</dd>
