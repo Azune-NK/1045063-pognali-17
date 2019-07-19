@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+@import "fonts"; /* Скописастил font-kit по этому шрифту, везде указан font-style\font-weight normal, шрифт вроде работает, но как? должно быть normal\italic, 300\400\500\700 + путь указан общий, файлы иначе названы и не лежат на уровне этого файла, не понимаю как оно находит что надо и работает */
+@import "common";
+
+@import "page-header";
+@import "main-nav";
+@import "main-menu";
+@import "login-btn";
+@import "contacts";
+@import "social";
+
+@import "intro";
+@import "review";
+@import "steps";
+
+@import "about-app";
+
+@import "destination";
+@import "btn-with-arrow";
+
+@import "companions";
+@import "user";
+@import "status";
+@import "destination-icon";
+@import "travel-mode";
+
+@import "pricing";
+@import "modal";
+@import "biz-pricing";
+
+@import "registration";
+
+@import "page-footer";
+@import "copyright";
+
+@import "pagination";
