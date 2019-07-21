@@ -1,4 +1,49 @@
 .page-footer {
-  font-size: 16px;
-  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto; /* Не понятно пока, нужно ли центровать на мобильной */
+  padding: 40px 25px 25px;
+
+  background-color: #ffffff;
+  border-radius: 25px 25px 0 0;
+}
+
+.page-footer__logo {
+  margin-bottom: 40px;
+}
+
+.page-footer__social {
+  margin-bottom: 60px;
+}
+
+.page-footer__copyright {
+  width: 270px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 40px;
+
+    border-radius: 50px 50px 0 0;
+  }
+
+  .page-footer__logo,
+  .page-footer__social {
+    margin: 0;
+  }
+
+  .page-footer__copyright {
+    width: 165px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding: 50px 60px; /* Появился дергающийся эффект при переходе брейкпойнта, % наверное должны исправить, пока не знаю как считать */
+  }
 }
