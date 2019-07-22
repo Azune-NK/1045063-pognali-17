@@ -12,6 +12,10 @@
 }
 
 @mixin font($size: false, $height: false, $weight: false) {
+  @if $weight {
+    font-weight: $weight;
+  }
+
   @if $size {
     font-size: $size;
   }
@@ -19,13 +23,9 @@
   @if $height {
     line-height: $height;
   }
-
-  @if $weight {
-    font-weight: $weight;
-  }
 }
 
-@mixin pseudo($position: absolute) {
-  content: "";
+@mixin pseudo($content: "", $position: absolute) {
+  content: $content;
   position: $position;
 }

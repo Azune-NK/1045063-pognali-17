@@ -11,7 +11,7 @@
   width: 45px;
   height: 45px;
 
-  background-color: #ffd74b;
+  background-color: $gold;
   border-radius: 50%;
 
   &--fb {
@@ -31,7 +31,7 @@
 
   &:hover,
   &:focus {
-    background-color: #ffbd30;
+    background-color: $mango-light;
   }
 
   &:active .social__svg {
@@ -40,7 +40,7 @@
 
   &--page-footer:hover,
   &--page-footer:focus {
-    background-color: #192144;
+    background-color: $grey-blue;
   }
 
   &--page-footer:hover .social__svg,
