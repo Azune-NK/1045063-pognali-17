@@ -1,7 +1,7 @@
 @import "normalize";
 @import "variables";
 @import "mixins";
-@import "fonts"; /* Скописастил font-kit по этому шрифту, везде указан font-style\font-weight normal, шрифт вроде работает, но как? должно быть normal\italic, 300\400\500\700 + путь указан общий, файлы иначе названы и не лежат на уровне этого файла, не понимаю как оно находит что надо и работает */
+@import "fonts";
 @import "common";
 @import "./blocks/page-header";
 @import "./blocks/main-nav";
@@ -24,6 +24,7 @@
 @import "./blocks/modal";
 @import "./blocks/biz-pricing";
 @import "./blocks/registration";
+@import "./blocks/office";
 @import "./blocks/page-footer";
 @import "./blocks/copyright";
 @import "./blocks/pagination";

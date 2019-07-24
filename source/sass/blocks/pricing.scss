@@ -173,8 +173,10 @@
 
 @media (min-width: $tablet-width) {
   .pricing {
-    width: 100%;
+    width: auto;
     padding: 160px 40px 85px;
+
+    border-radius: 0 0 50px 50px;
   }
 
   .pricing__lead {

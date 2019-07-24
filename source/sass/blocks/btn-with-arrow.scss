@@ -1,4 +1,40 @@
 .btn-with-arrow {
-  font-size: 16px;
-  line-height: 20px;
+  position: relative;
+
+  display: block;
+  padding: 24px;
+
+  color: $blue;
+
+  background-color: $gold;
+  border: 0;
+  border-radius: 10px;
+
+  @include font(18px, 1, 700);
+
+  &::before {
+    top: 26px;
+    right: 24px;
+
+    color: $blue;
+
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid $blue;
+
+    @include pseudo;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .btn-with-arrow {
+    padding: 31px 34px 32px;
+
+    @include font(24px, 1);
+
+    &::before {
+      top: 31px;
+      right: 34px;
+    }
+  }
 }

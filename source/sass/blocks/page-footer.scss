@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 320px;
-  margin: 0 auto; /* Не понятно пока, нужно ли центровать на мобильной */
+  margin: 0 auto; /* Не понятно пока, мы все блоки центруем и "фиксим" на мобильной? */
   padding: 40px 25px 25px;
 
   background-color: $white;
@@ -26,7 +26,7 @@
   .page-footer {
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: auto;
     padding: 50px 40px;
 
     border-radius: 50px 50px 0 0;
