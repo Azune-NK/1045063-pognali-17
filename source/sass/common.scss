@@ -16,7 +16,7 @@ body {
   font-family: "Blogger Sans", "Arial", sans-serif;
   color: $grey;
 
-  background-color: $bg-silver;
+  background-color: $grey-light; /* Не понятно какой цвет использовать, чтобы не на моб.версии не сливался с фоном футера и со светлосероголубым фоном */
 }
 
 a {

@@ -29,6 +29,7 @@
 @media (min-width: $tablet-width) {
   .btn-with-arrow {
     padding: 31px 34px 32px;
+    border-radius: 20px;
 
     @include font(24px, 1);
 

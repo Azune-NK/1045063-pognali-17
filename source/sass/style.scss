@@ -1,7 +1,7 @@
 @import "normalize";
 @import "variables";
 @import "mixins";
-@import "fonts";
+@import "fonts"; /* Вопрос - посмотри все ли нормально со шрифтами - я скачивал font-kit, он как-то странно написан ( везде fs-fw normal) - попробовал написать сам */
 @import "common";
 @import "./blocks/page-header";
 @import "./blocks/main-nav";

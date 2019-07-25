@@ -1,14 +1,15 @@
 .pricing {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   width: 320px;
   margin: 0 auto;
   margin-top: -30px;
   padding: 80px 50px 40px;
-  /* Падинг топ надо посмотреть когда появится верхний блок */
 
   background-color: $bg-silver;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 30px 30px;
 }
 
 .pricing__list,
@@ -176,7 +177,7 @@
     width: auto;
     padding: 160px 40px 85px;
 
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 60px 60px;
   }
 
   .pricing__lead {
@@ -322,7 +323,7 @@
 
 @media (min-width: $desktop-width) {
   .pricing {
-    padding: 240px 130px 190px;
+    padding: 240px 132px 190px;
   }
 
   .pricing__lead {
