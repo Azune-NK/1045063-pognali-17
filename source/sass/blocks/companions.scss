@@ -1,4 +1,208 @@
-.companions {
-  font-size: 16px;
-  line-height: 20px;
+.companions--index {
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+
+  width: 320px;
+  margin: 0 auto;
+  padding: 120px 25px 30px;
+
+  background: $grey-blue;
+  border-radius: 0 0 30px 30px;
+
+  &::before {
+    top: 85px;
+    right: 25px;
+    z-index: -1;
+
+    width: 143px;
+    height: 143px;
+
+    background: url("../img/background/smolov-back-desktop@1x.png") no-repeat;
+    border-radius: 20px;
+
+    @include pseudo;
+  }
+
+  &::after {
+    top: 330px;
+    left: -10px;
+    z-index: -1;
+
+    width: 61px;
+    height: 71px;
+
+    background: url("../img/background/rogovaya-back-mobile@1x.png") no-repeat;
+    border-radius: 10px; /* Проверить в ФШ */
+
+    @include pseudo;
+  }
+}
+
+.companions__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 20px;
+  margin-left: 25px;
+
+  color: $orange;
+
+  @include font(24px, 1);
+
+  &::before {
+    top: -34px;
+    left: -50px;
+    z-index: -1;
+
+    width: 113px;
+    height: 132px;
+
+    background-color: $bg-blue;
+    border-radius: 20px;
+
+    @include pseudo;
+  }
+}
+
+.companions__text {
+  margin: 0;
+  margin-bottom: 20px;
+  margin-left: 25px;
+
+  color: $white;
+
+  @include font(16px, 1.38, 300);
+}
+
+.companions__lead {
+  display: block;
+  margin-bottom: 60px;
+  margin-left: 25px;
+
+  color: $white;
+
+  @include font(16px, 1.38);
+  /* На глаз кажется что в макете текст 500, а не 700, хотя в свойствах болд */
+}
+
+.companions__list {
+  @include ul-reset;
+}
+
+.companions--index .companions__item {
+  margin-bottom: 10px;
+}
+
+.companions__btn {
+  margin-top: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .companions--index {
+    width: 768px;
+    padding: 120px 75px 90px;
+
+    border-radius: 0 0 60px 60px;
+
+    &::before {
+      top: 345px;
+      left: 40px;
+    }
+
+    &::after {
+      top: 60px;
+      right: 77px;
+      left: unset; /* Вопрос - интересно, почему тут пришлось ансетить прошлый left, а у before left перекрыл right без конфликта */
+
+      width: 285px;
+      height: 285px;
+
+      background: url("../img/background/rogovaya-back-desktop@1x.png") no-repeat;
+      border-radius: 10px;
+    }
+  }
+
+  .companions__title {
+    margin-bottom: 60px;
+    margin-left: 0;
+
+
+    @include font(45px, 1);
+
+    &::before {
+      top: -63px;
+      left: -35px;
+
+      width: 213px;
+      height: 213px;
+    }
+  }
+
+  .companions__text {
+    margin-bottom: 40px;
+    margin-left: 0;
+
+    @include font(28px, 1.18);
+  }
+
+  .companions__lead {
+    @include font(21px, 1.19);
+    margin-left: 0;
+  }
+
+  .companions__btn {
+    margin-top: 70px;
+  }
+
+  .companions--index .companions__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions--index {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 1440px;
+    padding: 220px 60px 135px 132px;
+
+    &::before {
+      top: 223px;
+      left: 547px;
+    }
+
+    &::after {
+      top: 475px;
+      left: 191px;
+    }
+  }
+
+  .companions__title {
+    order: 1;
+
+    &::before {
+      left: -71px;
+    }
+  }
+
+  .companions__text {
+    order: 2;
+  }
+
+  .companions__lead {
+    order: 3;
+  }
+
+  .companions__btn {
+    order: 4;
+    margin-top: 25px;
+  }
+
+  .companions--index .companions__list {
+    order: 5;
+  }
 }
