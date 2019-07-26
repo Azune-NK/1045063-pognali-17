@@ -218,6 +218,7 @@
 
   .destination__description-wrapper {
     flex-direction: column;
+    align-items: flex-start;
     margin: 0;
     flex-grow: 1;
     padding: 30px 30px 20px;
@@ -244,14 +245,6 @@
     &::after {
       top: -80px;
       right: -35px;
-
-      width: 289px;
-      height: 575px;
-
-      background: url("../img/background/flags-back@1x.png") no-repeat;
-      border-radius: 20px;
-
-      @include pseudo;
     }
   }
 
