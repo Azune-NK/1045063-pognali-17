@@ -1,11 +1,12 @@
 .companions--index {
-  overflow: hidden;
   position: relative;
   z-index: 4;
 
   width: 320px;
   margin: 0 auto;
+  margin-top: -30px;
   padding: 120px 25px 30px;
+  overflow: hidden;
 
   background: $grey-blue;
   border-radius: 0 0 30px 30px;
@@ -33,7 +34,8 @@
     height: 71px;
 
     background: url("../img/background/rogovaya-back-mobile@1x.png") no-repeat;
-    border-radius: 10px; /* Проверить в ФШ */
+    border-radius: 10px;
+    /* Проверить в ФШ */
 
     @include pseudo;
   }
@@ -82,20 +84,24 @@
 
   color: $white;
 
-  @include font(16px, 1.38);
+  @include font(16px, 1.38, 700);
   /* На глаз кажется что в макете текст 500, а не 700, хотя в свойствах болд */
+
+  br {
+    display: none;
+  }
 }
 
 .companions__list {
   @include ul-reset;
 }
 
-.companions--index .companions__item {
+.companions--index .companions__item:not(:last-child) {
   margin-bottom: 10px;
 }
 
 .companions__btn {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -113,7 +119,8 @@
     &::after {
       top: 60px;
       right: 77px;
-      left: unset; /* Вопрос - интересно, почему тут пришлось ансетить прошлый left, а у before left перекрыл right без конфликта */
+      left: unset;
+      /* Вопрос - интересно, почему тут пришлось ансетить прошлый left, а у before left перекрыл right без конфликта */
 
       width: 285px;
       height: 285px;
@@ -126,7 +133,6 @@
   .companions__title {
     margin-bottom: 60px;
     margin-left: 0;
-
 
     @include font(45px, 1);
 
@@ -147,12 +153,17 @@
   }
 
   .companions__lead {
-    @include font(21px, 1.19);
     margin-left: 0;
+
+    @include font(21px, 1.19);
+
+    br {
+      display: initial;
+    }
   }
 
   .companions__btn {
-    margin-top: 70px;
+    margin-top: 80px;
   }
 
   .companions--index .companions__list {
@@ -204,5 +215,6 @@
 
   .companions--index .companions__list {
     order: 5;
+    margin-bottom: 0;
   }
 }
