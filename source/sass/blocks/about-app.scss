@@ -8,11 +8,14 @@
 
   background-color: $grey-blue;
   border-radius: 0 0 30px 30px;
-  overflow: hidden;
+}
+
+.about-app__wrapper {
+  position: relative;
 
   &::before {
-    right: 10px;
-    bottom: 0;
+    right: -40px;
+    bottom: -80px;
     z-index: -1;
 
     width: 292px;
@@ -27,6 +30,7 @@
 .about-app__title {
   position: relative;
 
+  margin: 0;
   margin-bottom: 20px;
 
   color: $orange;
@@ -49,8 +53,8 @@
 }
 
 .about-app__text {
-  /* Поправить br */
   width: 210px;
+  margin: 0;
   margin-bottom: 20px;
 
   color: $white;
@@ -75,7 +79,7 @@
   }
 }
 
-/* Вот так скрыть не получилось, можно тут !important использовать? */
+/* Вопрос - вот так скрыть не получилось, можно тут !important использовать? */
 /* .about-app_btn {
   display: none;
 } */
@@ -87,13 +91,19 @@
 @media (min-width: $tablet-width) {
   .about-app {
     width: auto;
-    padding: 280px 75px 90px;
+    padding: 280px 0 90px;
 
     border-radius: 0 0 60px 60px;
+  }
+
+  .about-app__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
 
     &::before {
       right: -25px;
-      bottom: 90px;
+      bottom: 0;
 
       width: 376px;
       height: 548px;
@@ -151,11 +161,17 @@
 @media (min-width: $desktop-width) {
   .about-app {
     margin-top: -60px;
-    padding: 220px 132px 160px;
+    padding: 220px 0 160px;
+  }
+
+  .about-app__wrapper {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 132px;
 
     &::before {
       right: 60px;
-      bottom: 0;
+      bottom: -160px;
 
       width: 630px;
       height: 665px;
