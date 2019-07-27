@@ -11,7 +11,7 @@
   border-radius: 0 0 25px 25px;
 
   .btn-with-arrow::before {
-    top: 22px;
+    top: 23px;
     right: 21px;
   }
 }
@@ -63,7 +63,7 @@
   .office {
     width: auto;
     margin-bottom: 360px;
-    padding: 130px 75px 85px;
+    padding: 130px 0 85px;
 
     border-radius: 0 0 60px 60px;
 
@@ -71,6 +71,12 @@
       top: 32px;
       right: 34px;
     }
+  }
+
+  .office__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
   }
 
   .office__address {
@@ -98,11 +104,17 @@
 
 @media (min-width: $desktop-width) {
   .office {
+    margin-bottom: 395px;
+    padding: 120px 0 60px;
+  }
+
+  .office__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 395px;
-    padding: 120px 133px 60px 284px;
+    width: 1440px;
+    padding-right: 132px;
+    padding-left: 284px;
   }
 
   .office__address {
