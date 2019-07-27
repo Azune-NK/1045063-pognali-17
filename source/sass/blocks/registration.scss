@@ -2,8 +2,6 @@
   position: relative;
   z-index: 2;
 
-  display: flex;
-  flex-direction: column;
   width: 320px;
   margin: 0 auto;
   margin-top: -60px;
@@ -11,6 +9,11 @@
 
   background-color: $grey-blue;
   border-radius: 0 0 30px 30px;
+}
+
+.registration__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .registration__lead {
@@ -99,10 +102,16 @@
 
 @media (min-width: $tablet-width) {
   .registration {
-    width: 768px;
-    padding: 185px 75px 60px;
+    width: auto;
+    padding: 185px 0 60px;
 
     border-radius: 0 0 60px 60px;
+  }
+
+  .registration__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
   }
 
   .registration__lead {
@@ -143,8 +152,12 @@
 
 @media (min-width: $desktop-width) {
   .registration {
+    padding: 200px 0 105px;
+  }
+
+  .registration__wrapper {
     width: 1440px;
-    padding: 200px 132px 105px;
+    padding: 0 132px;
   }
 
   .registration__text {
