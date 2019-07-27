@@ -1,8 +1,6 @@
 .pricing {
   position: relative;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
   width: 320px;
   margin: 0 auto;
   margin-top: -30px;
@@ -10,6 +8,11 @@
 
   background-color: $bg-silver;
   border-radius: 0 0 30px 30px;
+}
+
+.pricing__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .pricing__list,
@@ -176,9 +179,15 @@
 @media (min-width: $tablet-width) {
   .pricing {
     width: auto;
-    padding: 160px 40px 85px;
+    padding: 160px 0 85px;
 
     border-radius: 0 0 60px 60px;
+  }
+
+  .pricing__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 
   .pricing__lead {
@@ -324,7 +333,12 @@
 
 @media (min-width: $desktop-width) {
   .pricing {
-    padding: 240px 132px 190px;
+    padding: 240px 0 190px;
+  }
+
+  .pricing__wrapper {
+    width: 1440px;
+    padding: 0 132px;
   }
 
   .pricing__lead {
