@@ -1,8 +1,15 @@
 .status {
-
+  font: 1em sans-serif;
 }
 
-@media (min-width: $tablet-width) { }
+@media (min-width: $tablet-width) {
+  .status {
+    font: 1em sans-serif;
+  }
+}
 
-@media (min-width: $desktop-width) { }
-
+@media (min-width: $desktop-width) {
+  .status {
+    font: 1em sans-serif;
+  }
+}

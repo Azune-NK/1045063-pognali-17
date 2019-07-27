@@ -4,16 +4,20 @@
 
   width: 320px;
   margin: 0 auto;
-  margin-top: -30px;
+  margin-top: -50px;
   padding: 120px 25px 30px;
   overflow: hidden;
 
   background: $grey-blue;
   border-radius: 0 0 30px 30px;
+}
+
+.companions--index .companions__wrapper {
+  position: relative;
 
   &::before {
-    top: 85px;
-    right: 25px;
+    top: -34px;
+    right: 0;
     z-index: -1;
 
     width: 143px;
@@ -26,8 +30,8 @@
   }
 
   &::after {
-    top: 330px;
-    left: -10px;
+    top: 230px;
+    left: -40px;
     z-index: -1;
 
     width: 61px;
@@ -106,18 +110,24 @@
 
 @media (min-width: $tablet-width) {
   .companions--index {
-    width: 768px;
-    padding: 120px 75px 90px;
+    width: auto;
+    padding: 200px 0 90px;
 
     border-radius: 0 0 60px 60px;
+  }
+
+  .companions--index .companions__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
 
     &::before {
-      top: 345px;
+      top: 260px;
       left: 40px;
     }
 
     &::after {
-      top: 60px;
+      top: -63px;
       right: 77px;
       left: unset;
       /* Вопрос - интересно, почему тут пришлось ансетить прошлый left, а у before left перекрыл right без конфликта */
@@ -162,33 +172,42 @@
     }
   }
 
-  .companions__btn {
-    margin-top: 80px;
-  }
-
   .companions--index .companions__list {
     display: flex;
     justify-content: space-between;
+  }
+
+  .companions--index .companions__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .companions__btn {
+    margin-top: 80px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .companions--index {
+    padding: 220px 0 135px;
+  }
+
+  .companions--index .companions__wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     width: 1440px;
-    padding: 220px 60px 135px 132px;
+    padding-right: 60px;
+    padding-left: 132px;
 
     &::before {
-      top: 223px;
-      left: 547px;
+      top: 0;
+      left: 550px;
     }
 
     &::after {
-      top: 475px;
-      left: 191px;
+      top: 200px;
+      left: 190px;
     }
   }
 
