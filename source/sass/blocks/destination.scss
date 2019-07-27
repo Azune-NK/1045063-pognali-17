@@ -122,14 +122,20 @@
 @media (min-width: $tablet-width) {
   .destination {
     width: auto;
-    margin: 0 auto;
-    padding: 160px 75px 80px;
+    padding: 160px 0 80px;
 
     border-radius: 0 0 60px 60px;
   }
 
+  .destination__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
+  }
+
   .destination__title {
     position: relative;
+
     margin-bottom: 60px;
 
     @include font(45px, 1);
@@ -180,11 +186,14 @@
     order: 1;
     width: 186px;
     height: 140px;
+
     border-radius: 0 20px 20px 0;
   }
 
-  .destination__img { /* Временно - убрать как будет адаптив.img в html */
-    width: 186px; /* Вопрос - вот если не задавать тут размер и далть bg-size cover - почему не сработает? */
+  .destination__img {
+    /* Временно - уберу как академия даст расскажет про адаптивные img */
+    width: 186px;
+    /* Вопрос - вот если не задавать тут размер и далть bg-size cover - почему не сработает? */
     height: 140px;
   }
 
@@ -205,8 +214,9 @@
   }
 
   .destination__visitors {
-    @include font(20px, 1.5);
     padding-left: 30px;
+
+    @include font(20px, 1.5);
 
     &::before {
       top: 4px;
@@ -217,12 +227,11 @@
   }
 
   .destination__description-wrapper {
+    flex-grow: 1;
     flex-direction: column;
     align-items: flex-start;
     margin: 0;
-    flex-grow: 1;
     padding: 30px 30px 20px;
-
 
     border-radius: 20px 0 0 20px;
   }
@@ -234,7 +243,13 @@
 
 @media (min-width: $desktop-width) {
   .destination {
-    padding: 250px 132px 140px;
+    padding: 250px 0 140px;
+  }
+
+  .destination__wrapper {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 132px;
   }
 
   .destination__title {
