@@ -1,10 +1,10 @@
 .office {
   position: relative;
-  top: -70px;
+  z-index: 1;
 
   width: 320px;
   margin: 0 auto;
-  margin-bottom: 270px;
+  margin-top: -60px;
   padding: 110px 25px 35px;
 
   background-color: $gold;
@@ -45,14 +45,6 @@
   }
 }
 
-.office__map {
-  position: absolute;
-  top: 200px;
-  /* не понятно пока как позиционировать */
-  left: 0;
-  z-index: -1;
-}
-
 .office__pathing-btn {
   padding: 21px 21px 18px;
 
@@ -62,7 +54,6 @@
 @media (min-width: $tablet-width) {
   .office {
     width: auto;
-    margin-bottom: 360px;
     padding: 130px 0 85px;
 
     border-radius: 0 0 60px 60px;
@@ -104,7 +95,6 @@
 
 @media (min-width: $desktop-width) {
   .office {
-    margin-bottom: 395px;
     padding: 120px 0 60px;
   }
 

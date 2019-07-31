@@ -97,6 +97,10 @@
 
   width: 60px;
   height: 62px;
+
+  span {
+    display: none;
+  }
 }
 
 
@@ -140,6 +144,10 @@
     /* Проверить в ФШ */
 
     @include font(24px, 1);
+
+    &:focus {
+      padding: 26px 31px;
+    }
   }
 
   .registration__btn {
@@ -171,8 +179,11 @@
   }
 
   .registration__btn {
-    width: 325px;
+    width: 326px;
     height: 81px;
-    /* padding-left: 36px; */
+
+    span {
+      display: initial;
+    }
   }
 }

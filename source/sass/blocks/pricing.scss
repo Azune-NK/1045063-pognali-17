@@ -199,13 +199,13 @@
     @include font(45px, 1);
 
     &::before {
-      top: 360px;
+      top: 340px;
       right: 45px;
       z-index: 2;
     }
 
     &::after {
-      top: 100px;
+      top: 80px;
       right: 0;
       z-index: 1;
 

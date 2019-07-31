@@ -72,6 +72,7 @@
 }
 
 .companions__text {
+  width: 215px;
   margin: 0;
   margin-bottom: 20px;
   margin-left: 25px;
@@ -79,6 +80,10 @@
   color: $white;
 
   @include font(16px, 1.38, 300);
+
+  br {
+    display: none;
+  }
 }
 
 .companions__lead {
@@ -156,10 +161,15 @@
   }
 
   .companions__text {
+    width: 425px;
     margin-bottom: 40px;
     margin-left: 0;
 
     @include font(28px, 1.18);
+
+    br {
+      display: initial;
+    }
   }
 
   .companions__lead {
@@ -193,9 +203,7 @@
 
   .companions--index .companions__wrapper {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    justify-content: space-between;
     width: 1440px;
     padding-right: 60px;
     padding-left: 132px;
@@ -212,28 +220,23 @@
   }
 
   .companions__title {
-    order: 1;
-
     &::before {
       left: -71px;
     }
   }
 
-  .companions__text {
-    order: 2;
-  }
-
   .companions__lead {
-    order: 3;
+    padding-bottom: 165px;
   }
 
   .companions__btn {
-    order: 4;
-    margin-top: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 132px;
+    width: 280px;
   }
 
   .companions--index .companions__list {
-    order: 5;
     margin-bottom: 0;
   }
 }
