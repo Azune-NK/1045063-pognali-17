@@ -1,15 +1,217 @@
 .steps {
-  display: none;
+  position: absolute;
+  bottom: -252px;
+
+  width: 270px;
+}
+
+.steps__list {
+  @include ul-reset;
+}
+
+.steps__item {
+  position: relative;
+
+  padding: 23px 25px 25px;
+
+  color: $black-blue;
+
+  @include font(18px, 1, 700);
+
+  &:nth-child(1) {
+    background-color: $orange;
+    border-radius: 10px 10px 0 0;
+
+    &::before {
+      right: 25px;
+
+      color: $white;
+
+      @include pseudo("1");
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $mango;
+
+    &::before {
+      right: 25px;
+
+      color: $white;
+
+      @include pseudo("2");
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: $mango-light;
+
+    &::before {
+      right: 25px;
+
+      color: $white;
+
+      @include pseudo("3");
+    }
+  }
+
+  &:nth-child(4) {
+    background-color: $gold;
+    border-radius: 0 0 10px 10px;
+
+    &::before {
+      right: 25px;
+
+      color: $white;
+
+      @include pseudo("4");
+    }
+  }
+
+  &::before {
+    @include font(18px, 1, 700);
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
-    display: none;
+  .steps {
+    bottom: -490px;
+    left: 40px;
+    width: 708px;
+  }
+
+  .steps__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .steps__item {
+    padding: 31px 31px 62px;
+
+    @include font(24px);
+
+
+    &::before {
+      @include font(30px, 4);
+    }
+
+    &:nth-child(1) {
+      width: 364px;
+      top: 1px;
+      /* Вопрос - без этого появляется зазор между блоками, почему так? на моб версии каждая li без отступов друг к другу шла */
+
+      border-radius: 20px 0 0 0;
+
+      &::before {
+        bottom: -25px;
+        left: 31px;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 344px;
+      top: 1px;
+      left: -20px;
+
+      border-radius: 20px 20px 0 0;
+
+      &::before {
+        bottom: -25px;
+        left: 31px;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 364px;
+      border-radius: 0 0 0 20px;
+
+      &::before {
+        bottom: -25px;
+        left: 31px;
+      }
+    }
+
+    &:nth-child(4) {
+      width: 344px;
+      left: -20px;
+
+      border-radius: 0 0 20px 20px;
+
+      &::before {
+        bottom: -25px;
+        left: 31px;
+      }
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
-    display: none;
+  .steps {
+    width: 1380px;
+    bottom: -210px;
+    left: 60px;
+  }
+
+  .steps-list {
+    flex-wrap: nowrap;
+  }
+
+  .steps__item {
+    padding: 29px 31px 31px;
+
+    &::before {
+      @include font(24px, 1);
+    }
+
+    &:nth-child(1) {
+      top: 0;
+
+      width: 335px;
+
+      border-radius: 20px 0 0 20px;
+
+      &::before {
+        bottom: unset;
+        left: 270px;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 365px;
+      top: 0;
+
+      border-radius: 20px 0 0 20px;
+
+      &::before {
+        bottom: unset;
+        left: 270px;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 365px;
+      left: -40px;
+
+      border-radius: 20px 0 0 20px;
+
+      &::before {
+        bottom: unset;
+        left: 270px;
+      }
+    }
+
+    &:nth-child(4) {
+      width: 315px;
+      left: -60px;
+
+      border-radius: 20px;
+
+      &::before {
+        bottom: unset;
+        left: 270px;
+      }
+    }
   }
 }

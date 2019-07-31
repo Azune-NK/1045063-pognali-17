@@ -1,15 +1,49 @@
 .review {
-  display: none;
+  margin: 0 -25px;
+  padding: 50px 50px 0;
+
+  background-color: $black-blue;
+}
+
+.review__text {
+  width: 155px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: $white;
+
+  @include font(16px, 1.38, 300);
+}
+
+.review__author {
+  display: block;
+  width: 155px;
+
+  font-style: normal;
+  color: $white;
+
+  @include font(16px, 1.38, 700);
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
-    display: none;
-  }
-}
+  .review {
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
 
-@media (min-width: $desktop-width) {
-  .page-header {
-    display: none;
+    background-color: unset;
+  }
+
+  .review__text {
+    width: 260px;
+    margin-bottom: 50px;
+
+    @include font(28px, 1.18);
+  }
+
+  .review__author {
+    width: 260px;
+
+    @include font(21px, 1.19);
   }
 }
