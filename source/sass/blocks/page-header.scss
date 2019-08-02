@@ -1,15 +1,118 @@
 .page-header {
+  position: relative;
+  z-index: 8;
+
+  width: 320px;
+  margin: 0 auto;
+  padding: 27px 25px 0;
+
+  background-color: $black-blue;
+
+  &--white {
+    background-color: $white;
+  }
+}
+
+.page-header__scroll-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.page-header__logo {
+  width: 100px;
+  height: 19px;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 27px;
+  right: 25px;
+
+  border: 0;
+}
+
+.page-header__scroll-wrapper--off .page-header__logo:nth-child(2) {
   display: none;
+}
+
+.page-header__scroll-wrapper--on {
+  .page-header__logo:nth-child(1) {
+    display: none;
+  }
+
+  .page-header__logo:nth-child(2) {
+    display: inline-flex;
+  }
+}
+
+.page-header__toggle--burger {
+  width: 25px;
+  height: 3px;
+
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 0 $white;
+}
+
+.page-header--white .page-header__toggle--burger {
+  background-color: $white-grey;
+  box-shadow: 0 8px 0 0 $white-grey;
+}
+
+.page-header--nojs .page-header__toggle--burger {
+  display: none;
+}
+
+.page-header__toggle--close {
+  width: 19px;
+  height: 19px;
+
+  background-color: transparent;
+
+  /* Вопрос - без этого появляется серый куб, почему? */
+  &::before,
+  &::after {
+    top: 5px;
+    left: 0;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: $white-grey;
+
+    @include pseudo;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
-    display: none;
+    width: auto;
+    padding: 40px 0;
+  }
+
+  .page-header__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    display: none;
+    padding: 50px 0 20px;
+  }
+
+  .page-header__wrapper {
+    width: 1440px;
+    padding: 0 60px;
   }
 }

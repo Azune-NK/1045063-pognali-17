@@ -17,16 +17,51 @@
   &--fb {
     padding-top: 13px;
     padding-left: 17px;
+
+    &::before {
+      width: 11px;
+      height: 21px;
+
+      background: url("../img/svg/facebook.svg") no-repeat;
+
+      @include pseudo;
+    }
   }
 
   &--vk {
     padding-top: 15px;
     padding-left: 11px;
+
+    &::before {
+      top: 17px;
+
+      width: 23px;
+      height: 12px;
+
+      background: url("../img/svg/vk.svg") no-repeat;
+
+      @include pseudo;
+    }
   }
 
   &--inst {
     padding-top: 14px;
     padding-left: 14px;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+
+      background: url("../img/svg/instagram.svg") no-repeat;
+
+      @include pseudo;
+    }
+  }
+
+  &--page-footer {
+    &::before {
+      display: none;
+    }
   }
 
   &:hover,
@@ -34,8 +69,14 @@
     background-color: $mango-light;
   }
 
-  &:active .social__svg {
-    opacity: 0.3;
+  &:active {
+    .social__svg {
+      opacity: 0.3;
+    }
+
+    &::before {
+      opacity: 0.3;
+    }
   }
 
   &--page-footer:hover,
@@ -72,16 +113,32 @@
     &--fb {
       padding-top: 16px;
       padding-left: 23px;
+
+      &::before {
+        width: 14px;
+        height: 28px;
+      }
     }
 
     &--vk {
       padding-top: 21px;
       padding-left: 14px;
+
+      &::before {
+        top: 21px;
+        width: 31px;
+        height: 16px;
+      }
     }
 
     &--inst {
       padding-top: 18px;
       padding-left: 18px;
+
+      &::before {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 

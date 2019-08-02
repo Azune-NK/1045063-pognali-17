@@ -3,13 +3,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
+  .modal {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
+  .modal {
     display: none;
   }
 }

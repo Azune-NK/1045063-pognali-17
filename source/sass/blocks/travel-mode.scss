@@ -1,15 +1,15 @@
 .travel-mode {
-  display: none;
+  font: 1em sans-serif;
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
-    display: none;
+  .travel-mode {
+    font: 1em sans-serif;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
-    display: none;
+  .travel-mode {
+    font: 1em sans-serif;
   }
 }

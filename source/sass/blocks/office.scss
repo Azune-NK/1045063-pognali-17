@@ -49,6 +49,24 @@
   padding: 21px 21px 18px;
 
   box-shadow: 0 0 0 3px $grey-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-blue;
+    color: $white;
+
+    &::before {
+      border-left-color: $white;
+    }
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    &::before {
+      border-left-color: rgba($white, 0.3);
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {

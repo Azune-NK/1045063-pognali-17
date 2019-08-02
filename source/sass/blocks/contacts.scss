@@ -53,7 +53,12 @@
   }
 
   &:active {
-    opacity: 0.3;
+    color: rgba($mango-light, 0.3);
+
+    .contacts__tel-svg,
+    .contacts__email-svg {
+      fill: rgba($mango-light, 0.3);
+    }
   }
 }
 

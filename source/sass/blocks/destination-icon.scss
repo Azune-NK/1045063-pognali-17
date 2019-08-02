@@ -1,15 +1,15 @@
 .destination-icon {
-  display: none;
+  font: 1em sans-serif;
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
-    display: none;
+  .destination-icon {
+    font: 1em sans-serif;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
-    display: none;
+  .destination-icon {
+    font: 1em sans-serif;
   }
 }
