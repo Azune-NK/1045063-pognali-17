@@ -3,6 +3,9 @@
 }
 
 .main-menu__item {
+  margin-left: -4px; /* Вопрос - нормально ли падинг 0 4px для спана компенсировать для сетки таким способом? */
+  overflow: hidden;
+
   text-align: center;
   text-transform: uppercase;
 }
@@ -11,7 +14,45 @@
   color: $grey-blue;
 
   @include font(30px, 1.2, 500);
+
+  &:hover,
+  &:focus {
+    color: $gold;
+  }
+
+  &:active {
+    color: rgba($gold, 0.3);
+  }
 }
+
+.main-menu__link span {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 0 4px;
+  white-space: nowrap;
+  /* Вопрос -  в исходнике(ссылка в стайлгайде) padding: 0 4px идет для ссылки, а не спана + нету nowrap - у меня так не работало, падинг я так понимаю нужен для того чтобы помещался bold текст, но как оно все на самом деле работает, и почему не работает без nowrap я не понимаю */
+
+  transition: transform 0.3s;
+}
+
+.main-menu__link span::before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 100%;
+
+  font-weight: 700;
+
+  transform: translate3d(0, 0, 0);
+  /* Вопрос - зачем нужен translate3d? ведь три нуля это значение по умолчанию */
+}
+
+.main-menu__link:hover span,
+.main-menu__link:focus span {
+  transform: translateY(-100%);
+}
+
 
 @media (min-width: $tablet-width) {
   .main-menu__item {
@@ -24,9 +65,21 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-menu {
+    display: flex;
+    align-self: center;
+  }
+
+  .main-menu__item {
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
+  }
+
   .main-menu__link {
     color: $white;
 
     @include font(20px, 1.5);
   }
 }
+
