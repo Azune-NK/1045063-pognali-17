@@ -14,7 +14,7 @@
 }
 
 /* Вопрос - тройная вложенность, если уберу main-nav--closed(так как по сути кнопка хоть бургер хоть крестик должна быть серой на белом меню) - у крестика нет box-shadow - либо иконку бургер делать через svg, а не рисовать или на !important задать main-nav--closed main-nav__toggle box-shadow:none? или не париться и ради исключения норм */
-.page-header--white .main-nav--closed .main-nav__toggle {
+.page-header--white .main-nav--closed .main-nav__toggle::before {
   background-color: $white-grey;
   box-shadow: 0 8px 0 0 $white-grey;
 }
@@ -36,6 +36,7 @@
 .page-header--white .page-header__logo-blue {
   display: initial;
 }
+
 @media (min-width: $tablet-width) and (max-width: 1439px) {
   .page-header {
     background-color: $bg-light-blue;
@@ -45,6 +46,7 @@
     }
   }
 }
+
 @media (min-width: $tablet-width) {
   .page-header {
     width: auto;

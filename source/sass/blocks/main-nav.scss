@@ -1,8 +1,9 @@
 .main-nav {
   position: relative;
-  width: 320px;
-  left: -25px;
   bottom: -31px;
+  left: -25px;
+
+  width: 320px;
   padding: 45px 25px 30px;
 
   background-color: $white;
@@ -53,9 +54,9 @@
 @media (max-width: 1439px) {
   .main-nav--opened.main-nav--nojs {
     position: relative;
-    left: -25px;
-    bottom: -31px;
     top: unset;
+    bottom: -31px;
+    left: -25px;
   }
 
   .main-nav--opened {
@@ -74,14 +75,23 @@
 
   .main-nav--closed .main-nav__toggle {
     top: unset;
-    bottom: -81%;
+    bottom: -83%;
 
     width: 25px;
-    height: 3px;
+    height: 11px;
+    background-color: transparent;
 
-    background-color: $white;
-    border-radius: 10px;
-    box-shadow: 0 8px 0 0 $white;
+    &::before {
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 3px;
+      background-color: $white;
+      border-radius: 10px;
+      box-shadow: 0 8px 0 0 $white;
+
+      @include pseudo;
+    }
   }
 
   .main-nav--opened .main-nav__toggle {
@@ -140,9 +150,10 @@
 
   .main-nav__login-btn {
     position: absolute;
-    margin: 0;
     top: -75px;
     right: 0;
+
+    margin: 0;
   }
 
   .main-nav__contacts {
@@ -157,19 +168,20 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    bottom: unset;
+    left: unset;
+
     margin: 0;
     padding: 0;
-    left: unset;
-    bottom: unset;
 
     background-color: unset;
   }
 
   .main-nav__wrapper {
-    width: auto;
     flex-direction: row;
-    padding-left: 105px;
+    width: auto;
     padding-right: 0;
+    padding-left: 105px;
 
     &::before {
       top: 23px;
@@ -192,13 +204,14 @@
 
   .main-nav__login-btn {
     position: initial;
+
     order: 1;
     margin: 0;
   }
 
   .main-nav__contacts {
-    margin: 0;
     flex-direction: row;
+    margin: 0;
     margin-left: auto;
   }
 
