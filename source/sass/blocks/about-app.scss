@@ -3,7 +3,7 @@
   z-index: 6;
 
   width: 320px;
-  margin: 0 auto; /* Вопрос - обязательно ли отменять это на табле\пк?(если не мешает) */
+  margin: 0 auto; /* Вопрос - обязательно ли отменять это на табле\пк?(я пока не заметил где бы это "мешало") */
   padding: 310px 50px 80px;
   overflow: hidden;
 
@@ -80,12 +80,7 @@
   }
 }
 
-/* Вопрос - вот так скрыть не получилось, можно тут !important использовать? */
-/* .about-app_btn {
-  display: none;
-} */
-
-.about-app .btn-with-arrow {
+.about-app_btn {
   display: none;
 }
 
@@ -153,7 +148,7 @@
     }
   }
 
-  .about-app .btn-with-arrow {
+  .about-app_btn {
     display: block;
     width: 275px;
   }

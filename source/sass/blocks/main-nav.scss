@@ -75,13 +75,16 @@
 
     width: 25px;
     height: 11px;
+
     background-color: transparent;
 
     &::before {
       top: 0;
       left: 0;
+
       width: 25px;
       height: 3px;
+
       background-color: $white;
       border-radius: 10px;
       box-shadow: 0 8px 0 0 $white;
@@ -126,8 +129,8 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    width: auto;
-    padding: 55px 0 75px;
+    width: 100%;
+    padding: 60px 0 75px;
   }
 
   .main-nav__wrapper {
@@ -141,15 +144,18 @@
   }
 
   .main-nav__toggle {
-    right: 350px;
+    right: 370px;
   }
 
   .main-nav__login-btn {
     position: absolute;
-    top: -75px;
-    right: 0;
 
     margin: 0;
+  }
+
+  .main-nav--opened.main-nav--nojs .main-nav__login-btn {
+    top: -134px;
+    right: 40px;
   }
 
   .main-nav__contacts {
@@ -159,6 +165,29 @@
   .main-nav__social {
     align-self: flex-start;
     margin-top: 115px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .main-nav--opened.main-nav--nojs {
+    bottom: -42px;
+    left: -40px;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    bottom: -51%;
+  }
+
+  .main-nav__login-btn {
+    top: unset;
+    right: 40px;
+    bottom: -54%;
+  }
+
+  .main-nav--opened .main-nav__login-btn {
+    top: -110px;
+    right: 40px;
+    bottom: unset;
   }
 }
 
