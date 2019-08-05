@@ -33,13 +33,13 @@
   @include font(16px, 1.38, 300);
 }
 
-.biz-pricing__offer:not(:last-child) {
+.biz-pricing__offer {
   margin-bottom: 20px;
 }
 
 .biz-pricing__button {
   width: 100%;
-  margin-top: 35px;
+  margin-top: 15px;
   padding: 23px 80px;
 
   color: $blue;
@@ -91,15 +91,11 @@
 
   .biz-pricing__offer {
     text-align: right;
-  }
-
-
-  .biz-pricing__offer:not(:last-child) {
     margin-bottom: 30px;
   }
 
   .biz-pricing__button {
-    margin-top: 65px;
+    margin-top: 35px;
 
     text-transform: initial;
 
