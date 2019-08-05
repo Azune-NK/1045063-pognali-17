@@ -1,4 +1,15 @@
 .destination-icon {
-  font-size: 16px;
-  line-height: 20px;
+  font: 1em sans-serif;
+}
+
+@media (min-width: $tablet-width) {
+  .destination-icon {
+    font: 1em sans-serif;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .destination-icon {
+    font: 1em sans-serif;
+  }
 }

@@ -1,4 +1,203 @@
 .about-app {
-  font-size: 16px;
-  line-height: 20px;
+  position: relative;
+  z-index: 6;
+
+  width: 320px;
+  margin: 0 auto; /* Вопрос - обязательно ли отменять это на табле\пк?(я пока не заметил где бы это "мешало") */
+  padding: 310px 50px 80px;
+  overflow: hidden;
+
+  background-color: $grey-blue;
+  border-radius: 0 0 30px 30px;
+}
+
+.about-app__wrapper {
+  position: relative;
+
+  &::before {
+    right: -40px;
+    bottom: -80px;
+    z-index: -1;
+
+    width: 292px;
+    height: 352px;
+
+    background: url("../img/background/about-mobile@1x.png") no-repeat;
+
+    @include pseudo;
+  }
+}
+
+.about-app__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: $orange;
+
+  @include font(24px, 1);
+
+  &::before {
+    top: -33px;
+    left: -50px;
+    z-index: -2;
+
+    width: 113px;
+    height: 132px;
+
+    background-color: $bg-blue;
+    border-radius: 20px;
+
+    @include pseudo;
+  }
+}
+
+.about-app__text {
+  width: 210px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: $white;
+
+  @include font(16px, 1.38, 300);
+
+  br:nth-child(2) {
+    display: none;
+  }
+}
+
+.about-app__lead {
+  display: block;
+  width: 195px;
+
+  color: $white;
+
+  @include font(16px, 1.38, 700);
+
+  span {
+    display: none;
+  }
+}
+
+.about-app_btn {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about-app {
+    width: auto;
+    padding: 280px 0 90px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  .about-app__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
+
+    &::before {
+      right: -25px;
+      bottom: 0;
+
+      width: 376px;
+      height: 548px;
+
+      background: url("../img/background/about-tablet@1x.png") no-repeat;
+    }
+  }
+
+  .about-app__title {
+    margin-bottom: 40px;
+
+    @include font(45px, 1);
+
+    &::before {
+      top: -43px;
+      left: -36px;
+
+      width: 688px;
+      height: 213px;
+    }
+  }
+
+  .about-app__text {
+    width: 300px;
+    margin-bottom: 35px;
+
+    @include font(28px, 1.18);
+
+    br:nth-child(1) {
+      display: none;
+    }
+
+    br:nth-child(2) {
+      display: initial;
+    }
+  }
+
+  .about-app__lead {
+    width: 295px;
+    margin-bottom: 50px;
+
+    @include font(21px, 1.19);
+
+    span {
+      display: initial;
+    }
+  }
+
+  .about-app_btn {
+    display: block;
+    width: 275px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-app {
+    margin-top: -60px;
+    padding: 220px 0 160px;
+  }
+
+  .about-app__wrapper {
+    width: 1440px;
+    padding: 0 132px;
+
+    &::before {
+      right: 60px;
+      bottom: -160px;
+
+      width: 630px;
+      height: 665px;
+
+      background: url("../img/background/about-desktop@1x.png") no-repeat;
+    }
+  }
+
+  .about-app__title {
+    margin-bottom: 60px;
+
+    &::before {
+      top: -62px;
+      left: -72px;
+
+      width: 213px;
+      height: 213px;
+    }
+  }
+
+  .about-app__text {
+    width: 620px;
+    margin-bottom: 40px;
+
+    br:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .about-app__lead {
+    width: 410px;
+    margin-bottom: 85px;
+  }
 }

@@ -1,4 +1,55 @@
 .btn-with-arrow {
-  font-size: 16px;
-  line-height: 20px;
+  position: relative;
+
+  display: block;
+  /* Вопрос - для кнопок типовой вариант использовать инлайн-блок?(так было на 1м курсе,потому что если не флекс, то чаще для построения сетки все же будет использоваться Inline-block, т.е взяли самый распространенный вариант, чтобы меньше переопределять?) */
+  padding: 24px;
+
+  text-align: left;
+  color: $blue;
+
+  background-color: $gold;
+  border: 0;
+  border-radius: 10px;
+
+  @include font(18px, 1, 700);
+
+  &::before {
+    top: 26px;
+    right: 24px;
+
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid $blue;
+
+    @include pseudo;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $mango-light;
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+
+    &::before {
+      border-left-color: rgba($blue, 0.3);
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .btn-with-arrow {
+    padding: 31px 34px 32px;
+
+    border-radius: 20px;
+
+    @include font(24px, 1);
+
+    &::before {
+      top: 34px;
+      right: 34px;
+    }
+  }
 }

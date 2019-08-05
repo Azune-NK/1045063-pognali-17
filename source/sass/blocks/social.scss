@@ -1,4 +1,141 @@
-.social {
-  font-size: 16px;
-  line-height: 20px;
+.social__list {
+  display: flex;
+
+  @include ul-reset;
+}
+
+.social__link {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  background-color: $gold;
+  border-radius: 50%;
+
+  &--fb {
+    &::before {
+      width: 11px;
+      height: 21px;
+
+      background: url("../img/svg/facebook.svg") no-repeat;
+
+      @include pseudo;
+    }
+  }
+
+  &--vk {
+    &::before {
+      width: 23px;
+      height: 12px;
+
+      background: url("../img/svg/vk.svg") no-repeat;
+
+      @include pseudo;
+    }
+  }
+
+  &--inst {
+    &::before {
+      width: 18px;
+      height: 18px;
+
+      background: url("../img/svg/instagram.svg") no-repeat;
+
+      @include pseudo;
+    }
+  }
+
+  &--page-footer {
+    &::before {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $mango-light;
+  }
+
+  &:active {
+    .social__svg {
+      opacity: 0.3;
+    }
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &--page-footer:hover,
+  &--page-footer:focus {
+    background-color: $grey-blue;
+  }
+
+  &--page-footer:hover .social__svg,
+  &--page-footer:focus .social__svg {
+    fill: #ffffff;
+  }
+}
+
+.social__link--fb .social__svg {
+  width: 11px;
+  height: 21px;
+}
+
+.social__link--vk .social__svg {
+  width: 23px;
+  height: 12px;
+}
+
+.social__link--inst .social__svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .social__link {
+    width: 60px;
+    height: 60px;
+
+    &--fb {
+      &::before {
+        width: 14px;
+        height: 28px;
+      }
+    }
+
+    &--vk {
+      &::before {
+        width: 31px;
+        height: 16px;
+      }
+    }
+
+    &--inst {
+      &::before {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .social__link--fb .social__svg {
+    width: 14px;
+    height: 28px;
+  }
+
+  .social__link--vk .social__svg {
+    width: 31px;
+    height: 16px;
+  }
+
+  .social__link--inst .social__svg {
+    width: 24px;
+    height: 24px;
+  }
 }

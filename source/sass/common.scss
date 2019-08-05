@@ -9,10 +9,15 @@ html {
 }
 
 body {
-  background-color: rgb(235, 6, 6);
+  position: relative;
   min-width: 320px;
+
   font-size: 16px;
+  line-height: 22px;
   font-family: "Blogger Sans", "Arial", sans-serif;
+  color: $grey;
+
+  background-color: $grey-light;
 }
 
 a {

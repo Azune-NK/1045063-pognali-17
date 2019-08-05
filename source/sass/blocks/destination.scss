@@ -1,4 +1,344 @@
 .destination {
-  font-size: 16px;
-  line-height: 20px;
+  position: relative;
+  z-index: 5;
+
+  width: 320px;
+  margin: 0 auto;
+  margin-top: -30px;
+  padding: 100px 25px 30px;
+  overflow: hidden;
+
+  background-color: $bg-silver;
+  border-radius: 0 0 30px 30px;
+}
+
+.destination__wrapper {
+  position: relative;
+}
+
+.destination__column-wrapper {
+  margin-left: 25px;
+}
+
+.destination__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: $orange;
+
+  @include font(24px, 1);
+}
+
+.destination__text {
+  width: 195px;
+  margin: 0;
+  margin-bottom: 65px;
+
+  @include font(16px, 1.38, 300);
+}
+
+.destination__list {
+  position: relative;
+
+  @include ul-reset;
+
+  &::before {
+    bottom: -10px;
+    left: 0;
+
+    width: 320px;
+    height: 81px;
+
+    background: url("../img/background/fade-mobile.png") no-repeat;
+
+    @include pseudo;
+    z-index: 2;
+  }
+}
+
+.destination__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.destination__img-link {
+  display: block;
+  width: 270px;
+  height: 110px;
+  overflow: hidden;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.destination__description-wrapper {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
+  padding: 30px 24px 20px;
+
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.destination__name {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 5px;
+
+  color: $black-blue;
+
+  @include font(21px, 1);
+
+  &::before {
+    top: -40px;
+    left: 0;
+
+    width: 35px;
+    height: 24px;
+
+    background: url("../img/svg/whereismyflagsvghtmlacademy.net") no-repeat;
+    background-color: black;
+
+    @include pseudo;
+  }
+}
+
+.destination__description {
+  margin: 0;
+
+  color: rgba($grey, 0.3);
+
+  @include font(16px, 1.13, 500);
+}
+
+.destination__visitors {
+  position: relative;
+
+  margin: 0;
+  padding-left: 18px;
+
+  color: rgba($grey, 0.3);
+
+  @include font(16px, 1.88, 500);
+
+  &::before {
+    top: 8px;
+    left: 0;
+
+    width: 11px;
+    height: 11px;
+
+    background: url("../img/svg/user.svg") no-repeat;
+    opacity: 0.1;
+
+    @include pseudo;
+  }
+}
+
+.destination__btn {
+  margin-top: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .destination {
+    width: auto;
+    padding: 160px 0 80px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  .destination__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
+  }
+
+  .destination__column-wrapper {
+    margin-left: 0;
+  }
+
+  .destination__title {
+    position: relative;
+
+    margin-bottom: 60px;
+
+    @include font(45px, 1);
+
+    &::after {
+      top: 0;
+      right: -35px;
+      z-index: -1;
+
+      width: 289px;
+      height: 575px;
+
+      background: url("../img/background/flags-back@1x.png") no-repeat;
+      border-radius: 20px;
+
+      @include pseudo;
+    }
+  }
+
+  .destination__text {
+    width: 340px;
+    margin-bottom: 110px;
+
+    @include font(28px, 1.18);
+  }
+
+  .destination__list {
+    position: relative;
+
+    &::after {
+      top: -40px;
+      left: -35px;
+
+      width: 141px;
+      height: 141px;
+
+      background-color: $grey-light;
+      border-radius: 20px;
+
+      @include pseudo;
+    }
+
+    &::before {
+      bottom: -15px;
+
+      width: 688px;
+      height: 81px;
+
+      background: url("../img/background/fade-tablet.png") no-repeat;
+    }
+  }
+
+  .destination__item {
+    display: flex;
+  }
+
+  .destination__img-link {
+    order: 1;
+    width: 186px;
+    height: 140px;
+
+    border-radius: 0 20px 20px 0;
+  }
+
+  .destination__img {
+    /* Временно - уберу как академия расскажет про адаптивные img */
+    width: 186px;
+    /* Вопрос - вот если не задавать тут размер и далть bg-size cover - почему не сработает? */
+    height: 140px;
+  }
+
+  .destination__name {
+    @include font(24px, 1);
+
+    &::before {
+      top: -15px;
+      left: 370px;
+
+      width: 70px;
+      height: 47px;
+    }
+  }
+
+  .destination__description {
+    @include font(20px, 0.77);
+  }
+
+  .destination__visitors {
+    padding-left: 30px;
+
+    @include font(20px, 1.5);
+
+    &::before {
+      top: 4px;
+
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .destination__description-wrapper {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 30px 30px 20px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .destination__btn {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .destination {
+    padding: 250px 0 140px;
+  }
+
+  .destination__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    padding: 0 132px;
+  }
+
+  .destination__column-wrapper {
+    margin-right: 110px;
+  }
+
+  .destination__title {
+    margin-bottom: 60px;
+
+    @include font(45px, 1);
+
+    &::after {
+      top: -80px;
+      right: -180px;
+    }
+  }
+
+  .destination__list {
+    position: relative;
+
+    order: -1;
+
+    &::after {
+      top: -70px;
+      left: -70px;
+    }
+
+    &::before {
+      width: 681px;
+      height: 81px;
+
+      background: url("../img/background/fade-desktop.png") no-repeat;
+    }
+  }
+
+  .destination__description-wrapper {
+    width: 373px;
+  }
+
+  .destination__name {
+    &::before {
+      top: -15px;
+      left: 310px;
+    }
+  }
+
+  .destination__btn {
+    position: absolute;
+    right: 300px;
+    bottom: -5px;
+
+    width: 274px;
+  }
 }

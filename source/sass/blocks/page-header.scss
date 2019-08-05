@@ -1,4 +1,110 @@
 .page-header {
-  font-size: 16px;
-  line-height: 20px;
+  position: relative;
+  z-index: 8;
+
+  width: 320px;
+  margin: 0 auto;
+  padding: 27px 25px 31px;
+
+  background-color: $black-blue;
+
+  &--white {
+    background-color: $white;
+  }
+}
+
+/* Вопрос - тройная вложенность, если уберу main-nav--closed(так как по сути кнопка хоть бургер хоть крестик должна быть серой на белом меню) - у крестика нет box-shadow - либо иконку бургер делать через svg, а не рисовать или на !important задать main-nav--closed main-nav__toggle box-shadow:none? или не париться и ради исключения норм */
+.page-header--white .main-nav--closed .main-nav__toggle::before {
+  background-color: $white-grey;
+  box-shadow: 0 8px 0 0 $white-grey;
+}
+
+.page-header__logo {
+  display: block;
+  width: 100px;
+  height: 19px;
+}
+
+.page-header__logo-blue {
+  display: none;
+}
+
+.page-header--white .page-header__logo-white {
+  display: none;
+}
+
+.page-header--white .page-header__logo-blue {
+  display: initial;
+}
+
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .page-header {
+    background-color: $bg-light-blue;
+
+    &--white {
+      background-color: $white;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    width: auto;
+    padding: 40px 0 42px;
+  }
+
+  .page-header__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding: 50px 0 20px;
+
+    &--white:not(.page-header--nojs) {
+      padding: 20px 0;
+
+      .main-nav__wrapper::before {
+        left: 15px;
+
+        width: 45px;
+
+        background-color: $grey-blue;
+      }
+
+      .main-menu__link {
+        color: $grey-blue;
+      }
+    }
+  }
+
+  .page-header--nojs {
+    background-color: $black-blue;
+  }
+
+  .page-header--white.page-header--nojs .page-header__logo-white {
+    display: initial;
+  }
+
+  .page-header--white.page-header--nojs .page-header__logo-blue {
+    display: none;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+    width: 1440px;
+    padding: 0 60px;
+  }
+
+  .page-header__logo {
+    align-self: center;
+    margin-right: 40px;
+  }
+
+  .page-header__nav {
+    flex-grow: 1;
+  }
 }

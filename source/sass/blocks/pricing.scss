@@ -1,4 +1,401 @@
 .pricing {
-  font-size: 16px;
-  line-height: 20px;
+  position: relative;
+  z-index: 3;
+  width: 320px;
+  margin: 0 auto;
+  margin-top: -30px;
+  padding: 80px 50px 40px;
+
+  background-color: $bg-silver;
+  border-radius: 0 0 30px 30px;
+}
+
+.pricing__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing__list,
+.pricing__offer {
+  margin: 0;
+}
+
+.pricing__lead {
+  position: relative;
+
+  width: 115px;
+  margin-bottom: 55px;
+
+  color: $orange;
+
+  @include font(24px, 1);
+
+  &::before {
+    top: -10px;
+    right: -130px;
+
+    width: 99px;
+    height: 99px;
+
+    background: url("../img/background/rates@1x.png") no-repeat;
+    background-size: 99px;
+
+    @include pseudo;
+  }
+}
+
+.pricing__btn {
+  margin-top: 30px;
+
+  color: $grey-blue;
+
+  @include font(16px, 1, 700);
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.pricing__service {
+  position: relative;
+
+  font-weight: 300; /* Вопрос - вот тут шрифт совпадает с тем что задан для боди, отличие в fw - для адаптива мне кажется заданный шрифт в боди не особо адекватен(он же только для мобилок), мне как-то не уютно вот для этого элемента не задавать полноценно шрифт, я бы во всех проектах всегда задавал шрифт явно - так норм или считается что я дублирую код? нормально ли совсем не задавать шрифт в боди или адекватнее для адаптива через медиа задать 3(или 2, ибо в табл и пк часто одинаково) шрифта? */
+
+  &:nth-of-type(1)::after {
+    top: -5px;
+    right: -25px;
+
+    width: 34px;
+    height: 34px;
+    padding-top: 10px;
+
+    text-align: center;
+    color: $white;
+
+    background-color: $mango;
+    border-radius: 50%;
+
+    @include pseudo("1");
+    @include font(16px, 0.88);
+  }
+
+  &:nth-of-type(2)::after {
+    top: -5px;
+    right: -25px;
+
+    width: 34px;
+    height: 34px;
+    padding-top: 10px;
+
+    text-align: center;
+    color: $white;
+
+    background-color: $mango-light;
+    border-radius: 50%;
+
+    @include pseudo("2");
+    @include font(16px, 0.88);
+  }
+
+  &:nth-of-type(3)::after {
+    top: -5px;
+    right: -25px;
+
+    width: 34px;
+    height: 34px;
+    padding-top: 10px;
+
+    text-align: center;
+    color: $white;
+
+    background-color: $gold;
+    border-radius: 50%;
+
+    @include pseudo("3");
+    @include font(16px, 0.88);
+  }
+}
+
+.pricing__offer {
+  position: relative;
+  font-weight: 300;
+
+  margin-bottom: 15px;
+
+  &:nth-of-type(1)::after {
+    top: -25px;
+    right: 20px;
+
+    width: 200px;
+    height: 1px;
+
+    background-color: rgba(0, 0, 0, 0.05);
+
+    @include pseudo;
+  }
+
+  &:nth-of-type(2)::after {
+    top: -25px;
+    right: 20px;
+
+    width: 200px;
+    height: 1px;
+
+    background-color: rgba(0, 0, 0, 0.05);
+
+    @include pseudo;
+  }
+
+  &:nth-of-type(3)::after {
+    top: -25px;
+    right: 20px;
+
+    width: 200px;
+    height: 1px;
+
+    background-color: rgba(0, 0, 0, 0.05);
+
+    @include pseudo;
+  }
+
+  &:nth-of-type(3)::before {
+    top: 30px;
+    right: 20px;
+
+    width: 200px;
+    height: 1px;
+
+    background-color: rgba(0, 0, 0, 0.05);
+
+    @include pseudo;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pricing {
+    width: auto;
+    padding: 160px 0 85px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  .pricing__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .pricing__lead {
+    width: auto;
+    margin-bottom: 90px;
+
+    text-align: center;
+
+    @include font(45px, 1);
+
+    &::before {
+      top: 340px;
+      right: 45px;
+      z-index: 2;
+    }
+
+    &::after {
+      top: 80px;
+      right: 0;
+      z-index: 1;
+
+      width: 198px;
+      height: 285px;
+
+      background-color: $grey-light;
+      border-radius: 20px;
+
+      @include pseudo;
+    }
+  }
+
+  .pricing__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include font(28px, 1.18);
+  }
+
+  .pricing__service {
+    position: relative;
+
+    width: 75%;
+    margin-bottom: 35px;
+    padding-left: 90px;
+
+    &:nth-of-type(1)::after {
+      top: -15px;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+      padding-top: 20px;
+
+      @include font(28px, 1);
+    }
+
+    &:nth-of-type(2)::after {
+      top: -15px;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+      padding-top: 20px;
+
+      @include font(28px, 1);
+    }
+
+    &:nth-of-type(3)::after {
+      top: -15px;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+      padding-top: 20px;
+
+      @include font(28px, 1);
+    }
+  }
+
+  .pricing__offer {
+    z-index: 3;
+
+    width: 25%;
+    padding-right: 35px;
+
+    text-align: right;
+
+    &:nth-of-type(1)::after {
+      top: -15px;
+      right: 35px;
+
+      width: 562px;
+    }
+
+    &:nth-of-type(2)::after {
+      top: -15px;
+      right: 35px;
+
+      width: 562px;
+    }
+
+    &:nth-of-type(3)::after {
+      top: -15px;
+      right: 35px;
+
+      width: 562px;
+    }
+
+    &:nth-of-type(3)::before {
+      top: 45px;
+      right: 35px;
+
+      width: 562px;
+    }
+  }
+
+  .pricing__btn {
+    position: relative;
+
+    align-self: flex-start;
+    margin-top: 40px;
+    padding-left: 90px;
+
+    @include font(20px, 1);
+
+    &::before {
+      top: -25px;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+
+      background: url("../img/svg/business.svg") no-repeat 50% 50%;
+      background-color: $grey-light;
+      border-radius: 50%;
+
+      @include pseudo;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pricing {
+    padding: 240px 0 190px;
+  }
+
+  .pricing__wrapper {
+    width: 1440px;
+    padding: 0 132px;
+  }
+
+  .pricing__lead {
+    margin-bottom: 150px;
+
+    &::before {
+      top: 170px;
+      right: 5px;
+
+      width: 198px;
+      height: 198px;
+
+      background-size: auto;
+    }
+
+    &::after {
+      top: 125px;
+      right: 120px;
+
+      width: 444px;
+      height: 300px;
+    }
+  }
+
+  .pricing__service {
+    width: 60%;
+  }
+
+  .pricing__offer {
+    width: 40%;
+    padding-right: 275px;
+
+    &:nth-of-type(1)::after {
+      top: -15px;
+      right: 275px;
+
+      width: 813px;
+    }
+
+    &:nth-of-type(2)::after {
+      top: -15px;
+      right: 275px;
+
+      width: 813px;
+    }
+
+    &:nth-of-type(3)::after {
+      top: -15px;
+      right: 275px;
+
+      width: 813px;
+    }
+
+    &:nth-of-type(3)::before {
+      top: 45px;
+      right: 275px;
+
+      width: 813px;
+    }
+  }
 }

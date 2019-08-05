@@ -1,4 +1,241 @@
-.companions {
-  font-size: 16px;
-  line-height: 20px;
+.companions--index {
+  position: relative;
+  z-index: 4;
+
+  width: 320px;
+  margin: 0 auto;
+  margin-top: -50px;
+  padding: 120px 25px 30px;
+  overflow: hidden;
+
+  background: $grey-blue;
+  border-radius: 0 0 30px 30px;
+}
+
+.companions--index .companions__wrapper {
+  position: relative;
+
+  &::before {
+    top: -34px;
+    right: 0;
+    z-index: -1;
+
+    width: 143px;
+    height: 143px;
+
+    background: url("../img/background/smolov-back-desktop@1x.png") no-repeat;
+    border-radius: 20px;
+
+    @include pseudo;
+  }
+
+  &::after {
+    top: 230px;
+    left: -40px;
+    z-index: -1;
+
+    width: 61px;
+    height: 71px;
+
+    background: url("../img/background/rogovaya-back-mobile@1x.png") no-repeat;
+    border-radius: 10px;
+    /* Проверить в ФШ */
+
+    @include pseudo;
+  }
+}
+
+.companions__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 20px;
+  margin-left: 25px;
+
+  color: $orange;
+
+  @include font(24px, 1);
+
+  &::before {
+    top: -34px;
+    left: -50px;
+    z-index: -1;
+
+    width: 113px;
+    height: 132px;
+
+    background-color: $bg-blue;
+    border-radius: 20px;
+
+    @include pseudo;
+  }
+}
+
+.companions__text {
+  width: 215px;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-left: 25px;
+
+  color: $white;
+
+  @include font(16px, 1.38, 300);
+
+  br {
+    display: none;
+  }
+}
+
+.companions__lead {
+  display: block;
+  margin-bottom: 60px;
+  margin-left: 25px;
+
+  color: $white;
+
+  @include font(16px, 1.38, 700);
+  /* На глаз кажется что в макете текст 500, а не 700, хотя в свойствах болд */
+
+  br {
+    display: none;
+  }
+}
+
+.companions__list {
+  @include ul-reset;
+}
+
+.companions--index .companions__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.companions__btn {
+  margin-top: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .companions--index {
+    width: auto;
+    padding: 200px 0 90px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  .companions--index .companions__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
+
+    &::before {
+      top: 260px;
+      left: 40px;
+    }
+
+    &::after {
+      top: -63px;
+      right: 77px;
+      left: unset;
+
+      width: 285px;
+      height: 285px;
+
+      background: url("../img/background/rogovaya-back-desktop@1x.png") no-repeat;
+      border-radius: 10px;
+    }
+  }
+
+  .companions__title {
+    margin-bottom: 60px;
+    margin-left: 0;
+
+    @include font(45px, 1);
+
+    &::before {
+      top: -63px;
+      left: -35px;
+
+      width: 213px;
+      height: 213px;
+    }
+  }
+
+  .companions__text {
+    width: 425px;
+    margin-bottom: 40px;
+    margin-left: 0;
+
+    @include font(28px, 1.18);
+
+    br {
+      display: initial;
+    }
+  }
+
+  .companions__lead {
+    margin-left: 0;
+
+    @include font(21px, 1.19);
+
+    br {
+      display: initial;
+    }
+  }
+
+  .companions--index .companions__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .companions--index .companions__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .companions__btn {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions--index {
+    padding: 220px 0 135px;
+  }
+
+  .companions--index .companions__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    padding-right: 60px;
+    padding-left: 132px;
+
+    &::before {
+      top: 0;
+      left: 550px;
+    }
+
+    &::after {
+      top: 200px;
+      left: 190px;
+    }
+  }
+
+  .companions__title {
+    &::before {
+      left: -71px;
+    }
+  }
+
+  .companions__lead {
+    padding-bottom: 165px;
+  }
+
+  .companions__btn {
+    position: absolute;
+    bottom: 0;
+    left: 132px;
+    width: 280px;
+  }
+
+  .companions--index .companions__list {
+    margin-bottom: 0;
+  }
 }

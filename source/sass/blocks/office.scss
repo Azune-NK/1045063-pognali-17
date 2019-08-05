@@ -1,0 +1,146 @@
+.office {
+  position: relative;
+  z-index: 1;
+
+  width: 320px;
+  margin: 0 auto;
+  margin-top: -60px;
+  padding: 110px 25px 35px;
+
+  background-color: $gold;
+  border-radius: 0 0 25px 25px;
+
+  .btn-with-arrow::before {
+    top: 23px;
+    right: 21px;
+  }
+}
+
+.office__address {
+  position: relative;
+
+  width: 205px;
+  margin-bottom: 35px;
+  padding-left: 60px;
+
+  font-style: normal;
+  color: $grey-blue;
+  text-transform: uppercase;
+
+  @include font(16px, 1.38, 700);
+
+  &::before {
+    top: 0;
+    left: 0;
+
+    width: 45px;
+    height: 45px;
+
+    background: url("../img/svg/contacts-location.svg") no-repeat 50% 50%;
+    background-color: $dark-blue;
+    background-size: 14px 22px;
+    border-radius: 50%;
+
+    @include pseudo;
+  }
+}
+
+.office__pathing-btn {
+  padding: 21px 21px 18px;
+
+  box-shadow: 0 0 0 3px $grey-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-blue;
+    color: $white;
+
+    &::before {
+      border-left-color: $white;
+    }
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    &::before {
+      border-left-color: rgba($white, 0.3);
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .office {
+    width: auto;
+    padding: 130px 0 85px;
+
+    border-radius: 0 0 60px 60px;
+
+    .btn-with-arrow::before {
+      top: 32px;
+      right: 34px;
+    }
+  }
+
+  .office__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
+  }
+
+  .office__address {
+    width: auto;
+    margin-bottom: 65px;
+    padding-left: 95px;
+
+    @include font(28px, 1.38);
+
+    &::before {
+      top: -14px;
+
+      width: 67px;
+      height: 67px;
+
+      background-size: 21px 31px;
+    }
+  }
+
+  .office__pathing-btn {
+    padding: 28px 34px 25px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .office {
+    padding: 120px 0 60px;
+  }
+
+  .office__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1440px;
+    padding-right: 132px;
+    padding-left: 284px;
+  }
+
+  .office__address {
+    align-self: center;
+    margin-bottom: 0;
+    padding-left: 120px;
+
+    &::before {
+      top: -25px;
+
+      width: 90px;
+      height: 90px;
+
+      background-size: 28px 43px;
+    }
+  }
+
+  .office__pathing-btn {
+    padding-right: 67px;
+  }
+}

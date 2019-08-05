@@ -1,4 +1,43 @@
 .copyright {
-  font-size: 16px;
-  line-height: 20px;
+  position: relative;
+
+  margin: 0;
+}
+
+.copyright__link {
+  color: inherit;
+
+  @include font(16px, 1.38, 400);
+
+  &::before {
+    top: -11px;
+    right: 0;
+
+    width: 27px;
+    height: 34px;
+
+    background: url("../img/svg/htmlacademy.svg") no-repeat;
+    cursor: pointer;
+
+    @include pseudo;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__link {
+    @include font(20px, 1.2);
+
+    &::before {
+      top: -5px;
+    }
+  }
 }

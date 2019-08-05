@@ -1,4 +1,114 @@
 .biz-pricing {
-  font-size: 16px;
-  line-height: 20px;
+  width: 270px;
+  padding-top: 33px;
+
+  background-color: $white;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+}
+
+.biz-pricing__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  text-align: center;
+  color: $orange;
+
+  @include font(24px, 1);
+}
+
+.biz-pricing__list,
+.biz-pricing__offer {
+  margin: 0;
+}
+
+.biz-pricing__list {
+  padding: 0 25px;
+}
+
+.biz-pricing__service,
+.biz-pricing__offer {
+  color: $grey;
+
+  @include font(16px, 1.38, 300);
+}
+
+.biz-pricing__offer {
+  margin-bottom: 20px;
+}
+
+.biz-pricing__button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 23px 80px;
+
+  color: $blue;
+  text-transform: uppercase;
+
+  background-color: $grey-blue-light;
+  border: 0;
+
+  @include font(16px, 1.5, 700);
+
+  &:hover,
+  &:focus {
+    background-color: $blue-light;
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .biz-pricing {
+    width: 688px;
+    padding-top: 52px;
+
+    border-radius: 30px;
+  }
+
+  .biz-pricing__title {
+    margin-bottom: 60px;
+
+    @include font(45px, 1);
+  }
+
+
+  .biz-pricing__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 90px;
+  }
+
+  .biz-pricing__service,
+  .biz-pricing__offer {
+    width: 50%;
+
+    @include font(22px, 1.27);
+  }
+
+  .biz-pricing__offer {
+    text-align: right;
+    margin-bottom: 30px;
+  }
+
+  .biz-pricing__button {
+    margin-top: 35px;
+
+    text-transform: initial;
+
+    @include font(24px, 1);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .biz-pricing {
+    width: 750px;
+  }
+
+  .biz-pricing__list {
+    padding: 0 60px;
+  }
 }

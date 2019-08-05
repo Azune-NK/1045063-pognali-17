@@ -1,5 +1,31 @@
 @mixin ul-reset {
   margin: 0;
   padding: 0;
+
   list-style: none;
+}
+
+@mixin container($width, $padding) {
+  width: $width;
+  margin: 0 auto;
+  padding: 0 $padding;
+}
+
+@mixin font($size: false, $height: false, $weight: false) {
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $height {
+    line-height: $height;
+  }
+}
+
+@mixin pseudo($content: "", $position: absolute) {
+  content: $content;
+  position: $position;
 }
