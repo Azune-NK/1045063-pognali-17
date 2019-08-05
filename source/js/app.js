@@ -3,6 +3,7 @@ var pageHeader = document.querySelector('.page-header'),
     navToggle = document.querySelector('.main-nav__toggle');
 
 pageHeader.classList.remove('page-header--white');
+pageHeader.classList.remove('page-header--nojs');
 navMain.classList.remove('main-nav--opened');
 navMain.classList.remove('main-nav--nojs');
 navMain.classList.add('main-nav--closed');

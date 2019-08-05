@@ -68,7 +68,7 @@
   .page-header {
     padding: 50px 0 20px;
 
-    &--white {
+    &--white:not(.page-header--nojs) {
       padding: 20px 0;
 
       .main-nav__wrapper::before {
@@ -85,6 +85,18 @@
     }
   }
 
+  .page-header--nojs {
+    background-color: $black-blue;
+  }
+
+  .page-header--white.page-header--nojs .page-header__logo-white {
+    display: initial;
+  }
+
+  .page-header--white.page-header--nojs .page-header__logo-blue {
+    display: none;
+  }
+
   .page-header__wrapper {
     display: flex;
     width: 1440px;
@@ -92,6 +104,7 @@
   }
 
   .page-header__logo {
+    align-self: center;
     margin-right: 40px;
   }
 
