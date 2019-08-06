@@ -1,0 +1,33 @@
+.catalog__container {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  z-index: 0;
+  padding: 30px 25px 60px;
+
+  background-color: $blue-light;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__container {
+    padding: 105px 0 110px;
+    width: auto;
+  }
+
+  .catalog__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__container {
+    padding: 125px 0;
+  }
+
+  .catalog__wrapper {
+    width: 1440px;
+    padding: 0 60px;
+  }
+}
