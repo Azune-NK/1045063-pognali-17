@@ -1,8 +1,293 @@
 .user {
+  /* Не забыть про разделители */
+  position: relative;
+
+  padding: 15px 20px 22px;
+
   background-color: $white;
-  border-radius: 20px; /* Проверить в ФШ в разных версиях */
+  border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+
+    .user__img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.user--index {
+  padding: 0;
+}
+
+.user__destination-list,
+.user__travel-mode {
+  @include ul-reset;
+}
+
+.user__name,
+.user__tags,
+.user__level {
+  margin: 0;
+}
+
+.user:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.user__name {
+  width: 80px;
+  margin-bottom: 45px;
+  margin-left: 85px;
 }
 
 .user__name-link {
   color: $blue;
+
+  @include font(20px, 1, 700);
+
+  &:hover,
+  &:focus {
+    color: rgba($blue, 0.6);
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+  }
+}
+
+.user--index .user__name-link {
+  @include font(21px);
+}
+
+.user__img-link {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+
+  border-radius: 50%;
+}
+
+.user__tags {
+  width: 180px;
+  margin-bottom: 17px;
+
+  color: $grey;
+
+  @include font(15px, 1.2);
+}
+
+.user--index .user__tags {
+  text-align: center;
+
+  @include font(16px, 1.13);
+}
+
+.user__likes {
+  position: absolute;
+  top: 65px;
+  left: 67px;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  &--checked {
+    .user__likes-count {
+      &::before {
+        background-color: $light-pink;
+      }
+
+      &::after {
+        background: url("../img/svg/heart-active.svg");
+        opacity: 1;
+      }
+
+      &:hover,
+      &:focus {
+        &::after {
+          opacity: 1;
+        }
+
+        &::before {
+          background-color: $pink;
+        }
+      }
+
+      &:active {
+        &::after {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
+
+.user__likes-count {
+  padding-left: 38px;
+
+  @include font(14px, 1.5, 700);
+
+  &::before {
+    top: -6px;
+    left: 0;
+
+    width: 31px;
+    height: 31px;
+
+    background-color: $bg-silver;
+    border-radius: 50%;
+
+    @include pseudo;
+  }
+
+  &::after {
+    top: 4px;
+    left: 9px;
+
+    width: 13px;
+    height: 11px;
+
+    background: url("../img/svg/heart.svg");
+    opacity: 0.3;
+
+    @include pseudo;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: $grey-light;
+    }
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.1;
+    }
+  }
+}
+
+.user__level {
+  position: absolute;
+  right: 20px;
+  bottom: 83px;
+
+  width: 42px;
+  height: 42px;
+  padding-top: 10px;
+
+  text-align: center;
+  color: $blue;
+
+  border: solid 3px $orange;
+  border-radius: 50%;
+
+  @include font(24px, 0.75, 700);
+
+  &::before {
+    top: -30px;
+    left: 0;
+
+    color: $grey;
+
+    @include font(15px, 1.2, 400);
+    @include pseudo("левел:", absolute);
+  }
+}
+
+.user__invite-btn.login-btn {
+  padding: 7px 79px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .user {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user__destination-list {
+    order: 1;
+  }
+
+  .user__travel-mode {
+    position: absolute;
+  }
+
+  .user--index:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .user--index .user__name-link {
+    @include font(24px);
+  }
+
+  .user__name-link {
+    @include font(30px);
+  }
+
+  .user__img-link {
+    top: 35px;
+    left: 35px;
+
+    width: 190px;
+    height: 190px;
+
+    border-radius: 20px;
+  }
+
+  .user__img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .user__tags {
+    @include font(20px, 1.2);
+  }
+
+  .user__likes {
+    top: 65px;
+    left: 67px;
+  }
+
+  .user__likes-count {
+    padding-left: 59px;
+
+    @include font(20px, 1.5);
+
+    &::before {
+      top: -11px;
+
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      top: 6px;
+      left: 15px;
+
+      width: 20px;
+      height: 17px;
+    }
+  }
+
+  .user__invite-btn.login-btn {
+    padding: 12px 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .status {
+  }
 }

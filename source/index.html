@@ -203,7 +203,14 @@
                 <a class="user__name-link" href="id104.html">Таня Фирсова</a>
               </h3>
               <a class="user__img-link" href="id104.html">
-                <img class="user__img" src="http://placehold.it/150x100" width="100" height="50" alt="Таня Фирсова">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/content/users/firsova-desktop@1x.jpg, img/content/users/firsova-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/users/firsova-tablet@1x.jpg, img/content/users/firsova-tablet@2x.jpg 2x">
+                  <img class="user__img" src="img/content/users/firsova-mobile@1x.jpg"
+                    srcset="img/content/users/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
+                </picture>
               </a>
               <ul class="user__destination-list destination-icon destination-icon--has-tooltip">
                 <li class="destination-icon__item">
@@ -238,7 +245,14 @@
                 <a class="user__name-link" href="id2579.html">Петя Демин</a>
               </h3>
               <a class="user__img-link" href="id2579.html">
-                <img class="user__img" src="http://placehold.it/150x100" width="100" height="50" alt="Петя Демин">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/content/users/demin-desktop@1x.jpg, img/content/users/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/users/demin-tablet@1x.jpg, img/content/users/demin-tablet@2x.jpg 2x">
+                  <img class="user__img" src="img/content/users/demin-mobile@1x.jpg"
+                    srcset="img/content/users/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
+                </picture>
               </a>
               <ul class="user__destination-list destination-icon destination-icon--has-tooltip">
                 <li class="destination-icon__item">
@@ -257,7 +271,7 @@
                   <p class="travel-mode__tooltip">Автотранспорт</p>
                 </li>
                 <li class="travel-mode__item">
-                  <p class="travel-mode__tooltip">На велосипеде</p>
+                  <p class="travel-mode__tooltip">Велосипед</p>
                 </li>
                 <li class="travel-mode__item travel-mode__item--checked">
                   <p class="travel-mode__tooltip">Пешком</p>
