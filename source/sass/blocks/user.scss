@@ -1,5 +1,4 @@
 .user {
-  /* Не забыть про разделители */
   position: relative;
 
   padding: 15px 20px 22px;
@@ -13,8 +12,16 @@
 
     .user__img {
       transform: scale(1.1);
+
+      transition: all 0.6s;
     }
   }
+}
+
+.user__img {
+  transform: scale(1);
+
+  transition: all 0.6s;
 }
 
 .user--index {
@@ -36,7 +43,53 @@
   margin-bottom: 10px;
 }
 
+.user__destination-list {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 17px;
+  margin-left: 5px;
+
+  &::before {
+    top: 10px;
+    left: -25px;
+    z-index: -1;
+
+    width: 270px;
+    height: 1px;
+
+    background: linear-gradient(90deg, $bg-silver 0, $bg-silver 14px, $white 14px, $white 132px, $bg-silver 132px, $bg-silver 100%);
+    background-color: $bg-silver;
+
+    @include pseudo;
+  }
+}
+
+.user__travel-mode {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 20px;
+  margin-left: 5px;
+
+  &::before {
+    top: 10px;
+    left: -25px;
+    z-index: -1;
+
+    width: 270px;
+    height: 1px;
+
+    background: linear-gradient(90deg, $bg-silver 0, $bg-silver 14px, $white 14px, $white 105px, $bg-silver 105px, $bg-silver 196px, $white 196px, $white 259px, $bg-silver 259px, $bg-silver 100%);
+    background-color: $bg-silver;
+
+    @include pseudo;
+  }
+}
+
 .user__name {
+  position: relative;
+
   width: 80px;
   margin-bottom: 45px;
   margin-left: 85px;
@@ -76,6 +129,7 @@
 .user__tags {
   width: 180px;
   margin-bottom: 17px;
+  margin-left: 5px;
 
   color: $grey;
 
@@ -180,7 +234,7 @@
 
 .user__level {
   position: absolute;
-  right: 20px;
+  right: 23px;
   bottom: 83px;
 
   width: 42px;
@@ -190,6 +244,7 @@
   text-align: center;
   color: $blue;
 
+  background-color: $white;
   border: solid 3px $orange;
   border-radius: 50%;
 
@@ -198,11 +253,32 @@
   &::before {
     top: -30px;
     left: 0;
+    z-index: 1;
 
     color: $grey;
 
     @include font(15px, 1.2, 400);
-    @include pseudo("левел:", absolute);
+    @include pseudo("левел:");
+  }
+}
+
+.user--index .user__level {
+  width: 57px;
+  height: 57px;
+  padding-top: 8px;
+
+  color: $white;
+
+  background-color: $black;
+
+  @include font(24px, 1);
+
+  &::before {
+    color: $white;
+  }
+
+  &::after {
+    background-color: $white;
   }
 }
 
@@ -215,14 +291,33 @@
   .user {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    padding: 35px 35px 25px;
   }
 
   .user__destination-list {
     order: 1;
+    margin: 0;
+
+    &::before {
+      left: -36px;
+      width: 688px;
+      background: linear-gradient(90deg, $bg-silver 0, $bg-silver 71px, $white 71px, $white 189px, $bg-silver 189px, $bg-silver 100%);
+    }
   }
 
   .user__travel-mode {
     position: absolute;
+    top: 37px;
+    right: 48px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .user:not(:last-child) {
+    margin-bottom: 40px;
   }
 
   .user--index:not(:last-child) {
@@ -231,6 +326,12 @@
 
   .user--index .user__name-link {
     @include font(24px);
+  }
+
+  .user__name {
+    width: auto;
+    margin-bottom: 20px;
+    margin-left: 225px;
   }
 
   .user__name-link {
@@ -253,12 +354,16 @@
   }
 
   .user__tags {
+    width: 225px;
+    margin-bottom: 40px;
+    margin-left: 225px;
+
     @include font(20px, 1.2);
   }
 
   .user__likes {
-    top: 65px;
-    left: 67px;
+    top: 185px;
+    left: 405px;
   }
 
   .user__likes-count {
@@ -282,12 +387,105 @@
     }
   }
 
+  .user__level {
+    right: 30px;
+    bottom: 120px;
+
+    width: 57px;
+    height: 57px;
+    padding-top: 8px;
+
+    @include font(24px, 1);
+
+    &::before {
+      top: 33px;
+      left: 14px;
+
+      color: rgba($grey, 0.4);
+
+      @include font(14px, 1);
+      @include pseudo("level");
+    }
+
+    &::after {
+      top: 31px;
+      left: 10px;
+
+      width: 31px;
+      height: 1px;
+
+      background-color: $black;
+      opacity: 0.1;
+
+      @include pseudo;
+    }
+  }
+
   .user__invite-btn.login-btn {
-    padding: 12px 33px;
+    margin-bottom: 25px;
+    margin-left: 219px;
+    padding: 10px 33px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .status {
+  .user {
+    padding: 48px 0;
+  }
+
+  .user:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .user__name {
+    margin-bottom: 20px;
+    margin-left: 344px;
+  }
+
+  .user__tags {
+    margin-left: 347px;
+
+    @include font(20px, 1.2);
+  }
+
+  .user__img-link {
+    top: 0;
+    left: 0;
+
+    width: 285px;
+    height: 285px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .user__img {
+    width: 285px;
+    height: 285px;
+  }
+
+  .user__invite-btn.login-btn {
+    margin-bottom: 0;
+    margin-left: 341px;
+  }
+
+  .user__travel-mode {
+    top: 205px;
+    right: 155px;
+  }
+
+  .user__destination-list {
+    position: absolute;
+    top: 40px;
+    right: 120px;
+  }
+
+  .user__level {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  .user__likes {
+    top: 196px;
+    left: 492px;
   }
 }

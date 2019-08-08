@@ -1,11 +1,8 @@
-.destination-icon {
-  margin-bottom: 17px;
-}
-
 .destination-icon__text {
   margin: 0;
-  color: $grey;
   margin-bottom: 17px;
+
+  color: $grey;
 
   @include font(15px, 1.2);
 }
@@ -24,7 +21,9 @@
 
 .destination-icon__tooltip {
   margin: 0;
+
   color: $blue;
+  text-transform: uppercase;
 
   @include font(15px, 1.2, 500);
 }
@@ -71,17 +70,24 @@
   .destination-icon {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 
-  .destination__item:not(:last-child) {
+  .destination-icon__item:not(:last-child) {
     margin-right: 30px;
+  }
+
+  .destination-icon__tooltip {
+    @include font(20px, 1.5);
   }
 
   .destination-icon__text {
     width: 100%;
+    margin-left: 46px;
   }
 
   .destination-icon__image {
+    align-self: center;
     width: 35px;
     height: 24px;
     margin-right: 11px;
@@ -90,10 +96,30 @@
 
 @media (min-width: $desktop-width) {
   .destination-icon {
+    flex-direction: column;
+
+    &:not(.destination-icon--has-tooltip) {
+      &::before {
+        top: 6px;
+        left: -43px;
+
+        width: 1px;
+        height: 187px;
+
+        background: linear-gradient(180deg, rgba(192, 192, 192, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(192, 192, 192, 1) 100%);
+        background-color: $black;
+        opacity: 0.1;
+
+        @include pseudo;
+      }
+    }
   }
 
+  .destination-icon__text {
+    display: none;
+  }
 
-  .destination__item:not(:last-child) {
+  .destination-icon__item:not(:last-child) {
     margin-right: 0;
   }
 

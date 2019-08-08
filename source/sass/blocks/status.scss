@@ -1,7 +1,7 @@
 .status {
   &::before {
-    top: 23px;
-    right: 22px;
+    top: 7px;
+    right: -63px;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -21,10 +21,19 @@
 @media (min-width: $tablet-width) {
   .status {
     &::before {
+      top: 13px;
+      right: -30px;
       width: 7px;
       height: 7px;
+    }
+  }
+}
 
-      @include pseudo;
+@media (min-width: $desktop-width) {
+  .status {
+    &::before {
+      top: 13px;
+      left: -20px;
     }
   }
 }
