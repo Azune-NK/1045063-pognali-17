@@ -1,24 +1,97 @@
-.map { /* Сделать маркер для статики */
-  width: 320px; /* 4.7  ширина подстраивается под ширину вьюпорта - на табле и пк это выглядит норм, но на мобильной - ужас */
+.map {
+  position: relative;
+  width: 320px;
+  /* 4.7  ширина подстраивается под ширину вьюпорта - на табле и пк это выглядит норм, но на мобильной - ужас, обязательно на моб делать 100vw? */
+  height: 330px;
   margin: 0 auto;
-  position: relative;
-  margin-bottom: -60px;
-}
+  margin-top: -30px;
+  margin-bottom: -30px;
+  overflow: hidden;
 
-.map__iframe {
-  position: relative;
+  &::before {
+    z-index: -1;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+
+    width: 41px;
+    height: 41px;
+
+    background: url("../img/svg/map-marker.svg") no-repeat;
+
+    @include pseudo;
+  }
 }
 
 .map__img {
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 
 @media (min-width: $tablet-width) {
   .map {
     width: 100%;
+    height: 570px;
+    margin-top: -55px;
+    margin-bottom: -55px;
+
+    &::before {
+      top: calc(50% - 28px);
+      left: calc(50% - 28px);
+
+      width: 57px;
+      height: 56px;
+    }
+  }
+
+  .map__wrapper {
+    position: relative;
+    z-index: -1;
+    top: -570px;
+    width: 768px;
+    height: 570px;
+    margin: 0 auto;
+  }
+
+  .map__img {
+    width: 768px;
+  }
+
+  .map__iframe {
+    height: 570px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    height: 505px;
+    margin-top: -55px;
+    margin-bottom: -55px;
+
+    &::before {
+      top: calc(50% - 27px);
+      left: calc(50% - 27px);
+
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  .map__wrapper {
+    top: -505px;
+    width: 1440px;
+    height: 505px;
+    margin: 0 auto;
+  }
+
+  .map__img {
+    width: 1440px;
+    top: -123px;
+  }
+
+  .map__iframe {
+    height: 505px;
   }
 }
