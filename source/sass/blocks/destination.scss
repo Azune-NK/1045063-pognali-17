@@ -1,4 +1,4 @@
-.destination {
+.destination { /* Вопрос - fade на мобильной версии перекрывает область клика по dest__name, исправить никак, кроме как перезадать псевдоэлемент не для ul, а для самой li? */
   position: relative;
   z-index: 5;
 
@@ -101,23 +101,29 @@
 
     @include pseudo;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba($black-blue, 0.6);
+  }
+
+  &:active {
+    color: rgba($black-blue, 0.3);
+  }
 }
 
 .destination__link[href="thailand.html"] .destination__name::before {
   background: url("../img/svg/flag-thailand.svg") no-repeat;
-
   background-size: contain;
 }
 
 .destination__link[href="france.html"] .destination__name::before {
   background: url("../img/svg/flag-france.svg") no-repeat;
-
   background-size: contain;
 }
 
 .destination__link[href="czech.html"] .destination__name::before {
   background: url("../img/svg/flag-czech.svg") no-repeat;
-
   background-size: contain;
 }
 
