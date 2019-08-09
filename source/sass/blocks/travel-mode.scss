@@ -27,6 +27,7 @@
 
   &:nth-of-type(1)::before {
     left: 8px;
+
     width: 14px;
     height: 16px;
 
@@ -78,54 +79,6 @@
   opacity: 1;
 }
 
-.user--index .travel-mode__item {
-  width: auto;
-  height: auto;
-
-  background-color: transparent;
-
-  &:nth-of-type(1) {
-    margin-right: 17px;
-
-    &::before {
-      left: unset;
-      position: relative;
-
-      width: 19px;
-      height: 21px;
-    }
-  }
-
-  &:nth-of-type(2) {
-    margin-right: 13px;
-
-    &::before {
-      position: relative;
-
-      width: 17px;
-      height: 21px;
-    }
-  }
-
-  &:nth-of-type(3) {
-    margin-right: 10px;
-
-    &::before {
-      position: relative;
-
-      width: 24px;
-      height: 21px;
-    }
-  }
-
-  &:nth-of-type(4)::before {
-    position: relative;
-
-    width: 20px;
-    height: 21px;
-  }
-}
-
 .travel-mode__tooltip {
   position: absolute;
   top: 40px;
@@ -173,8 +126,8 @@
       margin-bottom: 12px;
 
       &::before {
-        left: unset;
         position: relative;
+        left: unset;
 
         width: 19px;
         height: 21px;

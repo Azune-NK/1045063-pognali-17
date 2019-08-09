@@ -2,8 +2,10 @@
   &::before {
     top: 7px;
     right: -63px;
+
     width: 5px;
     height: 5px;
+
     border-radius: 50%;
 
     @include pseudo;
@@ -23,6 +25,7 @@
     &::before {
       top: 13px;
       right: -30px;
+
       width: 7px;
       height: 7px;
     }
@@ -32,7 +35,6 @@
 @media (min-width: $desktop-width) {
   .status {
     &::before {
-      top: 13px;
       left: -20px;
     }
   }

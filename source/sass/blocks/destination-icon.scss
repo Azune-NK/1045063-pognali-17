@@ -32,6 +32,12 @@
   .destination-icon__item {
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-right: 18px;
+
     &:hover,
     &:focus {
       .destination-icon__tooltip {
@@ -40,13 +46,21 @@
     }
   }
 
+  .destination-icon__image {
+    margin: 0;
+  }
+
   .destination-icon__tooltip {
     position: absolute;
+    top: 35px;
 
     display: none;
+    margin: 0;
     padding: 20px;
 
     color: $white;
+    text-transform: initial;
+    white-space: nowrap;
 
     background-color: $bg-black-blue;
     border-radius: 4px;
@@ -55,7 +69,7 @@
 
     &::before {
       top: -8px;
-      left: 50%;
+      left: calc(50% - 8px);
 
       border-right: 8px solid transparent;
       border-bottom: 8px solid $bg-black-blue;
@@ -79,6 +93,16 @@
 
   .destination-icon__tooltip {
     @include font(20px, 1.5);
+  }
+
+  .destination-icon--has-tooltip {
+    .destination-icon__item {
+      margin-right: 18px;
+    }
+
+    .destination-icon__tooltip {
+      @include font(20px, 1.2, 400);
+    }
   }
 
   .destination-icon__text {
@@ -125,5 +149,13 @@
 
   .destination-icon__image {
     margin-right: 20px;
+  }
+
+  .destination-icon--has-tooltip {
+    flex-direction: row;
+
+    .destination-icon__item {
+      margin-right: 18px;
+    }
   }
 }

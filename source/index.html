@@ -151,7 +151,12 @@
           <ul class="destination__list">
             <li class="destination__item">
               <a class="destination__img-link" href="thailand.html">
-                <img class="destination__img" src="img/content/thailand-mobile@1x.jpg" width="270" height="110" alt="Тайланд">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/thailand-desktop@1x.jpg, img/content/thailand-desktop@2x.jpg 2x">
+                  <img class="destination__img" src="img/content/thailand-mobile@1x.jpg"
+                    srcset="img/content/thailand-mobile@2x.jpg 2x" width="270" height="270" alt="Тайланд">
+                </picture>
               </a>
               <div class="destination__description-wrapper">
                 <a class="destination__link" href="thailand.html">
@@ -163,7 +168,12 @@
             </li>
             <li class="destination__item">
               <a class="destination__img-link" href="france.html">
-                <img class="destination__img" src="img/content/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/france-desktop@1x.jpg, img/content/france-desktop@2x.jpg 2x">
+                  <img class="destination__img" src="img/content/france-mobile@1x.jpg"
+                    srcset="img/content/france-mobile@2x.jpg 2x" width="270" height="270" alt="Тайланд">
+                </picture>
               </a>
               <div class="destination__description-wrapper">
                 <a class="destination__link" href="france.html">
@@ -175,10 +185,15 @@
             </li>
             <li class="destination__item">
               <a class="destination__img-link" href="chech.html">
-                <img class="destination__img" src="img/content/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/czech-desktop@1x.jpg, img/content/czech-desktop@2x.jpg 2x">
+                  <img class="destination__img" src="img/content/czech-mobile@1x.jpg"
+                    srcset="img/content/czech-mobile@2x.jpg 2x" width="270" height="270" alt="Тайланд">
+                </picture>
               </a>
               <div class="destination__description-wrapper">
-                <a class="destination__link" href="chech.html">
+                <a class="destination__link" href="czech.html">
                   <h3 class="destination__name">Чехия</h3>
                   <p class="destination__description">Закоулки старой Европы</p>
                 </a>
@@ -203,23 +218,24 @@
                 <a class="user__name-link" href="id104.html">Таня Фирсова</a>
               </h3>
               <a class="user__img-link" href="id104.html">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="img/content/users/firsova-desktop@1x.jpg, img/content/users/firsova-desktop@2x.jpg 2x">
+                <picture> <!-- Вопрос - У нас моб.картинка 70х70,она в 270х270 при растяжении становится мылом, получается для моб надо использовать либо табл с 190 и немного его увеличить или пк и немного уменьшить, разница в размере в 2раза, т.к это моб думаю лучше меньший вес - да? -->
                   <source media="(min-width: 768px)"
-                    srcset="img/content/users/firsova-tablet@1x.jpg, img/content/users/firsova-tablet@2x.jpg 2x">
-                  <img class="user__img" src="img/content/users/firsova-mobile@1x.jpg"
-                    srcset="img/content/users/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
+                    srcset="img/content/users/firsova-desktop@1x.jpg, img/content/users/firsova-desktop@2x.jpg 2x">
+                  <img class="user__img" src="img/content/users/firsova-tablet@1x.jpg"
+                    srcset="img/content/users/firsova-tablet@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
                 </picture>
               </a>
               <ul class="user__destination-list destination-icon destination-icon--has-tooltip">
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-sri-lanka.svg" width="35" height="24" alt="Шри-Ланка">
                   <p class="destination-icon__tooltip">Шри-Ланка</p>
                 </li>
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-thailand.svg" width="35" height="24" alt="Тайланд">
                   <p class="destination-icon__tooltip">Тайланд</p>
                 </li>
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-seychelles.svg" width="35" height="24" alt="Сейшелы">
                   <p class="destination-icon__tooltip">Сейшелы</p>
                 </li>
               </ul>
@@ -246,19 +262,19 @@
               </h3>
               <a class="user__img-link" href="id2579.html">
                 <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="img/content/users/demin-desktop@1x.jpg, img/content/users/demin-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/content/users/demin-tablet@1x.jpg, img/content/users/demin-tablet@2x.jpg 2x">
-                  <img class="user__img" src="img/content/users/demin-mobile@1x.jpg"
-                    srcset="img/content/users/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
+                    srcset="img/content/users/demin-desktop@1x.jpg, img/content/users/demin-desktop@2x.jpg 2x">
+                  <img class="user__img" src="img/content/users/demin-tablet@1x.jpg"
+                    srcset="img/content/users/demin-tablet@2x.jpg 2x" width="270" height="270" alt="Петя Демин">
                 </picture>
               </a>
               <ul class="user__destination-list destination-icon destination-icon--has-tooltip">
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-belgium.svg" width="35" height="24" alt="Бельгия">
                   <p class="destination-icon__tooltip">Бельгия</p>
                 </li>
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-czech.svg" width="35" height="24" alt="Чехия">
                   <p class="destination-icon__tooltip">Чехия</p>
                 </li>
               </ul>

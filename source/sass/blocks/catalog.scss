@@ -1,8 +1,9 @@
 .catalog__container {
   position: relative;
+  z-index: 0;
+
   width: 320px;
   margin: 0 auto;
-  z-index: 0;
   padding: 30px 25px 60px;
 
   background-color: $blue-light;
@@ -10,8 +11,8 @@
 
 @media (min-width: $tablet-width) {
   .catalog__container {
-    padding: 105px 0 110px;
     width: auto;
+    padding: 105px 0 110px;
   }
 
   .catalog__wrapper {

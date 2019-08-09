@@ -210,9 +210,14 @@
     }
 
     &::after {
-      top: 200px;
-      left: 190px;
+      top: 260px;
+      left: 195px;
     }
+  }
+
+  .companions--index .companions__list {
+    align-self: flex-start;
+    margin-top: 6px;
   }
 
   .companions__title {
@@ -222,7 +227,8 @@
   }
 
   .companions__lead {
-    padding-bottom: 165px;
+    margin-bottom: 0;
+    padding-bottom: 170px;
   }
 
   .companions__btn {

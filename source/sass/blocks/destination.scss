@@ -45,6 +45,7 @@
   &::before {
     bottom: -10px;
     left: 0;
+    z-index: 2;
 
     width: 320px;
     height: 81px;
@@ -52,7 +53,6 @@
     background: url("../img/background/fade-mobile.png") no-repeat;
 
     @include pseudo;
-    z-index: 2;
   }
 }
 
@@ -99,11 +99,26 @@
     width: 35px;
     height: 24px;
 
-    background: url("../img/svg/whereismyflagsvghtmlacademy.net") no-repeat;
-    background-color: black;
-
     @include pseudo;
   }
+}
+
+.destination__link[href="thailand.html"] .destination__name::before {
+  background: url("../img/svg/flag-thailand.svg") no-repeat;
+
+  background-size: contain;
+}
+
+.destination__link[href="france.html"] .destination__name::before {
+  background: url("../img/svg/flag-france.svg") no-repeat;
+
+  background-size: contain;
+}
+
+.destination__link[href="czech.html"] .destination__name::before {
+  background: url("../img/svg/flag-czech.svg") no-repeat;
+
+  background-size: contain;
 }
 
 .destination__description {
