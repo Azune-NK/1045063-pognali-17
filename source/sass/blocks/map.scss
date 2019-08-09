@@ -29,7 +29,6 @@
   z-index: -1;
 }
 
-
 @media (min-width: $tablet-width) {
   .map {
     width: 100%;
@@ -46,7 +45,8 @@
     }
   }
 
-  .map__wrapper {
+  .map__wrapper { /* Вопрос - вот на этом этапе заметил, что между Iframe и wrapper есть скрытый отступ, reset его не убирал почему-то - что это за отступ?(его из с
+    top: -570px; видно если через devtools подсветить блок) */
     position: relative;
     z-index: -1;
     top: -570px;
