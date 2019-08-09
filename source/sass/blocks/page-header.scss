@@ -21,6 +21,7 @@
 
 .page-header__logo {
   display: block;
+  width: 100px;
 }
 
 .page-header__logo-white,
@@ -62,6 +63,10 @@
     width: 768px;
     margin: 0 auto;
     padding: 0 40px;
+  }
+
+  .page-header__logo {
+    width: 166px;
   }
 
   .page-header__logo-white,
@@ -112,6 +117,7 @@
 
   .page-header__logo {
     align-self: center;
+    width: 200px;
     margin-right: 40px;
     flex-shrink: 0; /* Вопрос - не понимаю, почему без шринк0 логотип ужимался, у 2го флекс элемента ( пункты меню + блок авторизации) внутри стоит sbetween,  флекс решил что лучше ужать логотип, чем уменьшить размер этого sbetween */
   }

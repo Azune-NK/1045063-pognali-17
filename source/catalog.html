@@ -12,9 +12,22 @@
     <header class="page-header page-header--white page-header--nojs">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-white" src="img/content/logo-mobile-white@1x.png" width="100" height="19" alt="Погнали?">
-          <img class="page-header__logo-blue" src="img/content/logo-mobile-blue@1x.png" width="100" height="19"
-            alt="Погнали?">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/content/logo-desktop-white@1x.png, img/content/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/content/logo-tablet-white@1x.png, img/content/logo-tablet-white@2x.png 2x">
+            <img class="page-header__logo-white" src="img/content/logo-mobile-white@1x.png"
+              srcset="img/content/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали?">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/content/logo-desktop-blue@1x.png, img/content/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/content/logo-tablet-blue@1x.png, img/content/logo-tablet-blue@2x.png 2x">
+            <img class="page-header__logo-blue" src="img/content/logo-mobile-blue@1x.png"
+              srcset="img/content/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
+          </picture>
         </a>
         <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
           <div class="main-nav__wrapper">
