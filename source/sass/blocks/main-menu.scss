@@ -15,12 +15,12 @@
 
   @include font(30px, 1.2, 500);
 
-  &:hover,
-  &:focus {
+  &:hover[href],
+  &:focus[href] {
     color: $gold;
   }
 
-  &:active {
+  &:active[href] {
     color: rgba($gold, 0.3);
   }
 }
@@ -48,8 +48,8 @@
   /* Вопрос - зачем нужен translate3d? ведь три нуля это значение по умолчанию */
 }
 
-.main-menu__link:hover span,
-.main-menu__link:focus span {
+.main-menu__link:hover[href] span,
+.main-menu__link:focus[href] span {
   transform: translateY(-100%);
 }
 

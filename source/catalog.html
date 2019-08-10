@@ -9,7 +9,7 @@
   </head>
   <body>
 
-    <header class="page-header page-header--white page-header--nojs">
+    <header class="page-header page-header--white page-header--nojs page-header--notindex">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -42,7 +42,7 @@
                 <a class="main-menu__link" href="form.html"><span data-hover="Направления">Направления</span></a>
               </li>
               <li class="main-menu__item">
-                <a class="main-menu__link" href="catalog.html"><span data-hover="Попутчики">Попутчики</span></a>
+                <a class="main-menu__link main-menu__link--current"><span data-hover="Попутчики">Попутчики</span></a>
               </li>
             </ul>
             <a class="main-nav__login-btn login-btn" href="login.html">Авторизация</a>
@@ -102,12 +102,20 @@
 
       <h1 class="visually-hidden">Подбор попутчиков для путешествий</h1>
 
-      <!-- Дополнение к шапке -->
-      <!-- Фильтры по странам -->
+      <div class="main-header main-header--catalog">
+        <p class="main-header__current-page">Попутчики</p>
+        <a class="main-header__index-link" href="index.html">На главную</a>
+      </div>
+
+      <section class="country-filter"></section>
 
       <div class="catalog__container">
         <div class="catalog__wrapper">
-          <!-- Фильтры попутчиков -->
+
+          <section class="companions-filter">
+            <h2 class="companions-filter__lead">Подберите идеального попутчика</h2>
+            <form class="companions-filter__form" action="https://echo.htmlacademy.ru" method="get"></form>
+          </section>
 
           <section class="companions companions--catalog">
             <h2 class="visually-hidden">Попутчики для путешествий</h2>

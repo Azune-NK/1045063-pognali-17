@@ -50,6 +50,10 @@
     &--white {
       background-color: $white;
     }
+
+    &--notindex:not(.page-header--white) {
+      background-color: $black-blue;
+    }
   }
 }
 
@@ -116,10 +120,11 @@
   }
 
   .page-header__logo {
+    flex-shrink: 0;
     align-self: center;
     width: 200px;
     margin-right: 40px;
-    flex-shrink: 0; /* Вопрос - не понимаю, почему без шринк0 логотип ужимался, у 2го флекс элемента ( пункты меню + блок авторизации) внутри стоит sbetween,  флекс решил что лучше ужать логотип, чем уменьшить размер этого sbetween */
+    /* Вопрос - не понимаю, почему без шринк0 логотип ужимался, у 2го флекс элемента ( пункты меню + блок авторизации) внутри стоит sbetween,  флекс решил что лучше ужать логотип, чем уменьшить размер этого sbetween */
   }
 
   .page-header__logo-white,
