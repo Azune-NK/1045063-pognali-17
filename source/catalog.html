@@ -114,7 +114,129 @@
 
           <section class="companions-filter">
             <h2 class="companions-filter__lead">Подберите идеального попутчика</h2>
-            <form class="companions-filter__form" action="https://echo.htmlacademy.ru" method="get"></form>
+            <form class="companions-filter__form" action="https://echo.htmlacademy.ru" method="get">
+              <section>
+                <h3 class="visually-hidden">Хобби</h3>
+                <button class="companions-filter__legend-btn" type="button">Хобби</button>
+                <ul class="companions-filter__list">
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Спортзал
+                      </label>
+                    </li>
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Кальян
+                      </label>
+                    </li>
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Диван
+                      </label>
+                    </li>
+                  </ul>
+                </section>
+              <section>
+                <h3 class="visually-hidden">Музыка</h3>
+                <button class="companions-filter__legend-btn" type="button">Музыка</button>
+                <ul class="companions-filter__list">
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Тяжелый рок
+                      </label>
+                    </li>
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Русский рэп
+                      </label>
+                    </li>
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Евродэнс
+                      </label>
+                    </li>
+                  </ul>
+              </section>
+              <section>
+                <h3 class="visually-hidden">Еда</h3>
+                <button class="companions-filter__legend-btn" type="button">Еда</button>
+                <ul class="companions-filter__list">
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Мясоед
+                      </label>
+                    </li>
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Сиджит на ПП
+                      </label>
+                    </li>
+                    <li class="companions-filter__item">
+                      <label class="companions-filter__label">
+                        <input class="visually-hidden" type="checkbox" name="">
+                        <span class="companions-filter__checkbox"></span>Веган-сыроед
+                      </label>
+                    </li>
+                  </ul>
+              </section>
+              <section>
+                <h3 class="visually-hidden">Транспорт</h3>
+                <button class="companions-filter__legend-btn" type="button">Транспорт</button>
+                <ul class="companions-filter__list">
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="">
+                      <span class="companions-filter__checkbox"></span>
+                    </label>
+                  </li>
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="">
+                      <span class="companions-filter__checkbox"></span>
+                    </label>
+                  </li>
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="">
+                      <span class="companions-filter__checkbox"></span>
+                    </label>
+                  </li>
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="">
+                      <span class="companions-filter__checkbox"></span>
+                    </label>
+                  </li>
+                </ul>
+              </section>
+              <section>
+               <h3 class="visually-hidden">Левел</h3>
+               <button class="companions-filter__legend-btn" type="button">Левел</button>
+               <label class="range-min">
+                 <input type="text" name="min-level" value="30">
+               </label>
+               <label class="range-max">
+                 <input type="text" name="max-level" value="100">
+               </label>
+               <input class="visually-hidden" type="range" name="level-range" min="1" max="100" step="5" aria-label="Выбор уровня попутчика" tabindex="-1">
+               <div class="range-controls">
+                 <div class="scale">
+                   <div class="bar"></div>
+                 </div>
+                 <div class="range-toggle range-toggle-min" tabindex="0"></div>
+                 <div class="range-toggle range-toggle-max" tabindex="0"></div>
+               </div>
+              </section>
+              <button class="companions-filter__submit login-btn" type="submit">Показать</button>
+            </form>
           </section>
 
           <section class="companions companions--catalog">

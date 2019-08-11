@@ -1,5 +1,4 @@
 .destination {
-  /* Вопрос - fade на мобильной версии перекрывает область клика по dest__name, исправить никак, кроме как перезадать псевдоэлемент не для ul, а для самой li? */
   position: relative;
   z-index: 5;
 
@@ -52,6 +51,7 @@
     height: 81px;
 
     background: url("../img/background/fade-mobile.png") no-repeat;
+    pointer-events: none;
 
     @include pseudo;
   }

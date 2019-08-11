@@ -13,7 +13,6 @@
   }
 }
 
-/* Вопрос - тройная вложенность, если уберу main-nav--closed(так как по сути кнопка хоть бургер хоть крестик должна быть серой на белом меню) - у крестика нет box-shadow - либо иконку бургер делать через svg, а не рисовать или на !important задать main-nav--closed main-nav__toggle box-shadow:none? или не париться и ради исключения норм */
 .page-header--white .main-nav--closed .main-nav__toggle::before {
   background-color: $white-grey;
   box-shadow: 0 8px 0 0 $white-grey;
@@ -124,7 +123,6 @@
     align-self: center;
     width: 200px;
     margin-right: 40px;
-    /* Вопрос - не понимаю, почему без шринк0 логотип ужимался, у 2го флекс элемента ( пункты меню + блок авторизации) внутри стоит sbetween,  флекс решил что лучше ужать логотип, чем уменьшить размер этого sbetween */
   }
 
   .page-header__logo-white,

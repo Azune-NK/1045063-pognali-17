@@ -1,7 +1,6 @@
 .map {
   position: relative;
   width: 320px;
-  /* 4.7  ширина подстраивается под ширину вьюпорта - на табле и пк это выглядит норм, но на мобильной - ужас, обязательно на моб делать 100vw? */
   height: 330px;
   margin: 0 auto;
   margin-top: -30px;
@@ -20,6 +19,10 @@
 
     @include pseudo;
   }
+}
+
+.map__iframe {
+  display: block;
 }
 
 .map__img {
@@ -45,8 +48,7 @@
     }
   }
 
-  .map__wrapper { /* Вопрос - вот на этом этапе заметил, что между Iframe и wrapper есть скрытый отступ, reset его не убирал почему-то - что это за отступ?(его из с
-    top: -570px; видно если через devtools подсветить блок) */
+  .map__wrapper {
     position: relative;
     z-index: -1;
     top: -570px;

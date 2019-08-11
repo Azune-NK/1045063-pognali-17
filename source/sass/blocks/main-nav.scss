@@ -98,7 +98,6 @@
     height: 19px;
 
     background-color: transparent;
-    /* Вопрос - без этого появляется серый куб, почему? */
 
     &::before,
     &::after {
@@ -310,7 +309,6 @@
   .main-nav__contacts .contacts__tel,
   .main-nav__contacts .contacts__email {
     font-size: 0;
-    /* Вопрос - норм так? */
 
     &::before {
       margin: 0;

@@ -1,15 +1,206 @@
 .companions-filter {
+  margin-bottom: 28px;
+  padding: 25px 20px 22px;
+
   background-color: $gold;
   border-radius: 20px;
-  padding: 25px 20px 22px;
-  margin-bottom: 28px;
 }
 
+.companions-filter__lead {
+  width: 120px;
+  margin: 0;
+  margin-bottom: 35px;
+
+  color: $blue;
+
+  @include font(22.5px, 1, 700);
+}
+
+.companions-filter__list {
+  @include ul-reset;
+}
+
+.companions-filter__legend-btn {
+  position: relative;
+
+  padding: 0;
+
+  color: $blue;
+  text-transform: uppercase;
+
+  background-color: unset;
+  border: 0;
+  cursor: pointer;
+
+  @include font(16px, 1.13, 700);
+
+  &::before {
+    top: 0;
+    right: -5px;
+
+    border-top: 4px solid $grey-blue;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+
+    @include pseudo;
+  }
+
+  &::after {
+    top: 0;
+    right: -5px;
+
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid $grey-blue;
+    border-left: 4px solid transparent;
+
+    @include pseudo;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba($blue, 0.6);
+
+    &::before {
+      border-top: 4px solid rgba($grey-blue, 0.6);
+    }
+
+    &::after {
+      border-bottom: 4px solid rgba($grey-blue, 0.6);
+    }
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+
+
+    &::before {
+      border-top: 4px solid rgba($grey-blue, 0.3);
+    }
+
+    &::after {
+      border-bottom: 4px solid rgba($grey-blue, 0.3);
+    }
+  }
+}
+
+.companions-filter__submit {
+  background-color: $white;
+  border: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    background-color: $mustard;
+  }
+}
 
 @media (min-width: $tablet-width) {
+}
 
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .companions-filter__legend-btn {
+    &::before {
+      right: -5px;
+
+      @include pseudo(":");
+    }
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .companions-filter__legend-btn {
+    @include font(20px, 1.5);
 
+    &::before {
+      top: 0;
+      right: -5px;
+
+      display: none;
+
+      border-top: 5px solid $grey-blue;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+    }
+
+    &::after {
+      top: 0;
+      right: -5px;
+
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid $grey-blue;
+      border-left: 5px solid transparent;
+    }
+  }
 }
+
+/* .travel-mode__item {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+
+  background-color: $blue-light;
+  border-radius: 50%;
+
+  &:nth-of-type(1)::before {
+    left: 8px;
+
+    width: 14px;
+    height: 16px;
+
+    background: url("../img/svg/plane.svg") no-repeat;
+    opacity: 0.15;
+
+    @include pseudo;
+  }
+
+  &:nth-of-type(2)::before {
+    width: 13px;
+    height: 16px;
+
+    background: url("../img/svg/bus.svg") no-repeat;
+    opacity: 0.15;
+
+    @include pseudo;
+  }
+
+  &:nth-of-type(3)::before {
+    width: 19px;
+    height: 17px;
+
+    background: url("../img/svg/bike.svg") no-repeat;
+    opacity: 0.15;
+
+    @include pseudo;
+  }
+
+  &:nth-of-type(4)::before {
+    width: 15px;
+    height: 17px;
+
+    background: url("../img/svg/run.svg") no-repeat;
+    opacity: 0.15;
+
+    @include pseudo;
+  }
+
+  &:hover,
+  &:focus {
+    .travel-mode__tooltip {
+      display: block;
+    }
+  }
+}
+ */
