@@ -1,15 +1,161 @@
-.destination-icon {
-  font: 1em sans-serif;
+.destination-icon__text {
+  margin: 0;
+  margin-bottom: 17px;
+
+  color: $grey;
+
+  @include font(15px, 1.2);
+}
+
+.destination-icon__item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.destination-icon__image {
+  margin-right: 15px;
+}
+
+.destination-icon__tooltip {
+  margin: 0;
+
+  color: $blue;
+  text-transform: uppercase;
+
+  @include font(15px, 1.2, 500);
+}
+
+.destination-icon--has-tooltip {
+  .destination-icon__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-right: 18px;
+
+    &:hover,
+    &:focus {
+      .destination-icon__tooltip {
+        display: block;
+      }
+    }
+  }
+
+  .destination-icon__image {
+    margin: 0;
+  }
+
+  .destination-icon__tooltip {
+    position: absolute;
+    top: 35px;
+
+    display: none;
+    margin: 0;
+    padding: 20px;
+
+    color: $white;
+    text-transform: initial;
+    white-space: nowrap;
+
+    background-color: $bg-black-blue;
+    border-radius: 4px;
+
+    @include font(20px, 1.2, 400);
+
+    &::before {
+      top: -8px;
+      left: calc(50% - 8px);
+
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $bg-black-blue;
+      border-left: 8px solid transparent;
+
+      @include pseudo;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .destination-icon {
-    font: 1em sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .destination-icon__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .destination-icon__tooltip {
+    @include font(20px, 1.5);
+  }
+
+  .destination-icon--has-tooltip {
+    .destination-icon__item {
+      margin-right: 18px;
+    }
+
+    .destination-icon__tooltip {
+      @include font(20px, 1.2, 400);
+    }
+  }
+
+  .destination-icon__text {
+    width: 100%;
+    margin-left: 46px;
+  }
+
+  .destination-icon__image {
+    align-self: center;
+    width: 35px;
+    height: 24px;
+    margin-right: 11px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .destination-icon {
-    font: 1em sans-serif;
+    flex-direction: column;
+
+    &:not(.destination-icon--has-tooltip) {
+      &::before {
+        top: 6px;
+        left: -43px;
+
+        width: 1px;
+        height: 187px;
+
+        background: linear-gradient(180deg, rgba(192, 192, 192, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(192, 192, 192, 1) 100%);
+        background-color: $black;
+        opacity: 0.1;
+
+        @include pseudo;
+      }
+    }
+  }
+
+  .destination-icon__text {
+    display: none;
+  }
+
+  .destination-icon__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .destination-icon__image {
+    margin-right: 20px;
+  }
+
+  .destination-icon--has-tooltip {
+    flex-direction: row;
+
+    .destination-icon__item {
+      margin-right: 18px;
+    }
   }
 }

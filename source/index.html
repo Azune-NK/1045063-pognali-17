@@ -11,10 +11,23 @@
 
     <header class="page-header page-header--white page-header--nojs">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <img class="page-header__logo-white" src="img/content/logo-mobile-white@1x.png" width="100" height="19" alt="Погнали?">
-          <img class="page-header__logo-blue" src="img/content/logo-mobile-blue@1x.png" width="100" height="19"
-            alt="Погнали?">
+        <a class="page-header__logo" href="#about-app">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/content/logo-desktop-white@1x.png, img/content/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/content/logo-tablet-white@1x.png, img/content/logo-tablet-white@2x.png 2x">
+            <img class="page-header__logo-white" src="img/content/logo-mobile-white@1x.png"
+              srcset="img/content/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали?">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/content/logo-desktop-blue@1x.png, img/content/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/content/logo-tablet-blue@1x.png, img/content/logo-tablet-blue@2x.png 2x">
+            <img class="page-header__logo-blue" src="img/content/logo-mobile-blue@1x.png"
+              srcset="img/content/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
+          </picture>
         </a>
         <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
           <div class="main-nav__wrapper">
@@ -138,7 +151,12 @@
           <ul class="destination__list">
             <li class="destination__item">
               <a class="destination__img-link" href="thailand.html">
-                <img class="destination__img" src="img/content/thailand-mobile@1x.jpg" width="270" height="110" alt="Тайланд">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/thailand-desktop@1x.jpg, img/content/thailand-desktop@2x.jpg 2x">
+                  <img class="destination__img" src="img/content/thailand-mobile@1x.jpg"
+                    srcset="img/content/thailand-mobile@2x.jpg 2x" width="270" height="270" alt="Тайланд">
+                </picture>
               </a>
               <div class="destination__description-wrapper">
                 <a class="destination__link" href="thailand.html">
@@ -150,7 +168,12 @@
             </li>
             <li class="destination__item">
               <a class="destination__img-link" href="france.html">
-                <img class="destination__img" src="img/content/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/france-desktop@1x.jpg, img/content/france-desktop@2x.jpg 2x">
+                  <img class="destination__img" src="img/content/france-mobile@1x.jpg"
+                    srcset="img/content/france-mobile@2x.jpg 2x" width="270" height="270" alt="Тайланд">
+                </picture>
               </a>
               <div class="destination__description-wrapper">
                 <a class="destination__link" href="france.html">
@@ -162,10 +185,15 @@
             </li>
             <li class="destination__item">
               <a class="destination__img-link" href="chech.html">
-                <img class="destination__img" src="img/content/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/czech-desktop@1x.jpg, img/content/czech-desktop@2x.jpg 2x">
+                  <img class="destination__img" src="img/content/czech-mobile@1x.jpg"
+                    srcset="img/content/czech-mobile@2x.jpg 2x" width="270" height="270" alt="Тайланд">
+                </picture>
               </a>
               <div class="destination__description-wrapper">
-                <a class="destination__link" href="chech.html">
+                <a class="destination__link" href="czech.html">
                   <h3 class="destination__name">Чехия</h3>
                   <p class="destination__description">Закоулки старой Европы</p>
                 </a>
@@ -185,21 +213,29 @@
             <b class="companions__lead">Теперь можно легко<br> найти единомышленников!</b>
           </div>
           <ul class="companions__list">
-            <li class="companions__item user user--index status status--afk">
-              <h3 class="user__name">
+            <li class="companions__item user user--index">
+              <h3 class="user__name status status--afk">
                 <a class="user__name-link" href="id104.html">Таня Фирсова</a>
               </h3>
               <a class="user__img-link" href="id104.html">
-                <img class="user__img" src="http://placehold.it/150x100" width="100" height="50" alt="Таня Фирсова">
+                <picture> <!-- Вопрос - У нас моб.картинка 70х70,она в 270х270 при растяжении становится мылом, получается для моб надо использовать либо табл с 190 и немного его увеличить или пк и немного уменьшить, разница в размере в 2раза, т.к это моб думаю лучше меньший вес - да? -->
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/users/firsova-desktop@1x.jpg, img/content/users/firsova-desktop@2x.jpg 2x">
+                  <img class="user__img" src="img/content/users/firsova-tablet@1x.jpg"
+                    srcset="img/content/users/firsova-tablet@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
+                </picture>
               </a>
               <ul class="user__destination-list destination-icon destination-icon--has-tooltip">
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-sri-lanka.svg" width="35" height="24" alt="Шри-Ланка">
                   <p class="destination-icon__tooltip">Шри-Ланка</p>
                 </li>
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-thailand.svg" width="35" height="24" alt="Тайланд">
                   <p class="destination-icon__tooltip">Тайланд</p>
                 </li>
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-seychelles.svg" width="35" height="24" alt="Сейшелы">
                   <p class="destination-icon__tooltip">Сейшелы</p>
                 </li>
               </ul>
@@ -220,18 +256,25 @@
               </ul>
               <p class="user__level">99</p>
             </li>
-            <li class="companions__item user user--index status status--online">
-              <h3 class="user__name">
+            <li class="companions__item user user--index">
+              <h3 class="user__name status status--online">
                 <a class="user__name-link" href="id2579.html">Петя Демин</a>
               </h3>
               <a class="user__img-link" href="id2579.html">
-                <img class="user__img" src="http://placehold.it/150x100" width="100" height="50" alt="Петя Демин">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/users/demin-desktop@1x.jpg, img/content/users/demin-desktop@2x.jpg 2x">
+                  <img class="user__img" src="img/content/users/demin-tablet@1x.jpg"
+                    srcset="img/content/users/demin-tablet@2x.jpg 2x" width="270" height="270" alt="Петя Демин">
+                </picture>
               </a>
               <ul class="user__destination-list destination-icon destination-icon--has-tooltip">
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-belgium.svg" width="35" height="24" alt="Бельгия">
                   <p class="destination-icon__tooltip">Бельгия</p>
                 </li>
                 <li class="destination-icon__item">
+                  <img class="destination-icon__image" src="img/svg/flag-czech.svg" width="35" height="24" alt="Чехия">
                   <p class="destination-icon__tooltip">Чехия</p>
                 </li>
               </ul>
@@ -244,7 +287,7 @@
                   <p class="travel-mode__tooltip">Автотранспорт</p>
                 </li>
                 <li class="travel-mode__item">
-                  <p class="travel-mode__tooltip">На велосипеде</p>
+                  <p class="travel-mode__tooltip">Велосипед</p>
                 </li>
                 <li class="travel-mode__item travel-mode__item--checked">
                   <p class="travel-mode__tooltip">Пешком</p>
@@ -326,15 +369,29 @@
 
       <section class="map">
         <h2 class="visually-hidden">Мы на карте</h2>
-        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Affa429de5daa94bb2fe69a271a13e25a15345a2d9cc3948e854d73632bbf1e42&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
-        <img class="map__img" src="img/content/map-with-marker-mobile.jpg" width="320" height="546" alt="ул. Большая Конюшенная, 19/8">
+        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Affa429de5daa94bb2fe69a271a13e25a15345a2d9cc3948e854d73632bbf1e42&amp;source=constructor" width="100%" height="330" frameborder="0"></iframe>
+        <div class="map__wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/content/map-desktop@1x.jpg, img/content/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/content/map-tablet@1x.jpg, img/content/map-tablet@2x.jpg 2x">
+            <img class="map__img" src="img/content/map-mobile@1x.jpg" srcset="img/content/map-mobile@2x.jpg 2x"
+              width="320" height="546" alt="ул. Большая Конюшенная, 19/8">
+          </picture>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="#registration">
-          <img class="page-footer__logo-img" src="img/content/logo-mobile-blue@1x.png" width="96" height="15" alt="Погнали?">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/content/logo-desktop-blue@1x.png, img/content/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/content/logo-tablet-blue@1x.png, img/content/logo-tablet-blue@2x.png 2x">
+            <img class="page-footer__logo-img" src="img/content/logo-mobile-blue@1x.png"
+              srcset="img/content/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
+          </picture>
         </a>
         <section class="page-footer__social social">
           <h2 class="visually-hidden">«Погнали?» в социальных сетях</h2>

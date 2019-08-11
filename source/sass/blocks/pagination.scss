@@ -1,15 +1,177 @@
 .pagination {
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+.pagination__load-more {
+  position: relative;
+
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-left: 33px;
+
+  color: $blue;
+  text-transform: uppercase;
+
+  @include font(17px, 1.76, 700);
+
+  &::before {
+    top: 4px;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background: url("../img/svg/show-more-plus.svg") no-repeat;
+
+    @include pseudo;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.pagination__wrapper {
+  position: relative;
+
+  padding: 15px 63px;
+
+  background-color: $white;
+  border-radius: 20px;
+
+  &::before {
+    top: 0;
+    left: 135px;
+
+    width: 1px;
+    height: 50px;
+
+    background-color: $blue-light;
+
+    @include pseudo;
+  }
+}
+
+.pagination__list {
   display: none;
+}
+
+.pagination__list,
+.pagination__arrows {
+  @include ul-reset;
+}
+
+.pagination__arrows {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__left .pagination__btn {
+  display: block;
+
+  border-top: 10px solid transparent;
+  border-right: 10px solid $blue;
+  border-bottom: 10px solid transparent;
+}
+
+.pagination__right .pagination__btn {
+  display: block;
+
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid $blue;
+}
+
+.pagination__btn[href] {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .pagination {
-    display: none;
+    margin-top: 45px;
+  }
+
+  .pagination__load-more {
+    margin-bottom: 50px;
+    padding-left: 52px;
+
+    @include font(20px, 1.5);
+
+    &::before {
+      top: 0;
+
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  .pagination__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 44px 25px 28px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .pagination__arrows {
+    width: 53px;
+  }
+
+  .pagination__list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .pagination__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    color: $black-blue;
+
+    border-radius: 50px;
+
+    @include font(20px, 1.5, 700);
+
+    &:hover[href],
+    &:focus[href] {
+      color: rgba($black-blue, 0.6);
+    }
+
+    &:active[href],
+    &--current {
+      color: $black-blue;
+
+      background-color: $gold;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .pagination {
-    display: none;
+    margin-top: 65px;
+  }
+
+  .pagination__load-more {
+    margin-bottom: 70px;
   }
 }

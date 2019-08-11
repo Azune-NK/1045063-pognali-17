@@ -1,4 +1,5 @@
 .destination {
+  /* Вопрос - fade на мобильной версии перекрывает область клика по dest__name, исправить никак, кроме как перезадать псевдоэлемент не для ul, а для самой li? */
   position: relative;
   z-index: 5;
 
@@ -45,6 +46,7 @@
   &::before {
     bottom: -10px;
     left: 0;
+    z-index: 2;
 
     width: 320px;
     height: 81px;
@@ -52,8 +54,26 @@
     background: url("../img/background/fade-mobile.png") no-repeat;
 
     @include pseudo;
-    z-index: 2;
   }
+}
+
+.destination__item {
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+
+    .destination__img {
+      transform: scale(1.1);
+
+      transition: all 0.6s;
+    }
+  }
+}
+
+.destination__img {
+  transform: scale(1);
+
+  transition: all 0.6s;
 }
 
 .destination__item:not(:last-child) {
@@ -99,11 +119,32 @@
     width: 35px;
     height: 24px;
 
-    background: url("../img/svg/whereismyflagsvghtmlacademy.net") no-repeat;
-    background-color: black;
-
     @include pseudo;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba($black-blue, 0.6);
+  }
+
+  &:active {
+    color: rgba($black-blue, 0.3);
+  }
+}
+
+.destination__link[href="thailand.html"] .destination__name::before {
+  background: url("../img/svg/flag-thailand.svg") no-repeat;
+  background-size: contain;
+}
+
+.destination__link[href="france.html"] .destination__name::before {
+  background: url("../img/svg/flag-france.svg") no-repeat;
+  background-size: contain;
+}
+
+.destination__link[href="czech.html"] .destination__name::before {
+  background: url("../img/svg/flag-czech.svg") no-repeat;
+  background-size: contain;
 }
 
 .destination__description {
@@ -225,13 +266,6 @@
     height: 140px;
 
     border-radius: 0 20px 20px 0;
-  }
-
-  .destination__img {
-    /* Временно - уберу как академия расскажет про адаптивные img */
-    width: 186px;
-    /* Вопрос - вот если не задавать тут размер и далть bg-size cover - почему не сработает? */
-    height: 140px;
   }
 
   .destination__name {

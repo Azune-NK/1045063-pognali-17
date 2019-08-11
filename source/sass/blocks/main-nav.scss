@@ -14,7 +14,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -95px;
+  top: -92px;
   right: 0;
 
   border: 0;
@@ -51,7 +51,7 @@
   .main-nav--opened.main-nav--nojs {
     position: relative;
     top: unset;
-    bottom: -31px;
+    bottom: -27px;
     left: -25px;
   }
 
@@ -71,7 +71,7 @@
 
   .main-nav--closed .main-nav__toggle {
     top: unset;
-    bottom: -83%;
+    bottom: -74.3%;
 
     width: 25px;
     height: 11px;
@@ -103,7 +103,7 @@
     &::before,
     &::after {
       top: 9px;
-      left: -6px;
+      left: -4px;
 
       width: 25px;
       height: 2px;
@@ -139,6 +139,10 @@
     padding: 0 100px;
   }
 
+  .main-nav--opened {
+    top: 132px;
+  }
+
   .main-nav__list {
     align-self: flex-start;
   }
@@ -154,7 +158,7 @@
   }
 
   .main-nav--opened.main-nav--nojs .main-nav__login-btn {
-    top: -134px;
+    top: -151px;
     right: 40px;
   }
 
@@ -170,22 +174,26 @@
 
 @media (min-width: $tablet-width) and (max-width: 1439px) {
   .main-nav--opened.main-nav--nojs {
-    bottom: -42px;
+    bottom: -45px;
     left: -40px;
   }
 
+  .main-nav__toggle {
+    top: -135px;
+  }
+
   .main-nav--closed .main-nav__toggle {
-    bottom: -51%;
+    bottom: -100.5%;
   }
 
   .main-nav__login-btn {
     top: unset;
     right: 40px;
-    bottom: -54%;
+    bottom: -103.5%;
   }
 
   .main-nav--opened .main-nav__login-btn {
-    top: -110px;
+    top: -151px;
     right: 40px;
     bottom: unset;
   }

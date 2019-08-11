@@ -4,7 +4,7 @@
 
   width: 320px;
   margin: 0 auto;
-  padding: 27px 25px 31px;
+  padding: 27px 25px;
 
   background-color: $black-blue;
 
@@ -22,6 +22,12 @@
 .page-header__logo {
   display: block;
   width: 100px;
+}
+
+.page-header__logo-white,
+.page-header__logo-blue {
+  display: block;
+  width: 100px;
   height: 19px;
 }
 
@@ -34,7 +40,7 @@
 }
 
 .page-header--white .page-header__logo-blue {
-  display: initial;
+  display: block;
 }
 
 @media (min-width: $tablet-width) and (max-width: 1439px) {
@@ -44,19 +50,33 @@
     &--white {
       background-color: $white;
     }
+
+    &--notindex:not(.page-header--white) {
+      background-color: $black-blue;
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
     width: auto;
-    padding: 40px 0 42px;
+    padding: 45px 0;
   }
 
   .page-header__wrapper {
     width: 768px;
     margin: 0 auto;
     padding: 0 40px;
+  }
+
+  .page-header__logo {
+    width: 166px;
+  }
+
+  .page-header__logo-white,
+  .page-header__logo-blue {
+    width: 166px;
+    height: 42px;
   }
 }
 
@@ -100,8 +120,17 @@
   }
 
   .page-header__logo {
+    flex-shrink: 0;
     align-self: center;
+    width: 200px;
     margin-right: 40px;
+    /* Вопрос - не понимаю, почему без шринк0 логотип ужимался, у 2го флекс элемента ( пункты меню + блок авторизации) внутри стоит sbetween,  флекс решил что лучше ужать логотип, чем уменьшить размер этого sbetween */
+  }
+
+  .page-header__logo-white,
+  .page-header__logo-blue {
+    width: 200px;
+    height: 52px;
   }
 
   .page-header__nav {

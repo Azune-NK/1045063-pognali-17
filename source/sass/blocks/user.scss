@@ -1,8 +1,689 @@
 .user {
+  position: relative;
+
+  padding: 15px 20px 22px;
+
   background-color: $white;
-  border-radius: 20px; /* Проверить в ФШ в разных версиях */
+  border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+
+    .user__img {
+      transform: scale(1.1);
+
+      transition: all 0.6s;
+    }
+  }
+}
+
+.user__img {
+  transform: scale(1);
+
+  transition: all 0.6s;
+}
+
+.user__destination-list,
+.user__travel-mode {
+  @include ul-reset;
+}
+
+.user__name,
+.user__tags,
+.user__level {
+  margin: 0;
+}
+
+.user:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.user__destination-list {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 17px;
+  margin-left: 5px;
+
+  &::before {
+    top: 10px;
+    left: -25px;
+    z-index: -1;
+
+    width: 270px;
+    height: 1px;
+
+    background: linear-gradient(90deg, $bg-silver 0, $bg-silver 14px, $white 14px, $white 132px, $bg-silver 132px, $bg-silver 100%);
+    background-color: $bg-silver;
+
+    @include pseudo;
+  }
+}
+
+.user__travel-mode {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 20px;
+  margin-left: 5px;
+
+  &::before {
+    top: 10px;
+    left: -25px;
+    z-index: -1;
+
+    width: 270px;
+    height: 1px;
+
+    background: linear-gradient(90deg, $bg-silver 0, $bg-silver 14px, $white 14px, $white 105px, $bg-silver 105px, $bg-silver 196px, $white 196px, $white 259px, $bg-silver 259px, $bg-silver 100%);
+    background-color: $bg-silver;
+
+    @include pseudo;
+  }
+}
+
+.user__name {
+  position: relative;
+
+  width: 80px;
+  margin-bottom: 45px;
+  margin-left: 85px;
 }
 
 .user__name-link {
   color: $blue;
+
+  @include font(20px, 1, 700);
+
+  &:hover,
+  &:focus {
+    color: rgba($blue, 0.6);
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+  }
+}
+
+.user__img-link {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+
+  border-radius: 50%;
+}
+
+.user__tags {
+  width: 180px;
+  margin-bottom: 17px;
+  margin-left: 5px;
+
+  color: $grey;
+
+  @include font(15px, 1.2);
+}
+
+.user__likes {
+  position: absolute;
+  top: 65px;
+  left: 67px;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  &--checked {
+    .user__likes-count {
+      &::before {
+        background-color: $light-pink;
+      }
+
+      &::after {
+        background: url("../img/svg/heart-active.svg");
+        opacity: 1;
+      }
+
+      &:hover,
+      &:focus {
+        &::after {
+          opacity: 1;
+        }
+
+        &::before {
+          background-color: $pink;
+        }
+      }
+
+      &:active {
+        &::after {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
+
+.user__likes-count {
+  padding-left: 38px;
+
+  @include font(14px, 1.5, 700);
+
+  &::before {
+    top: -6px;
+    left: 0;
+
+    width: 31px;
+    height: 31px;
+
+    background-color: $bg-silver;
+    border-radius: 50%;
+
+    @include pseudo;
+  }
+
+  &::after {
+    top: 4px;
+    left: 9px;
+
+    width: 13px;
+    height: 11px;
+
+    background: url("../img/svg/heart.svg");
+    opacity: 0.3;
+
+    @include pseudo;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: $grey-light;
+    }
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.1;
+    }
+  }
+}
+
+.user__level {
+  position: absolute;
+  right: 23px;
+  bottom: 83px;
+
+  width: 42px;
+  height: 42px;
+  padding-top: 10px;
+
+  text-align: center;
+  color: $blue;
+
+  background-color: $white;
+  border: solid 3px $orange;
+  border-radius: 50%;
+
+  @include font(24px, 0.75, 700);
+
+  &::before {
+    top: -30px;
+    left: 0;
+    z-index: 1;
+
+    color: $grey;
+
+    @include font(15px, 1.2, 400);
+    @include pseudo("левел:");
+  }
+}
+
+.user__invite-btn.login-btn {
+  padding: 7px 79px;
+}
+
+@media (min-width: $tablet-width) {
+  .user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px 35px 25px;
+  }
+
+  .user__destination-list {
+    order: 1;
+    margin: 0;
+
+    &::before {
+      left: -36px;
+
+      width: 688px;
+
+      background: linear-gradient(90deg, $bg-silver 0, $bg-silver 71px, $white 71px, $white 189px, $bg-silver 189px, $bg-silver 100%);
+    }
+  }
+
+  .user__travel-mode {
+    position: absolute;
+    top: 37px;
+    right: 48px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .user:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .user--index:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .user--index .user__name-link {
+    @include font(24px);
+  }
+
+  .user__name {
+    width: auto;
+    margin-bottom: 20px;
+    margin-left: 225px;
+  }
+
+  .user__name-link {
+    @include font(30px);
+  }
+
+  .user__img-link {
+    top: 35px;
+    left: 35px;
+
+    width: 190px;
+    height: 190px;
+
+    border-radius: 20px;
+  }
+
+  .user__img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .user__tags {
+    width: 225px;
+    margin-bottom: 40px;
+    margin-left: 225px;
+
+    @include font(20px, 1.2);
+  }
+
+  .user__likes {
+    top: 185px;
+    left: 405px;
+  }
+
+  .user__likes-count {
+    padding-left: 59px;
+
+    @include font(20px, 1.5);
+
+    &::before {
+      top: -11px;
+
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      top: 6px;
+      left: 15px;
+
+      width: 20px;
+      height: 17px;
+    }
+  }
+
+  .user__level {
+    right: 30px;
+    bottom: 120px;
+
+    width: 57px;
+    height: 57px;
+    padding-top: 7px;
+
+    @include font(24px, 1);
+
+    &::before {
+      top: 32px;
+      left: 13px;
+
+      color: rgba($grey, 0.4);
+
+      @include font(14px, 1);
+      @include pseudo("level");
+    }
+
+    &::after {
+      top: 30px;
+      left: 10px;
+
+      width: 31px;
+      height: 1px;
+
+      background-color: $black;
+      opacity: 0.1;
+
+      @include pseudo;
+    }
+  }
+
+  .user__invite-btn.login-btn {
+    margin-bottom: 25px;
+    margin-left: 219px;
+    padding: 10px 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user {
+    padding: 48px 0;
+  }
+
+  .user:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .user__name {
+    margin-bottom: 20px;
+    margin-left: 344px;
+  }
+
+  .user__tags {
+    margin-left: 347px;
+
+    @include font(20px, 1.2);
+  }
+
+  .user__img-link {
+    top: 0;
+    left: 0;
+
+    width: 285px;
+    height: 285px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .user__img {
+    width: 285px;
+    height: 285px;
+  }
+
+  .user__invite-btn.login-btn {
+    margin-bottom: 0;
+    margin-left: 341px;
+  }
+
+  .user__travel-mode {
+    top: 205px;
+    right: 155px;
+  }
+
+  .user__destination-list {
+    position: absolute;
+    top: 40px;
+    right: 120px;
+  }
+
+  .user__level {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  .user__likes {
+    top: 196px;
+    left: 492px;
+  }
+}
+
+@media (min-width: 0) {
+  /* И вот на этом этапе ( когда нужно из карточек каталога сделать карточки для главное - я не знаю, нравится мне модульность или нет и нормально ли вот так ради каскадности писать media и свойства для модификатора */
+  .user--index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+
+    .user__img-link {
+      position: initial;
+
+      order: -1;
+      width: 270px;
+      height: 270px;
+
+      border-radius: 20px 20px 0 0;
+    }
+
+    .user__name {
+      width: auto;
+      margin-top: 27px;
+      margin-bottom: 15px;
+      margin-left: 0;
+    }
+
+    .user__name-link {
+      @include font(21px);
+    }
+
+    .status {
+      &::before {
+        top: 8px;
+        left: -15px;
+      }
+    }
+
+    .user__travel-mode,
+    .user__destination-list {
+      &::before {
+        display: none;
+      }
+    }
+
+    .user__destination-list {
+      position: absolute;
+      top: 258px;
+
+      display: flex;
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    .user__travel-mode {
+      margin-bottom: 22px;
+      margin-left: 0;
+    }
+
+    .travel-mode__item {
+      width: auto;
+      height: auto;
+
+      background-color: transparent;
+
+      &:nth-of-type(1) {
+        margin-right: 17px;
+
+        &::before {
+          position: relative;
+          left: unset;
+
+          width: 19px;
+          height: 21px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        margin-right: 13px;
+
+        &::before {
+          position: relative;
+
+          width: 17px;
+          height: 21px;
+        }
+      }
+
+      &:nth-of-type(3) {
+        margin-right: 10px;
+
+        &::before {
+          position: relative;
+
+          width: 24px;
+          height: 21px;
+        }
+      }
+
+      &:nth-of-type(4)::before {
+        position: relative;
+
+        width: 20px;
+        height: 21px;
+      }
+    }
+
+    .user__tags {
+      margin-left: 0;
+
+      text-align: center;
+
+      @include font(16px, 1.13);
+    }
+
+    .user__level {
+      top: 16px;
+      left: 17px;
+
+      width: 57px;
+      height: 57px;
+      padding-top: 7px;
+
+      color: $white;
+
+      background-color: $black;
+
+      @include font(24px, 1);
+
+      &::before {
+        top: 32px;
+        left: 13px;
+
+        color: $white;
+
+        @include font(14px, 1);
+        @include pseudo("level");
+      }
+
+      &::after {
+        top: 30px;
+        left: 10px;
+
+        width: 31px;
+        height: 1px;
+
+        background-color: $white;
+        opacity: 0.3;
+
+        @include pseudo;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user--index {
+    .user__img-link {
+      width: 285px;
+      height: 285px;
+
+      border-radius: 20px 20px 0 0;
+    }
+
+    .user__img {
+      width: 285px;
+      height: 285px;
+    }
+
+    .user__travel-mode {
+      position: initial;
+
+      flex-direction: row;
+      margin-bottom: 29px;
+    }
+
+    .travel-mode__item {
+      margin-bottom: 0;
+    }
+
+    .user__name {
+      margin-top: 31px;
+      margin-bottom: 22px;
+    }
+
+    .user__name-link {
+      @include font(24px);
+    }
+
+    .status {
+      &::before {
+        top: 9px;
+        left: -20px;
+      }
+    }
+
+    .user__destination-list {
+      top: 273px;
+
+      margin-left: 5px;
+    }
+
+    .user__tags {
+      margin-bottom: 25px;
+
+      @include font(20px, 1.2);
+    }
+
+    .user__level {
+      top: 23px;
+      left: 23px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user--index {
+    &:not(:last-child) {
+      margin-right: 60px;
+      margin-bottom: 0;
+    }
+
+    .user__name {
+      margin-top: 33px;
+    }
+
+    .user__destination-list {
+      right: unset;
+    }
+  }
 }

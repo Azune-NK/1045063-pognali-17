@@ -17,7 +17,8 @@ body {
   font-family: "Blogger Sans", "Arial", sans-serif;
   color: $grey;
 
-  background-color: $grey-light;
+  background-color: rgb(255, 0, 0); /* временно */
+  /* Под каждый градиент задать фоновый цвет */
 }
 
 a {

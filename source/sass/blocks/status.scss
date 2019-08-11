@@ -1,15 +1,41 @@
 .status {
-  font: 1em sans-serif;
+  &::before {
+    top: 7px;
+    right: -63px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    @include pseudo;
+  }
+
+  &--online::before {
+    background-color: $green;
+  }
+
+  &--afk::before {
+    background-color: $salmon;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .status {
-    font: 1em sans-serif;
+    &::before {
+      top: 13px;
+      right: -30px;
+
+      width: 7px;
+      height: 7px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .status {
-    font: 1em sans-serif;
+    &::before {
+      left: -20px;
+    }
   }
 }
