@@ -1,0 +1,129 @@
+.range-controls__scale {
+  position: relative;
+
+  width: 220px;
+  height: 2px;
+
+  background-color: rgba($blue, 0.2);
+  border-radius: 0.5px;
+}
+
+.range-controls__bar {
+  position: absolute;
+  right: 0;
+
+  width: 144px;
+  height: 2px;
+
+  background-color: $blue;
+  border-radius: 1px;
+}
+
+.range-controls__toggle {
+  position: absolute;
+  top: -4px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: $blue;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--min {
+    right: 139px;
+
+    &:hover,
+    &:focus {
+      right: 135px;
+    }
+  }
+
+
+  &--max {
+    right: 0;
+
+
+    &:hover,
+    &:focus {
+      right: -4px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    top: -7px;
+
+    width: 16px;
+    height: 16px;
+  }
+
+  &:active {
+    outline: none;
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .range-controls__scale {
+    width: 277px;
+    height: 3px;
+
+    border-radius: 1.5px;
+  }
+
+
+  .range-controls__bar {
+    width: 201px;
+    height: 3px;
+
+    border-radius: 1.5px;
+  }
+
+  .range-controls__toggle {
+    top: -5px;
+
+    width: 13px;
+    height: 13px;
+
+    &--min {
+      right: 195px;
+
+      &:hover,
+      &:focus {
+        right: 192px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      top: -8px;
+
+      width: 19px;
+      height: 19px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range-controls__scale {
+    width: 191px;
+  }
+
+
+  .range-controls__bar {
+    width: 125px;
+    height: 3px;
+  }
+
+  .range-controls__toggle {
+    &--min {
+      right: 120px;
+
+      &:hover,
+      &:focus {
+        right: 117px;
+      }
+    }
+  }
+}

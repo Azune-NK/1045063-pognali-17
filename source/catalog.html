@@ -117,360 +117,410 @@
           <section class="companions-filter">
             <h2 class="companions-filter__lead">Подберите идеального попутчика</h2>
             <form class="companions-filter__form" action="https://echo.htmlacademy.ru" method="get">
-              <section>
+              <section class="companions-filter__hobby">
                 <h3 class="visually-hidden">Хобби</h3>
                 <button class="companions-filter__legend-btn" type="button">Хобби</button>
                 <ul class="companions-filter__list">
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Спортзал
-                      </label>
-                    </li>
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Кальян
-                      </label>
-                    </li>
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Диван
-                      </label>
-                    </li>
-                  </ul>
-                </section>
-              <section>
-                <h3 class="visually-hidden">Музыка</h3>
-                <button class="companions-filter__legend-btn" type="button">Музыка</button>
-                <ul class="companions-filter__list">
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Тяжелый рок
-                      </label>
-                    </li>
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Русский рэп
-                      </label>
-                    </li>
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Евродэнс
-                      </label>
-                    </li>
-                  </ul>
-              </section>
-              <section>
-                <h3 class="visually-hidden">Еда</h3>
-                <button class="companions-filter__legend-btn" type="button">Еда</button>
-                <ul class="companions-filter__list">
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Мясоед
-                      </label>
-                    </li>
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Сиджит на ПП
-                      </label>
-                    </li>
-                    <li class="companions-filter__item">
-                      <label class="companions-filter__label">
-                        <input class="visually-hidden" type="checkbox" name="">
-                        <span class="companions-filter__checkbox"></span>Веган-сыроед
-                      </label>
-                    </li>
-                  </ul>
-              </section>
-              <section>
-                <h3 class="visually-hidden">Транспорт</h3>
-                <button class="companions-filter__legend-btn" type="button">Транспорт</button>
-                <ul class="companions-filter__list">
                   <li class="companions-filter__item">
                     <label class="companions-filter__label">
-                      <input class="visually-hidden" type="checkbox" name="">
-                      <span class="companions-filter__checkbox"></span>
+                      <input class="visually-hidden" type="checkbox" name="Gym" checked>
+                      <span class="companions-filter__checkbox"></span>Спортзал
                     </label>
                   </li>
                   <li class="companions-filter__item">
                     <label class="companions-filter__label">
-                      <input class="visually-hidden" type="checkbox" name="">
-                      <span class="companions-filter__checkbox"></span>
+                      <input class="visually-hidden" type="checkbox" name="Hookah">
+                      <span class="companions-filter__checkbox"></span>Кальян
                     </label>
                   </li>
                   <li class="companions-filter__item">
                     <label class="companions-filter__label">
-                      <input class="visually-hidden" type="checkbox" name="">
-                      <span class="companions-filter__checkbox"></span>
-                    </label>
-                  </li>
-                  <li class="companions-filter__item">
-                    <label class="companions-filter__label">
-                      <input class="visually-hidden" type="checkbox" name="">
-                      <span class="companions-filter__checkbox"></span>
+                      <input class="visually-hidden" type="checkbox" name="Couch">
+                      <span class="companions-filter__checkbox"></span>Диван
                     </label>
                   </li>
                 </ul>
               </section>
-              <section>
-               <h3 class="visually-hidden">Левел</h3>
-               <button class="companions-filter__legend-btn" type="button">Левел</button>
-               <label class="range-min">
-                 <input type="text" name="min-level" value="30">
-               </label>
-               <label class="range-max">
-                 <input type="text" name="max-level" value="100">
-               </label>
-               <input class="visually-hidden" type="range" name="level-range" min="1" max="100" step="5" aria-label="Выбор уровня попутчика" tabindex="-1">
-               <div class="range-controls">
-                 <div class="scale">
-                   <div class="bar"></div>
-                 </div>
-                 <div class="range-toggle range-toggle-min" tabindex="0"></div>
-                 <div class="range-toggle range-toggle-max" tabindex="0"></div>
-               </div>
+              <section class="companions-filter__music">
+                <h3 class="visually-hidden">Музыка</h3>
+                <button class="companions-filter__legend-btn" type="button">Музыка</button>
+                <ul class="companions-filter__list">
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="Hard Rock" checked>
+                      <span class="companions-filter__checkbox"></span>Тяжелый рок
+                    </label>
+                  </li>
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="Russian rap">
+                      <span class="companions-filter__checkbox"></span>Русский рэп
+                    </label>
+                  </li>
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="Eurodance">
+                      <span class="companions-filter__checkbox"></span>Евродэнс
+                    </label>
+                  </li>
+                </ul>
+              </section>
+              <section class="companions-filter__food">
+                <h3 class="visually-hidden">Еда</h3>
+                <button class="companions-filter__legend-btn" type="button">Еда</button>
+                <ul class="companions-filter__list">
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="Meat eater" checked>
+                      <span class="companions-filter__checkbox"></span>Мясоед
+                    </label>
+                  </li>
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="Healthy diet">
+                      <span class="companions-filter__checkbox"></span>Сидит на ПП
+                    </label>
+                  </li>
+                  <li class="companions-filter__item">
+                    <label class="companions-filter__label">
+                      <input class="visually-hidden" type="checkbox" name="Vegan-raw foodist">
+                      <span class="companions-filter__checkbox"></span>Веган-сыроед
+                    </label>
+                  </li>
+                </ul>
+              </section>
+              <section class="companions-filter__travel-mode">
+                <h3 class="visually-hidden">Транспорт</h3>
+                <button class="companions-filter__legend-btn" type="button">Транспорт</button>
+                <ul class="companions-filter__list travel-checkboxes">
+                  <li class="travel-checkboxes__item">
+                    <label class="travel-checkboxes__label">
+                      <input class="visually-hidden" type="checkbox" name="Plane" checked>
+                      <span class="travel-checkboxes__checkbox">
+                        <svg class="travel-checkboxes__svg" fill="#1d2e5b" width="14" height="16" version="1.1"
+                          id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          x="0px" y="0px" viewBox="0 0 19 21" style="enable-background: new 0 0 19 21;"
+                          xml:space="preserve">
+                          <path
+                            d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
+                        c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
+                        C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1
+                        c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1
+                        c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9
+                        c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5
+                        c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z" />
+                        </svg>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="travel-checkboxes__item">
+                    <label class="travel-checkboxes__label">
+                      <input class="visually-hidden" type="checkbox" name="Bus" checked>
+                      <span class="travel-checkboxes__checkbox">
+                        <svg class="travel-checkboxes__svg" fill="#1d2e5b" width="13" height="16" version="1.1"
+                          id="svg2103" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          x="0px" y="0px" viewBox="0 0 17 21" style="enable-background: new 0 0 17 21;"
+                          xml:space="preserve">
+                          <path
+                            d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
+                        c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
+                        C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z
+                        M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9
+                        H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z" />
+                        </svg>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="travel-checkboxes__item">
+                    <label class="travel-checkboxes__label">
+                      <input class="visually-hidden" type="checkbox" name="Bike">
+                      <span class="travel-checkboxes__checkbox">
+                        <svg class="travel-checkboxes__svg" fill="#1d2e5b" width="19" height="17" version="1.1"
+                          id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          x="0px" y="0px" viewBox="0 0 24 21" style="enable-background: new 0 0 24 21;"
+                          xml:space="preserve">
+                          <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
+                        S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
+                        l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5
+                        l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5
+                        s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z" />
+                        </svg>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="travel-checkboxes__item">
+                    <label class="travel-checkboxes__label">
+                      <input class="visually-hidden" type="checkbox" name="Afoot" checked>
+                      <span class="travel-checkboxes__checkbox">
+                        <svg class="travel-checkboxes__svg" fill="#1d2e5b" width="15" height="17" version="1.1"
+                          id="Icons_Run" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          x="0px" y="0px" viewBox="0 0 20 21" style="enable-background: new 0 0 20 21;"
+                          xml:space="preserve">
+                          <g>
+                            <ellipse cx="14.3" cy="2" rx="2.1" ry="2" />
+                            <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6
+                        C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5
+                        c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4
+                        c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6
+                        z" />
+                          </g>
+                        </svg>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </section>
+              <section class="companions-filter__level">
+                <h3 class="visually-hidden">Левел</h3>
+                <button class="companions-filter__legend-btn" type="button">Левел</button>
+                <input class="companions-filter__level-input" type="text" name="min-level" value="30">
+                <input class="companions-filter__level-input" type="text" name="max-level" value="100">
+                <input class="visually-hidden" type="range" name="level-range" min="1" max="100" step="1"
+                  aria-label="Выбор уровня попутчика" tabindex="-1">
+                <div class="companions-filter__level-range range-controls">
+                  <div class="range-controls__scale">
+                    <div class="range-controls__bar"></div>
+                  </div>
+                  <div class="range-controls__toggle range-controls__toggle--min" tabindex="0"></div>
+                  <div class="range-controls__toggle range-controls__toggle--max" tabindex="0"></div>
+                </div>
               </section>
               <button class="companions-filter__submit login-btn" type="submit">Показать</button>
             </form>
           </section>
 
-          <section class="companions companions--catalog">
-            <h2 class="visually-hidden">Попутчики для путешествий</h2>
-            <ul class="companions__list">
-              <li class="companions__item user">
-                <h3 class="user__name status status--afk">
-                  <a class="user__name-link" href="id104.html">Таня Фирсова</a>
-                </h3>
-                <p class="user__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-                <a class="user__img-link" href="id104.html">
-                  <picture>
-                    <source media="(min-width: 1440px)"
-                      srcset="img/content/users/firsova-desktop@1x.jpg, img/content/users/firsova-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)"
-                      srcset="img/content/users/firsova-tablet@1x.jpg, img/content/users/firsova-tablet@2x.jpg 2x">
-                    <img class="user__img" src="img/content/users/firsova-mobile@1x.jpg"
-                      srcset="img/content/users/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
-                  </picture>
-                </a>
-                <button class="user__likes user__likes--checked" type="button">
-                  <span class="user__likes-count">1,5 М</span>
-                </button>
-                <ul class="user__destination-list destination-icon">
-                  <p class="destination-icon__text">хочет посетить:</p>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-sri-lanka.svg" width="26" height="18" alt="Шри-Ланка">
-                    <p class="destination-icon__tooltip">Шри-Ланка</p>
-                  </li>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-thailand.svg" width="26" height="18" alt="Тайланд">
-                    <p class="destination-icon__tooltip">Тайланд</p>
-                  </li>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-seychelles.svg" width="26" height="18" alt="Сейшелы">
-                    <p class="destination-icon__tooltip">Сейшелы</p>
-                  </li>
-                </ul>
-                <ul class="user__travel-mode travel-mode">
-                  <p class="travel-mode__text">транспорт:</p>
-                  <li class="travel-mode__item travel-mode__item--checked">
-                    <p class="travel-mode__tooltip">Авиаперелет</p>
-                  </li>
-                  <li class="travel-mode__item">
-                    <p class="travel-mode__tooltip">Автотранспорт</p>
-                  </li>
-                  <li class="travel-mode__item">
-                    <p class="travel-mode__tooltip">Велосипед</p>
-                  </li>
-                  <li class="travel-mode__item">
-                    <p class="travel-mode__tooltip">Пешком</p>
-                  </li>
-                </ul>
-                <p class="user__level">99</p>
-                <a class="user__invite-btn login-btn" href="companion-call.html">Позвать!</a>
-              </li>
-              <li class="companions__item user">
-                <h3 class="user__name status status--afk">
-                  <a class="user__name-link" href="id2579.html">Петя Демин</a>
-                </h3>
-                <p class="user__tags">#бургер #бар #футбол #концерт #крафт</p>
-                <a class="user__img-link" href="id2579.html">
-                  <picture>
-                    <source media="(min-width: 1440px)"
-                      srcset="img/content/users/demin-desktop@1x.jpg, img/content/users/demin-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)"
-                      srcset="img/content/users/demin-tablet@1x.jpg, img/content/users/demin-tablet@2x.jpg 2x">
-                    <img class="user__img" src="img/content/users/demin-mobile@1x.jpg"
-                      srcset="img/content/users/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
-                  </picture>
-                </a>
-                <button class="user__likes" type="button">
-                  <span class="user__likes-count">150</span>
-                </button>
-                <ul class="user__destination-list destination-icon">
-                  <p class="destination-icon__text">хочет посетить:</p>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-belgium.svg" width="26" height="18" alt="Бельгия">
-                    <p class="destination-icon__tooltip">Бельгия</p>
-                  </li>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-czech.svg" width="26" height="18" alt="Чехия">
-                    <p class="destination-icon__tooltip">Чехия</p>
-                  </li>
-                </ul>
-                <ul class="user__travel-mode travel-mode">
-                  <p class="travel-mode__text">транспорт:</p>
-                  <li class="travel-mode__item travel-mode__item--checked">
-                    <p class="travel-mode__tooltip">Авиаперелет</p>
-                  </li>
-                  <li class="travel-mode__item travel-mode__item--checked">
-                    <p class="travel-mode__tooltip">Автотранспорт</p>
-                  </li>
-                  <li class="travel-mode__item">
-                    <p class="travel-mode__tooltip">Велосипед</p>
-                  </li>
-                  <li class="travel-mode__item travel-mode__item--checked">
-                    <p class="travel-mode__tooltip">Пешком</p>
-                  </li>
-                </ul>
-                <p class="user__level">80</p>
-                <a class="user__invite-btn login-btn" href="companion-call.html">Позвать!</a>
-              </li>
-              <li class="companions__item user">
-                <h3 class="user__name status status--afk">
-                  <a class="user__name-link" href="id5755.html">Марк Смолов</a>
-                </h3>
-                <p class="user__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-                <a class="user__img-link" href="id5755.html">
-                  <picture>
-                    <source media="(min-width: 1440px)"
-                      srcset="img/content/users/smolov-desktop@1x.jpg, img/content/users/smolov-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)"
-                      srcset="img/content/users/smolov-tablet@1x.jpg, img/content/users/smolov-tablet@2x.jpg 2x">
-                    <img class="user__img" src="img/content/users/smolov-mobile@1x.jpg"
-                      srcset="img/content/users/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
-                  </picture>
-                </a>
-                <button class="user__likes" type="button">
-                  <span class="user__likes-count">1700</span>
-                </button>
-                <ul class="user__destination-list destination-icon">
-                  <p class="destination-icon__text">хочет посетить:</p>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-usa.svg" width="26" height="18" alt="США">
-                    <p class="destination-icon__tooltip">США</p>
-                  </li>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-australia.svg" width="26" height="18" alt="Австралия">
-                    <p class="destination-icon__tooltip">Австралия</p>
-                  </li>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-dominica.svg" width="26" height="18" alt="Доминикана">
-                    <p class="destination-icon__tooltip">Доминикана</p>
-                  </li>
-                </ul>
-                <ul class="user__travel-mode travel-mode">
-                  <p class="travel-mode__text">транспорт:</p>
-                  <li class="travel-mode__item travel-mode__item--checked">
-                    <p class="travel-mode__tooltip">Авиаперелет</p>
-                  </li>
-                  <li class="travel-mode__item">
-                    <p class="travel-mode__tooltip">Автотранспорт</p>
-                  </li>
-                  <li class="travel-mode__item travel-mode__item--checked">
-                    <p class="travel-mode__tooltip">Велосипед</p>
-                  </li>
-                  <li class="travel-mode__item">
-                    <p class="travel-mode__tooltip">Пешком</p>
-                  </li>
-                </ul>
-                <p class="user__level">25</p>
-                <a class="user__invite-btn login-btn" href="companion-call.html">Позвать!</a>
-              </li>
-              <li class="companions__item user">
-                <h3 class="user__name status status--online">
-                  <a class="user__name-link" href="id4777.html">Лариса Роговая</a>
-                </h3>
-                <p class="user__tags">#образование #карьера #учеба #линкедин</p>
-                <a class="user__img-link" href="id4777.html">
-                  <picture>
-                    <source media="(min-width: 1440px)"
-                      srcset="img/content/users/rogovaya-desktop@1x.jpg, img/content/users/rogovaya-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)"
-                      srcset="img/content/users/rogovaya-tablet@1x.jpg, img/content/users/rogovaya-tablet@2x.jpg 2x">
-                    <img class="user__img" src="img/content/users/rogovaya-mobile@1x.jpg"
-                      srcset="img/content/users/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
-                  </picture>
-                </a>
-                <button class="user__likes" type="button">
-                  <span class="user__likes-count">23</span>
-                </button>
-                <ul class="user__destination-list destination-icon">
-                  <p class="destination-icon__text">хочет посетить:</p>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-united-kingdom.svg" width="26" height="18" alt="Великобритания">
-                    <p class="destination-icon__tooltip">Великобритания</p>
-                  </li>
-                  <li class="destination-icon__item">
-                    <img class="destination-icon__image" src="img/svg/flag-germany.svg" width="26" height="18" alt="Германия">
-                    <p class="destination-icon__tooltip">Германия</p>
-                  </li>
-                </ul>
-                <ul class="user__travel-mode travel-mode">
-                  <p class="travel-mode__text">транспорт:</p>
-                  <li class="travel-mode__item travel-mode__item--checked">
-                    <p class="travel-mode__tooltip">Авиаперелет</p>
-                  </li>
-                  <li class="travel-mode__item travel-mode__item--checked">
-                    <p class="travel-mode__tooltip">Автотранспорт</p>
-                  </li>
-                  <li class="travel-mode__item">
-                    <p class="travel-mode__tooltip">Велосипед</p>
-                  </li>
-                  <li class="travel-mode__item">
-                    <p class="travel-mode__tooltip">Пешком</p>
-                  </li>
-                </ul>
-                <p class="user__level">50</p>
-                <a class="user__invite-btn login-btn" href="companion-call.html">Позвать!</a>
-              </li>
-            </ul>
-          </section>
+          <div class="catalog__column">
+            <section class="companions companions--catalog">
+              <h2 class="visually-hidden">Попутчики для путешествий</h2>
+              <ul class="companions__list">
+                <li class="companions__item user">
+                  <h3 class="user__name status status--afk">
+                    <a class="user__name-link" href="id104.html">Таня Фирсова</a>
+                  </h3>
+                  <p class="user__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                  <a class="user__img-link" href="id104.html">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/content/users/firsova-desktop@1x.jpg, img/content/users/firsova-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/content/users/firsova-tablet@1x.jpg, img/content/users/firsova-tablet@2x.jpg 2x">
+                      <img class="user__img" src="img/content/users/firsova-mobile@1x.jpg"
+                        srcset="img/content/users/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
+                    </picture>
+                  </a>
+                  <button class="user__likes user__likes--checked" type="button">
+                    <span class="user__likes-count">1,5 М</span>
+                  </button>
+                  <ul class="user__destination-list destination-icon">
+                    <p class="destination-icon__text">хочет посетить:</p>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-sri-lanka.svg" width="26" height="18" alt="Шри-Ланка">
+                      <p class="destination-icon__tooltip">Шри-Ланка</p>
+                    </li>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-thailand.svg" width="26" height="18" alt="Тайланд">
+                      <p class="destination-icon__tooltip">Тайланд</p>
+                    </li>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-seychelles.svg" width="26" height="18" alt="Сейшелы">
+                      <p class="destination-icon__tooltip">Сейшелы</p>
+                    </li>
+                  </ul>
+                  <ul class="user__travel-mode travel-mode">
+                    <p class="travel-mode__text">транспорт:</p>
+                    <li class="travel-mode__item travel-mode__item--checked">
+                      <p class="travel-mode__tooltip">Авиаперелет</p>
+                    </li>
+                    <li class="travel-mode__item">
+                      <p class="travel-mode__tooltip">Автотранспорт</p>
+                    </li>
+                    <li class="travel-mode__item">
+                      <p class="travel-mode__tooltip">Велосипед</p>
+                    </li>
+                    <li class="travel-mode__item">
+                      <p class="travel-mode__tooltip">Пешком</p>
+                    </li>
+                  </ul>
+                  <p class="user__level">99</p>
+                  <a class="user__invite-btn login-btn" href="companion-call.html">Позвать!</a>
+                </li>
+                <li class="companions__item user">
+                  <h3 class="user__name status status--afk">
+                    <a class="user__name-link" href="id2579.html">Петя Демин</a>
+                  </h3>
+                  <p class="user__tags">#бургер #бар #футбол #концерт #крафт</p>
+                  <a class="user__img-link" href="id2579.html">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/content/users/demin-desktop@1x.jpg, img/content/users/demin-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/content/users/demin-tablet@1x.jpg, img/content/users/demin-tablet@2x.jpg 2x">
+                      <img class="user__img" src="img/content/users/demin-mobile@1x.jpg"
+                        srcset="img/content/users/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
+                    </picture>
+                  </a>
+                  <button class="user__likes" type="button">
+                    <span class="user__likes-count">150</span>
+                  </button>
+                  <ul class="user__destination-list destination-icon">
+                    <p class="destination-icon__text">хочет посетить:</p>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-belgium.svg" width="26" height="18" alt="Бельгия">
+                      <p class="destination-icon__tooltip">Бельгия</p>
+                    </li>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-czech.svg" width="26" height="18" alt="Чехия">
+                      <p class="destination-icon__tooltip">Чехия</p>
+                    </li>
+                  </ul>
+                  <ul class="user__travel-mode travel-mode">
+                    <p class="travel-mode__text">транспорт:</p>
+                    <li class="travel-mode__item travel-mode__item--checked">
+                      <p class="travel-mode__tooltip">Авиаперелет</p>
+                    </li>
+                    <li class="travel-mode__item travel-mode__item--checked">
+                      <p class="travel-mode__tooltip">Автотранспорт</p>
+                    </li>
+                    <li class="travel-mode__item">
+                      <p class="travel-mode__tooltip">Велосипед</p>
+                    </li>
+                    <li class="travel-mode__item travel-mode__item--checked">
+                      <p class="travel-mode__tooltip">Пешком</p>
+                    </li>
+                  </ul>
+                  <p class="user__level">80</p>
+                  <a class="user__invite-btn login-btn" href="companion-call.html">Позвать!</a>
+                </li>
+                <li class="companions__item user">
+                  <h3 class="user__name status status--afk">
+                    <a class="user__name-link" href="id5755.html">Марк Смолов</a>
+                  </h3>
+                  <p class="user__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+                  <a class="user__img-link" href="id5755.html">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/content/users/smolov-desktop@1x.jpg, img/content/users/smolov-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/content/users/smolov-tablet@1x.jpg, img/content/users/smolov-tablet@2x.jpg 2x">
+                      <img class="user__img" src="img/content/users/smolov-mobile@1x.jpg"
+                        srcset="img/content/users/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
+                    </picture>
+                  </a>
+                  <button class="user__likes" type="button">
+                    <span class="user__likes-count">1700</span>
+                  </button>
+                  <ul class="user__destination-list destination-icon">
+                    <p class="destination-icon__text">хочет посетить:</p>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-usa.svg" width="26" height="18" alt="США">
+                      <p class="destination-icon__tooltip">США</p>
+                    </li>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-australia.svg" width="26" height="18" alt="Австралия">
+                      <p class="destination-icon__tooltip">Австралия</p>
+                    </li>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-dominica.svg" width="26" height="18" alt="Доминикана">
+                      <p class="destination-icon__tooltip">Доминикана</p>
+                    </li>
+                  </ul>
+                  <ul class="user__travel-mode travel-mode">
+                    <p class="travel-mode__text">транспорт:</p>
+                    <li class="travel-mode__item travel-mode__item--checked">
+                      <p class="travel-mode__tooltip">Авиаперелет</p>
+                    </li>
+                    <li class="travel-mode__item">
+                      <p class="travel-mode__tooltip">Автотранспорт</p>
+                    </li>
+                    <li class="travel-mode__item travel-mode__item--checked">
+                      <p class="travel-mode__tooltip">Велосипед</p>
+                    </li>
+                    <li class="travel-mode__item">
+                      <p class="travel-mode__tooltip">Пешком</p>
+                    </li>
+                  </ul>
+                  <p class="user__level">25</p>
+                  <a class="user__invite-btn login-btn" href="companion-call.html">Позвать!</a>
+                </li>
+                <li class="companions__item user">
+                  <h3 class="user__name status status--online">
+                    <a class="user__name-link" href="id4777.html">Лариса Роговая</a>
+                  </h3>
+                  <p class="user__tags">#образование #карьера #учеба #линкедин</p>
+                  <a class="user__img-link" href="id4777.html">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/content/users/rogovaya-desktop@1x.jpg, img/content/users/rogovaya-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/content/users/rogovaya-tablet@1x.jpg, img/content/users/rogovaya-tablet@2x.jpg 2x">
+                      <img class="user__img" src="img/content/users/rogovaya-mobile@1x.jpg"
+                        srcset="img/content/users/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
+                    </picture>
+                  </a>
+                  <button class="user__likes" type="button">
+                    <span class="user__likes-count">23</span>
+                  </button>
+                  <ul class="user__destination-list destination-icon">
+                    <p class="destination-icon__text">хочет посетить:</p>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-united-kingdom.svg" width="26" height="18" alt="Великобритания">
+                      <p class="destination-icon__tooltip">Великобритания</p>
+                    </li>
+                    <li class="destination-icon__item">
+                      <img class="destination-icon__image" src="img/svg/flag-germany.svg" width="26" height="18" alt="Германия">
+                      <p class="destination-icon__tooltip">Германия</p>
+                    </li>
+                  </ul>
+                  <ul class="user__travel-mode travel-mode">
+                    <p class="travel-mode__text">транспорт:</p>
+                    <li class="travel-mode__item travel-mode__item--checked">
+                      <p class="travel-mode__tooltip">Авиаперелет</p>
+                    </li>
+                    <li class="travel-mode__item travel-mode__item--checked">
+                      <p class="travel-mode__tooltip">Автотранспорт</p>
+                    </li>
+                    <li class="travel-mode__item">
+                      <p class="travel-mode__tooltip">Велосипед</p>
+                    </li>
+                    <li class="travel-mode__item">
+                      <p class="travel-mode__tooltip">Пешком</p>
+                    </li>
+                  </ul>
+                  <p class="user__level">50</p>
+                  <a class="user__invite-btn login-btn" href="companion-call.html">Позвать!</a>
+                </li>
+              </ul>
+            </section>
 
-          <section class="pagination">
-            <h2 class="visually-hidden">Навигация по каталогу</h2>
-            <a class="pagination__load-more" href="catalog-2.html">Показать еще</a>
-            <div class="pagination__wrapper">
-              <ul class="pagination__list">
-                <li class="pagination__page">
-                  <a class="pagination__link pagination__link--current">1</a>
-                </li>
-                <li class="pagination__page">
-                  <a href="catalog-2.html" class="pagination__link">2</a>
-                </li>
-                <li class="pagination__page">
-                  <a href="catalog-3.html" class="pagination__link">3</a>
-                </li>
-                <li class="pagination__page">
-                  <a href="catalog-4.html" class="pagination__link">4</a>
-                </li>
-              </ul>
-              <ul class="pagination__arrows">
-                <li class="pagination__left">
-                  <a class="pagination__btn"><span class="visually-hidden">Показать предыдущую страницу</span></a>
-                </li>
-                <li class="pagination__right">
-                  <a class="pagination__btn" href="catalog-2.html"><span class="visually-hidden">Показать следующую страницу</span></a>
-                </li>
-              </ul>
-            </div>
-          </section>
+            <section class="pagination">
+              <h2 class="visually-hidden">Навигация по каталогу</h2>
+              <a class="pagination__load-more" href="catalog-2.html">Показать еще</a>
+              <div class="pagination__wrapper">
+                <ul class="pagination__list">
+                  <li class="pagination__page">
+                    <a class="pagination__link pagination__link--current">1</a>
+                  </li>
+                  <li class="pagination__page">
+                    <a href="catalog-2.html" class="pagination__link">2</a>
+                  </li>
+                  <li class="pagination__page">
+                    <a href="catalog-3.html" class="pagination__link">3</a>
+                  </li>
+                  <li class="pagination__page">
+                    <a href="catalog-4.html" class="pagination__link">4</a>
+                  </li>
+                </ul>
+                <ul class="pagination__arrows">
+                  <li class="pagination__left">
+                    <a class="pagination__btn"><span class="visually-hidden">Показать предыдущую страницу</span></a>
+                  </li>
+                  <li class="pagination__right">
+                    <a class="pagination__btn" href="catalog-2.html"><span class="visually-hidden">Показать следующую страницу</span></a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </main>

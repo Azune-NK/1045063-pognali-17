@@ -1,9 +1,37 @@
 .companions-filter {
   margin-bottom: 28px;
-  padding: 25px 20px 22px;
+  padding: 25px 25px 22px;
 
   background-color: $gold;
   border-radius: 20px;
+}
+
+.companions-filter__hobby,
+.companions-filter__music,
+.companions-filter__food,
+.companions-filter__travel-mode {
+  margin-bottom: 33px;
+}
+
+
+.companions-filter__hobby,
+.companions-filter__music,
+.companions-filter__food,
+.companions-filter__travel-mode,
+.companions-filter__level {
+  position: relative;
+
+  &::before {
+    top: -13px;
+    left: 0;
+
+    width: 220px;
+    height: 1px;
+
+    background-color: $mustard;
+
+    @include pseudo;
+  }
 }
 
 .companions-filter__lead {
@@ -20,9 +48,15 @@
   @include ul-reset;
 }
 
+.companions-filter__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .companions-filter__legend-btn {
   position: relative;
 
+  display: block;
+  margin-bottom: 15px;
   padding: 0;
 
   color: $blue;
@@ -35,8 +69,10 @@
   @include font(16px, 1.13, 700);
 
   &::before {
-    top: 0;
-    right: -5px;
+    top: 5px;
+    left: 210px;
+
+    display: none;
 
     border-top: 4px solid $grey-blue;
     border-right: 4px solid transparent;
@@ -46,8 +82,8 @@
   }
 
   &::after {
-    top: 0;
-    right: -5px;
+    top: 5px;
+    left: 210px;
 
     border-right: 4px solid transparent;
     border-bottom: 4px solid $grey-blue;
@@ -83,7 +119,147 @@
   }
 }
 
+.companions-filter__travel-mode .companions-filter__legend-btn {
+  margin-bottom: 17px;
+}
+
+.companions-filter__label {
+  position: relative;
+
+  padding-left: 27px;
+
+  color: $grey;
+
+  @include font(15px, 1);
+
+  &:hover {
+    color: rgba($grey, 0.6);
+
+    .companions-filter__checkbox {
+      background-color: rgba($white, 0.6);
+    }
+  }
+
+  &:active {
+    color: rgba($grey, 0.3);
+
+    .companions-filter__checkbox {
+      background-color: rgba($white, 0.3);
+    }
+
+    input[type="checkbox"]:checked + .companions-filter__checkbox::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.companions-filter__checkbox {
+  position: absolute;
+  top: -2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+
+  background-color: $white;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + .companions-filter__checkbox {
+  &::before {
+    width: 9px;
+    height: 9px;
+
+    background: url("../img/svg/tick.svg") no-repeat;
+
+    @include pseudo;
+  }
+}
+
+
+input[type="checkbox"]:focus + .companions-filter__checkbox {
+  outline: thin dotted;
+}
+
+.companions-filter__level {
+  position: relative;
+
+  font-size: 0;
+}
+
+.companions-filter__level-range {
+  position: relative;
+
+  margin-top: 24px;
+
+  &::before {
+    top: -47px;
+    right: 101px;
+    z-index: 10;
+
+    width: 16px;
+    height: 11px;
+
+    background: linear-gradient(to bottom, $white 0, $white 5px, $grey-border 5px, $grey-border 6px, $white 6px, $white 100%);
+
+    @include pseudo;
+  }
+}
+
+.companions-filter__level-input {
+  position: relative;
+
+  width: 110px;
+  height: 35px;
+  padding: 10px;
+
+  text-align: center;
+  color: $blue;
+  letter-spacing: 1.5px;
+
+  border: 1px solid $grey-border;
+
+  @include font(15px, 0.9, 500);
+
+  &:hover {
+    z-index: 1;
+
+    border: 1px solid $dark-border;
+  }
+
+  &:focus {
+    z-index: 2;
+
+    border: 1px solid $black-blue;
+    outline: none;
+
+    .companions-filter__level-range::before {
+      /* Вопрос - ради интереса, почему не работает? */
+      background: linear-gradient(to bottom, $white 0, $white 5px, $black-blue 5px, $black-blue 6px, $white 6px, $white 100%);
+    }
+  }
+
+  &:nth-of-type(1) {
+    right: -0.5px;
+
+    border-radius: 5px 0 0 5px;
+  }
+
+  &:nth-of-type(2) {
+    left: -0.5px;
+
+    border-radius: 0 5px 5px 0;
+  }
+}
+
 .companions-filter__submit {
+  display: block;
+  width: calc(100% + 10px);
+  margin-top: 25px;
+  margin-left: -5px;
+
   background-color: $white;
   border: 0;
   cursor: pointer;
@@ -100,12 +276,173 @@
 }
 
 @media (min-width: $tablet-width) {
+  .companions-filter__hobby,
+  .companions-filter__level {
+    &::before {
+      top: -33px;
+
+      width: 618px;
+      height: 1px;
+
+      background-color: $mustard;
+    }
+  }
+
+  .companions-filter__level {
+    &::before {
+      top: unset;
+      bottom: -36px;
+    }
+  }
+
+  .companions-filter__music,
+  .companions-filter__food,
+  .companions-filter__travel-mode {
+    &::before {
+      display: none;
+    }
+  }
+
+  .companions-filter {
+    padding: 35px;
+  }
+
+  .companions-filter__lead {
+    width: auto;
+    margin-bottom: 70px;
+
+    @include font(30px);
+  }
+
+  .companions-filter__legend-btn {
+    margin: 0;
+
+    @include font(20px, 1.5, 500);
+  }
+
+  .companions-filter__label {
+    padding-left: 36px;
+
+    @include font(20px);
+  }
+
+  .companions-filter__checkbox {
+    top: 0;
+
+    width: 24px;
+    height: 24px;
+  }
+
+  input[type="checkbox"]:checked + .companions-filter__checkbox {
+    &::before {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .companions-filter__level-input {
+    width: 75px;
+    height: 46px;
+    padding: 15px;
+
+    letter-spacing: 2px;
+
+    @include font(20px);
+  }
+
+
+  .companions-filter__level-range {
+    margin-top: 0;
+
+    &::before {
+      top: -8px;
+      right: -151px;
+
+      width: 21px;
+      height: 15px;
+
+      background: linear-gradient(to bottom, $white 0, $white 7px, $grey-border 7px, $grey-border 8px, $white 8px, $white 100%);
+    }
+  }
+
+  .companions-filter__submit {
+    width: 100%;
+    margin-top: 73px;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: 1439px) {
+  .companions-filter__hobby,
+  .companions-filter__music,
+  .companions-filter__food,
+  .companions-filter__travel-mode,
+  .companions-filter__level {
+    display: flex;
+    align-items: center;
+  }
+
+  .companions-filter__hobby,
+  .companions-filter__music {
+    margin-bottom: 25px;
+  }
+
+  .companions-filter__food {
+    margin-bottom: 20px;
+  }
+
+  .companions-filter__travel-mode {
+    margin-bottom: 15px;
+
+    .companions-filter__list {
+      padding-top: 0;
+    }
+
+    .companions-filter__legend-btn {
+      align-self: center;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .companions-filter__item {
+    width: 150px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:nth-of-type(2) {
+      margin-right: 25px;
+    }
+  }
+
+  .companions-filter__level-range {
+    order: -1;
+    margin-right: 65px;
+  }
+
+  .companions-filter__list {
+    display: flex;
+    padding-top: 5px;
+  }
+
   .companions-filter__legend-btn {
+    order: -2;
+    align-self: flex-start;
+    width: 100px;
+    margin-right: 25px;
+
+    text-align: left;
+
     &::before {
+      top: unset;
       right: -5px;
+      left: unset;
+
+      display: block;
+
+      border: 0;
 
       @include pseudo(":");
     }
@@ -113,16 +450,79 @@
     &::after {
       display: none;
     }
+
+    &:hover,
+    &:focus {
+      &::before {
+        border-top: 0;
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      &::before {
+        border-top: 0;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .companions-filter__hobby .companions-filter__legend-btn::before {
+    right: 37px;
+  }
+
+  .companions-filter__music .companions-filter__legend-btn::before {
+    right: 20px;
+  }
+
+  .companions-filter__food .companions-filter__legend-btn::before {
+    right: 58px;
+  }
+
+  .companions-filter__level .companions-filter__legend-btn {
+    align-self: center;
+
+    &::before {
+      right: 39px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .companions-filter {
+    padding: 48px;
+  }
+
+  .companions-filter__lead {
+    width: 160px;
+    margin-bottom: 30px;
+  }
+
+  .companions-filter__hobby,
+  .companions-filter__level {
+    &::before {
+      display: none;
+    }
+  }
+
+  .companions-filter__hobby,
+  .companions-filter__music,
+  .companions-filter__food {
+    margin-bottom: 28px;
+  }
+
+  .companions-filter__travel-mode {
+    margin-bottom: 30px;
+  }
+
   .companions-filter__legend-btn {
+    margin-bottom: 23px;
+
     @include font(20px, 1.5);
 
     &::before {
-      top: 0;
-      right: -5px;
+      top: 10px;
+      left: 180px;
 
       display: none;
 
@@ -132,75 +532,41 @@
     }
 
     &::after {
-      top: 0;
-      right: -5px;
+      top: 10px;
+      left: 180px;
 
       border-right: 5px solid transparent;
       border-bottom: 5px solid $grey-blue;
       border-left: 5px solid transparent;
     }
   }
-}
 
-/* .travel-mode__item {
-  position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 33px;
-  height: 33px;
-
-  background-color: $blue-light;
-  border-radius: 50%;
-
-  &:nth-of-type(1)::before {
-    left: 8px;
-
-    width: 14px;
-    height: 16px;
-
-    background: url("../img/svg/plane.svg") no-repeat;
-    opacity: 0.15;
-
-    @include pseudo;
+  .companions-filter__item:not(:last-child) {
+    margin-bottom: 15px;
   }
 
-  &:nth-of-type(2)::before {
-    width: 13px;
-    height: 16px;
-
-    background: url("../img/svg/bus.svg") no-repeat;
-    opacity: 0.15;
-
-    @include pseudo;
+  .companions-filter__level .companions-filter__legend-btn {
+    margin-bottom: 17px;
   }
 
-  &:nth-of-type(3)::before {
-    width: 19px;
-    height: 17px;
-
-    background: url("../img/svg/bike.svg") no-repeat;
-    opacity: 0.15;
-
-    @include pseudo;
+  .companions-filter__level-input {
+    width: 96px;
   }
 
-  &:nth-of-type(4)::before {
-    width: 15px;
-    height: 17px;
 
-    background: url("../img/svg/run.svg") no-repeat;
-    opacity: 0.15;
+  .companions-filter__level-range {
+    margin-top: 35px;
 
-    @include pseudo;
-  }
-
-  &:hover,
-  &:focus {
-    .travel-mode__tooltip {
-      display: block;
+    &::before {
+      top: -65px;
+      right: 85px;
     }
   }
+
+  .companions-filter__submit {
+    width: calc(100% + 7px);
+    margin-top: 43px;
+    margin-right: -7px;
+  }
 }
- */

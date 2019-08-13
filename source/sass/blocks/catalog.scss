@@ -30,7 +30,14 @@
   .catalog__wrapper {
     width: 1440px;
     padding: 0 60px;
-    /* display: flex;
-    flex-wrap: wrap; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .catalog__column {
+    flex-grow: 1;
+    margin-right: 85px;
+    order: -1;
   }
 }
