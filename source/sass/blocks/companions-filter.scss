@@ -276,6 +276,11 @@ input[type="checkbox"]:focus + .companions-filter__checkbox {
 }
 
 @media (min-width: $tablet-width) {
+  .companions-filter {
+    margin-bottom: 40px;
+    padding: 35px;
+  }
+
   .companions-filter__hobby,
   .companions-filter__level {
     &::before {
@@ -301,10 +306,6 @@ input[type="checkbox"]:focus + .companions-filter__checkbox {
     &::before {
       display: none;
     }
-  }
-
-  .companions-filter {
-    padding: 35px;
   }
 
   .companions-filter__lead {
