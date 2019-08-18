@@ -89,12 +89,12 @@
   width: 80px;
   margin-bottom: 45px;
   margin-left: 85px;
+
+  @include font(20px, 1, 700);
 }
 
 .user__name-link {
   color: $blue;
-
-  @include font(20px, 1, 700);
 
   &:hover,
   &:focus {
@@ -299,9 +299,7 @@
     width: auto;
     margin-bottom: 20px;
     margin-left: 225px;
-  }
 
-  .user__name-link {
     @include font(30px);
   }
 
@@ -484,9 +482,6 @@
       margin-top: 27px;
       margin-bottom: 15px;
       margin-left: 0;
-    }
-
-    .user__name-link {
       @include font(21px);
     }
 
@@ -642,9 +637,6 @@
     .user__name {
       margin-top: 31px;
       margin-bottom: 22px;
-    }
-
-    .user__name-link {
       @include font(24px);
     }
 
@@ -658,7 +650,7 @@
     .user__destination-list {
       top: 273px;
 
-      margin-left: 5px;
+      margin-left: 8px;
     }
 
     .user__tags {
@@ -686,7 +678,7 @@
     }
 
     .user__destination-list {
-      right: unset;
+      left: unset;
     }
   }
 }

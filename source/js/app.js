@@ -24,15 +24,15 @@ navMain.classList.add("main-nav--closed");
   }
  })(Element.prototype); */
 
- /* for (var i = 0; i < filterBtns.length; i++) {
-  filterBtns[i].addEventListener('click', function(e){
-  e.preventDefault();
-  var target = e.target.closet('.companions-filter__food');
-  if (!target) return;
+/* for (var i = 0; i < filterBtns.length; i++) {
+ filterBtns[i].addEventListener('click', function(e){
+ e.preventDefault();
+ var target = e.target.closet('.companions-filter__food');
+ if (!target) return;
 
-  target.querySelector('.companions-filter__list').classList.add(.companions-filter__list--opened)
-  })
-  } */
+ target.querySelector('.companions-filter__list').classList.add(.companions-filter__list--opened)
+ })
+ } */
 
 /* var blocks = document.querySelectorAll('.companions-filter__food');
 for (var i = 0; i < blocks.length; i++) {

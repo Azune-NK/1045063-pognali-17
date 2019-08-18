@@ -592,6 +592,7 @@
   .country-filter__title {
     display: initial;
     margin-right: 40px;
+    margin-bottom: 0;
     padding-left: 45px;
 
     @include font(20px, 1.2);
@@ -608,10 +609,6 @@
 
       @include pseudo(":");
     }
-  }
-
-  .country-filter__toggle {
-    top: 2px;
   }
 
   .country-filter__popup {
@@ -655,7 +652,7 @@
     }
 
     &:nth-of-type(n+23) {
-      margin-bottom: 257px;
+      margin-bottom: 207px;
     }
   }
 
@@ -791,13 +788,21 @@
 
 
   .country-filter__close-btn {
-    margin-top: 0;
+    margin-top: 57px;
     padding-right: 598px;
     padding-left: 633px;
 
     &::before,
     &::after {
       left: 594px;
+    }
+  }
+
+  .country-filter--closed {
+    padding-bottom: 54px;
+
+    .country-filter__nav {
+      margin-right: 63px;
     }
   }
 }
