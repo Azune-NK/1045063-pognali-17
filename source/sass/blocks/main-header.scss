@@ -12,6 +12,7 @@
 
 .main-header__wrapper {
   position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,6 +40,56 @@
 
 .main-header__index-link {
   display: none;
+}
+
+.main-header__user-photo {
+  position: absolute;
+  top: 70px;
+  right: 17px;
+
+  border-radius: 50%;
+}
+
+
+.main-header__user-lvl {
+  position: absolute;
+  top: 70px;
+  left: 19px;
+
+  width: 97px;
+  height: 97px;
+  margin: 0;
+  padding-top: 18px;
+
+  text-align: center;
+  color: $black-blue;
+
+  border: solid 3px $orange;
+  border-radius: 50%;
+
+  @include font(38px, 1, 700);
+
+  &::before {
+    top: 59px;
+    left: 30px;
+
+    color: $grey;
+
+    @include font(18px, 1.22, 400);
+    @include pseudo("level");
+  }
+
+  &::after {
+    top: 55px;
+    left: 20px;
+
+    width: 49px;
+    height: 2px;
+
+    background-color: $grey-border;
+
+    @include pseudo;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -109,6 +160,36 @@
       }
     }
   }
+
+  .main-header__user-lvl {
+    top: 200px;
+    left: unset;
+
+    width: 91px;
+    height: 91px;
+    padding-top: 14px;
+
+    &::before {
+      top: 54px;
+      left: 27px;
+    }
+
+    &::after {
+      top: 51px;
+      left: 18px;
+    }
+  }
+
+
+  .main-header__user-photo {
+    top: 200px;
+    right: 75px;
+
+    width: 94px;
+    height: 94px;
+
+    border-radius: 10px;
+  }
 }
 
 
@@ -126,6 +207,32 @@
   .main-header__current-page {
     &::before {
       left: 130px;
+    }
+  }
+
+  .main-header__user-photo {
+    top: -55px;
+    right: 155px;
+
+    width: 190px;
+    height: 190px;
+
+    border-radius: 10px 10px 0 0;
+  }
+
+
+  .main-header__user-lvl {
+    top: -12px;
+    right: 390px;
+
+    color: $white;
+
+    &::before {
+      color: $white;
+    }
+
+    &::after {
+      background-color: rgba($white, 0.3);
     }
   }
 }

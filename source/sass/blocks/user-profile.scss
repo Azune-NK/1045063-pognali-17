@@ -1,0 +1,231 @@
+.user-profile {
+  width: 320px;
+  margin: 0 auto;
+  margin-top: -20px;
+  padding: 162px 25px 63px;
+
+  background-color: $bg-silver;
+}
+
+.user-profile__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-profile__photo-upload {
+  display: block;
+  margin-bottom: 33px;
+  padding-top: 6px;
+  padding-bottom: 5px;
+
+  text-align: center;
+  color: $black-blue;
+  text-transform: uppercase;
+
+  background-color: $bg-light-sky;
+  border-radius: 20px;
+
+  @include font(17px, 1.76, 700);
+
+  &:hover,
+  &:focus {
+    background-color: $bg-deep-sky;
+  }
+
+  &:active {
+    color: rgba($black-blue, 0.3);
+  }
+}
+
+.user-profile__tags-wrapper,
+.user-profile__travel-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-profile__tags-wrapper {
+  margin-bottom: 25px;
+}
+
+.user-profile__travel-list {
+  @include ul-reset;
+}
+
+.user-profile__tags-legend,
+.user-profile__travel-legend {
+  position: absolute;
+  top: -8px;
+
+  margin: 0;
+
+  color: $blue;
+  text-transform: uppercase;
+
+  background-color: $bg-silver;
+
+  @include font(16px, 1.13, 700);
+}
+
+.user-profile__tags-legend {
+  padding: 0 18px;
+}
+
+.user-profile__travel-legend {
+  padding: 0 14px;
+}
+
+.user-profile__tags {
+  /* Вопрос - padding top не работает, если мы вводим больше тэгов чем высота + появляется прокрутка = наша псевдо легенда наползает на текст, как вообще убрать прокрутку, чтобы текст влиял на высоту textarea и падинг работал */
+  width: 270px;
+  height: 89px;
+  padding: 25px;
+
+  color: $grey;
+
+  background-color: transparent;
+  border: solid 1px $grey-border;
+  border-radius: 10px;
+  outline: none;
+
+  resize: none;
+
+  @include font(16px, 1.13);
+
+  &:hover {
+    border-color: $grey-border-hover;
+  }
+
+  &:focus {
+    border-color: $black-blue;
+  }
+}
+
+.user-profile__travel-wrapper {
+  padding: 14px 68px;
+
+  border: solid 1px $grey-border;
+  border-radius: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .user-profile {
+    width: auto;
+    margin-top: -55px;
+    padding: 120px 0 80px;
+  }
+
+  .user-profile__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
+  }
+
+  .user-profile__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-profile__photo-upload {
+    margin: 51px 0;
+    padding: 21px 0;
+
+    color: $blue;
+    letter-spacing: 2px;
+
+    border-radius: 10px;
+
+    @include font(20px, 0.9, 500);
+  }
+
+  .user-profile__tags-wrapper {
+    margin: 0;
+  }
+
+  .user-profile__travel-wrapper {
+    order: -1;
+    align-self: center;
+    padding: 25px 55px;
+  }
+
+  .user-profile__travel-list .travel-checkboxes__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .user-profile__tags-legend,
+  .user-profile__travel-legend {
+    top: unset;
+    bottom: -8px;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 0.9, 500);
+  }
+
+  .user-profile__travel-legend {
+    padding: 0 20px;
+  }
+
+  .user-profile__tags {
+    width: 618px;
+    height: 94px;
+    padding: 37px 40px;
+
+    @include font(20px, 1.2);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-profile {
+    padding: 130px 0 120px;
+  }
+
+  .user-profile__wrapper {
+    position: relative;
+
+    width: 1440px;
+    padding-right: 60px;
+    padding-left: 125px;
+  }
+
+  .user-profile__form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .user-profile__photo-upload {
+    position: absolute;
+    top: -75px;
+    right: 155px;
+
+    margin: 0;
+    padding: 15px 67px;
+
+    border-radius: 0 0 10px 10px;
+
+    span:nth-of-type(1) {
+      display: none;
+    }
+  }
+
+  .user-profile__travel-wrapper {
+    order: initial;
+    padding: 25px 105px;
+  }
+
+
+  .user-profile__travel-list .travel-checkboxes__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .user-profile__tags {
+    width: 730px;
+    height: 94px;
+  }
+
+  .user-profile__tags-legend {
+    left: 22px;
+  }
+}

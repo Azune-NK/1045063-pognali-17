@@ -125,11 +125,12 @@
               <input class="visually-hidden" type="file" name="profile-photo">
               <span>Сменить</span> <span>фото</span>
             </label>
-            <div>
-              <p>Тэги</p>
-              <textarea class="user-profile__tags" name="user-tags" cols="35" rows="3">#бургер #бар #футбол #концерт #крафт</textarea>
+            <div class="user-profile__tags-wrapper">
+              <p class="user-profile__tags-legend">Тэги</p>
+              <textarea class="user-profile__tags" name="user-tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
-            <div class="user-profile__travel-mode">
+            <div class="user-profile__travel-wrapper">
+              <p class="user-profile__travel-legend">Транспорт</p>
               <ul class="user-profile__travel-list travel-checkboxes">
                 <li class="travel-checkboxes__item">
                   <label class="travel-checkboxes__label">
