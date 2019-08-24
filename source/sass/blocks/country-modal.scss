@@ -1,0 +1,369 @@
+.country-modal {
+  position: absolute;
+  bottom: 592px;
+  left: 50%;
+  z-index: 100;
+
+  display: none;
+  flex-direction: column;
+  width: 220px;
+
+  background-color: $white;
+  border: solid 1px $grey-border;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+  transform: translate(-50%, -50%);
+
+
+  &--opened {
+    display: flex;
+  }
+}
+
+.country-modal__title {
+  position: absolute;
+  top: -42px;
+  left: -1px;
+
+  width: 220px;
+  margin: 0;
+  padding: 13px 14px 12px;
+  padding-right: 26px;
+
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+
+  background-color: $blue;
+  border-radius: 4px 4px 0 0;
+
+  @include font(14px, 1.28, 500);
+}
+
+.country-modal__close {
+  position: absolute;
+  top: -25px;
+  right: 17px;
+
+  width: 9px;
+  height: 9px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  &::before,
+  &::after {
+    top: 4px;
+    left: -1px;
+
+    width: 12px;
+    height: 1px;
+
+    background-color: rgba($white, 0.3);
+
+    @include pseudo;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: rgba($white, 1);
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: rgba($white, 0.1);
+    }
+  }
+}
+
+.country-modal__letter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+  margin-left: -1px;
+}
+
+.country-modal__by-letter {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 42px;
+  padding: 0;
+
+  color: $blue;
+
+  background-color: $white;
+  border: solid 1px $grey-border;
+
+  @include font(14px, 1.29, 500);
+
+  &:nth-child(5n) {
+    width: 44px;
+  }
+
+  &:nth-child(5n+2) {
+    left: -1px;
+  }
+
+  &:nth-child(5n+3) {
+    left: -2px;
+  }
+
+  &:nth-child(5n+4) {
+    left: -3px;
+  }
+
+  &:nth-child(5n+5) {
+    left: -4px;
+
+    margin-right: -4px;
+  }
+
+  &:nth-child(n+6) {
+    top: -1px;
+  }
+
+  &:nth-child(n+11) {
+    top: -2px;
+  }
+
+  &:nth-child(n+16) {
+    top: -3px;
+  }
+
+  &:nth-child(n+21) {
+    top: -4px;
+  }
+
+  &:nth-child(n+26) {
+    top: -5px;
+
+    margin-bottom: -5px;
+  }
+
+  &:hover:not(.country-modal__by-letter--active),
+  &:focus {
+    z-index: 2;
+
+    border: solid 1px $dark-border;
+  }
+
+  &--active,
+  &:active {
+    z-index: 3;
+
+    color: $white;
+
+    background-color: $blue;
+    border-color: $blue;
+  }
+}
+
+.country-modal__list-wrapper {
+  padding: 18px 20px;
+}
+
+.country-modal__list {
+  display: none;
+
+  @include ul-reset;
+
+  &--active {
+    display: initial;
+  }
+}
+
+.country-modal__country-link {
+  color: $grey;
+
+  @include font(16px, 1.38);
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+
+  &:active {
+    color: rgba($grey, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .country-modal {
+    bottom: 843px;
+    left: calc(50% + 23px);
+    flex-direction: row;
+    width: 575px;
+
+    border: 0;
+  }
+
+
+  .country-modal__title {
+    top: -70px;
+    left: 0;
+
+    width: 369px;
+    padding: 26px 27px;
+    padding-right: 44px;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 0.9);
+  }
+
+  .country-modal__close {
+    top: -44px;
+    right: 233px;
+
+    width: 17px;
+    height: 17px;
+
+    &::before,
+    &::after {
+      top: 8px;
+      left: -3px;
+
+      width: 24px;
+      height: 2px;
+
+      background-color: rgba($white, 0.3);
+
+      @include pseudo;
+    }
+  }
+
+  .country-modal__letter-wrapper {
+    align-self: flex-start;
+    width: 368px;
+    margin-left: 0;
+    padding: 34px 27px;
+  }
+
+  .country-modal__by-letter {
+    height: 70px;
+
+    @include font(20px, 0.9);
+
+    &:nth-child(n) {
+      top: unset;
+      left: unset;
+
+      width: 53px;
+      margin: 0;
+    }
+
+    &:nth-child(6n+2) {
+      left: -1px;
+    }
+
+    &:nth-child(6n+3) {
+      left: -2px;
+    }
+
+    &:nth-child(6n+4) {
+      left: -3px;
+    }
+
+    &:nth-child(6n+5) {
+      left: -4px;
+    }
+
+    &:nth-child(6n+6) {
+      left: -5px;
+
+      margin-right: -5px;
+    }
+
+    &:nth-child(n+7) {
+      top: -1px;
+    }
+
+    &:nth-child(n+13) {
+      top: -2px;
+    }
+
+    &:nth-child(n+19) {
+      top: -3px;
+    }
+
+    &:nth-child(n+25) {
+      top: -4px;
+
+      margin-bottom: -4px;
+    }
+  }
+
+  .country-modal__list-wrapper {
+    width: 207px;
+    padding: 35px 25px;
+
+    border-left: 1px solid rgba($grey-border, 0.5);
+  }
+
+  .country-modal__country-link {
+    @include font(20px, 1.5);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-modal {
+    bottom: 894px;
+    left: calc(50% - 135px);
+
+    width: 730px;
+  }
+
+  .country-modal__title {
+    width: 730px;
+  }
+
+  .country-modal__close {
+    right: 27px;
+  }
+
+  .country-modal__letter-wrapper {
+    width: 489px;
+  }
+
+  .country-modal__by-letter {
+    &:nth-child(n) {
+      top: unset;
+      left: unset;
+
+      width: 60px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+
+    &:nth-child(6n) {
+      margin-right: 0;
+    }
+
+
+    &:nth-child(n+25) {
+      margin-bottom: 0;
+    }
+  }
+
+  .country-modal__list-wrapper {
+    width: 241px;
+  }
+}

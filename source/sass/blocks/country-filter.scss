@@ -139,7 +139,7 @@
   margin-left: 25px;
 }
 
-.contry-filter__letter-wrapper {
+.country-filter__letter-wrapper {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
@@ -458,7 +458,7 @@
     margin: 0;
   }
 
-  .contry-filter__letter-wrapper {
+  .country-filter__letter-wrapper {
     margin-right: 75px;
     margin-bottom: 0;
     margin-left: -20px;
@@ -615,7 +615,7 @@
     position: relative;
   }
 
-  .contry-filter__letter-wrapper {
+  .country-filter__letter-wrapper {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
@@ -668,6 +668,10 @@
 
     display: initial;
     width: 182px;
+
+    &:nth-child(1):not(.country-filter__list--active) {
+      display: initial;
+    }
 
     &:nth-of-type(2) {
       left: 210px;

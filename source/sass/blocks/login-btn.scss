@@ -7,6 +7,7 @@
   text-transform: uppercase;
 
   background-color: $gold;
+  border: 0;
   border-radius: 20px;
 
   @include font(17px, 1.76, 700);
@@ -17,7 +18,7 @@
   }
 
   &:active {
-    color: rgba($grey-blue, 0.3);
+    color: rgba($black-blue, 0.3);
   }
 }
 

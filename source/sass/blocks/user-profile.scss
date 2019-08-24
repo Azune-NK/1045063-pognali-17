@@ -101,6 +101,10 @@
   &:focus {
     border-color: $black-blue;
   }
+
+  &::placeholder {
+    color: rgba($grey, 0.6);
+  }
 }
 
 .user-profile__travel-wrapper {

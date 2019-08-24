@@ -126,8 +126,8 @@
               <span>Сменить</span> <span>фото</span>
             </label>
             <div class="user-profile__tags-wrapper">
-              <p class="user-profile__tags-legend">Тэги</p>
-              <textarea class="user-profile__tags" name="user-tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+              <label class="user-profile__tags-legend" for="tags">Тэги</label>
+              <textarea class="user-profile__tags" id="tags" name="user-tags" aria-label="Коротко о себе в виде 5-8 хештэгов" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
             <div class="user-profile__travel-wrapper">
               <p class="user-profile__travel-legend">Транспорт</p>
@@ -227,13 +227,160 @@
               <p class="current-plans__name">Тайланд, Индонезия</p>
               <p class="current-plans__companions-count">1 попутчик</p>
               <p class="current-plans__trip-duration">1 июл — 15 июл</p>
-              <a class="current-plans__edit-link"  href="demin-plan-2.html">Изменить</a>
+              <a class="current-plans__edit-link" href="demin-plan-2.html">Изменить</a>
             </li>
           </ul>
         </div>
       </section>
       <section class="new-plan">
-        <h2 class="visually-hidden">Новые планы для путешествий</h2>
+        <form class="new-plan__form" action="https://echo.htmlacademy.ru" method="post">
+          <h2 class="visually-hidden">Новые планы для путешествий</h2>
+          <p class="new-plan__title">Добавить план:</p>
+          <ul class="new-plan__list">
+            <li class="new-plan__item new-plan__item--active" id="new-plan-step-1">
+              <ul class="new-plan__progress-list">
+                <li class="new-plan__steps new-plan__steps--active">Даты</li>
+                <li class="new-plan__steps">Маршрут</li>
+                <li class="new-plan__steps">Развлечения</li>
+              </ul>
+              <p class="new-plan__step-name">Шаг 1.<br> Даты пребывания</p>
+              <p class="new-plan__step-description">Укажите предпочтительное количество попутчиков, которых<br> вы хотели бы
+                позвать в поездку и ее предполагаемую длительность.</p>
+              <div class="new-plan__flex-wrapper">
+                <div class="new-plan__calc-wrapper">
+                  <label class="new-plan__calc-label" for="companions-count">Ищу попутчиков:</label>
+                  <p class="new-plan__calc-description">Чел.</p>
+                  <input class="new-plan__calc-input" id="companions-count" type="text" name="companions-count" value="2">
+                  <button class="new-plan__minus-btn" type="button"><span class="visually-hidden">Уменьшить количество</span></button>
+                  <button class="new-plan__plus-btn" type="button"><span class="visually-hidden">Увеличить количество</span></button>
+                </div>
+                <div class="new-plan__calc-wrapper">
+                  <label class="new-plan__calc-label" for="days-duration">Длительность:</label>
+                  <p class="new-plan__calc-description">Дн.</p>
+                  <input class="new-plan__calc-input" id="days-duration" type="text" name="days-duration" value="2">
+                  <button class="new-plan__minus-btn" type="button"><span class="visually-hidden">Уменьшить количество</span></button>
+                  <button class="new-plan__plus-btn" type="button"><span class="visually-hidden">Увеличить количество</span></button>
+                </div>
+                <label class="new-plan__checkbox-label">
+                  <input class="visually-hidden" type="checkbox" name="kids-alowed" checked>
+                  <span class="new-plan__checkbox"></span>Можно с детьми
+                </label>
+              </div>
+              <div class="new-plan__calendar-nav">
+                <button class="new-plan__month-arrows" type="button"><span class="visually-hidden">Предыдущий месяц</span></button>
+                <p class="new-plan__month-name">Март 2019</p>
+                <button class="new-plan__month-arrows" type="button"><span class="visually-hidden">Следующий месяц</span></button>
+              </div>
+              <div class="new-plan__calendar">
+                <p class="new-plan__calendar-weekday">П<span>н</span></p>
+                <p class="new-plan__calendar-weekday">В<span>т</span></p>
+                <p class="new-plan__calendar-weekday">С<span>р</span></p>
+                <p class="new-plan__calendar-weekday">Ч<span>т</span></p>
+                <p class="new-plan__calendar-weekday">П<span>т</span></p>
+                <p class="new-plan__calendar-weekday">С<span>б</span></p>
+                <p class="new-plan__calendar-weekday">В<span>с</span></p>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">23</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">24</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">25</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">26</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">27</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">28</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">1<span> март</span></button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">2</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">3</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">4</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">5</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">6</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">7</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">8</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">9</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">10</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">11</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">12</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">13</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">14</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">15</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">16</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">17</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">18</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">19</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">20</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">21</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">22</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">23</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">24</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--disabled" type="button">25</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--chosen" type="button">26<span>Заезд</span></button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--chosen" type="button">27</button>
+                <button class="new-plan__calendar-days new-plan__calendar-days--chosen" type="button">28<span>Выезд</span></button>
+                <button class="new-plan__calendar-days" type="button">29</button>
+                <button class="new-plan__calendar-days" type="button">30</button>
+                <button class="new-plan__calendar-days" type="button">31</button>
+                <button class="new-plan__calendar-days" type="button">1<span> апр</span></button>
+                <button class="new-plan__calendar-days" type="button">2</button>
+                <button class="new-plan__calendar-days" type="button">3</button>
+                <button class="new-plan__calendar-days" type="button">4</button>
+                <button class="new-plan__calendar-days" type="button">5</button>
+              </div>
+              <a class="new-plan__next-step btn-with-arrow" href="#new-plan-step-2">Следующий шаг</a>
+            </li>
+            <li class="new-plan__item" id="new-plan-step-2">
+              <ul class="new-plan__progress-list">
+                <li class="new-plan__steps">Даты</li>
+                <li class="new-plan__steps new-plan__steps--active">Маршрут</li>
+                <li class="new-plan__steps">Развлечения</li>
+              </ul>
+              <p class="new-plan__step-name">Шаг 2.<br> Маршрут</p>
+              <p class="new-plan__step-description">Укажите страны, которые вы хотели бы посетить.<br> Это может быть одна или сразу несколько.</p>
+              <div class="new-plan__select-wrapper">
+                <button class="new-plan__select-country new-plan__select-country--selected" type="button">
+                  <span>Босния и герцеговина</span>
+                  <img class="new-plan__country-img" src="img/svg/flag-bosnia.svg" width="35" height="24" alt="Босния и герцеговина">
+                </button>
+                <button class="new-plan__delete-country" type="button"><span class="visually-hidden">Удалить</span></button>
+              </div>
+              <div class="new-plan__select-wrapper">
+                <button class="new-plan__select-country new-plan__select-country--selected" type="button">
+                  <span>Чехословакия</span>
+                  <img class="new-plan__country-img" src="img/svg/flag-czech.svg" width="35" height="24" alt="Чехословакия">
+                </button>
+                <button class="new-plan__delete-country" type="button"><span class="visually-hidden">Удалить</span></button>
+              </div>
+              <div class="new-plan__select-wrapper">
+                <button class="new-plan__select-country" type="button"><span>Выберите страну</span></button>
+                <button class="new-plan__delete-country" type="button"><span class="visually-hidden">Удалить</span></button>
+              </div>
+              <button class="new-plan__add-country" type="button">Добавить страну</button>
+              <a class="new-plan__next-step btn-with-arrow" href="#new-plan-step-3">Следующий шаг</a>
+              <a class="new-plan__previous-step" href="#new-plan-step-1">На шаг назад</a>
+            </li>
+            <li class="new-plan__item" id="new-plan-step-3">
+              <ul class="new-plan__progress-list">
+                <li class="new-plan__steps">Даты</li>
+                <li class="new-plan__steps">Маршрут</li>
+                <li class="new-plan__steps new-plan__steps--active">Развлечения</li>
+              </ul>
+              <p class="new-plan__step-name">Шаг 3.<br> Развлечения</p>
+              <p class="new-plan__step-description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <ul class="new-plan__todo-list">
+                <li class="new-plan__todo-item">
+                  <label for="bosniaAndHerzegovina" class="new-plan__textarea-label">Босния и герцеговина</label>
+                  <img class="new-plan__country-img" src="img/svg/flag-bosnia.svg" width="35" height="24" alt="Босния и герцеговина">
+                  <textarea class="new-plan__textarea" id="bosniaAndHerzegovina" name="bosniaAndHerzegovina-todo" aria-label="План действий"
+                    placeholder="План действий"></textarea>
+                </li>
+                <li class="new-plan__todo-item">
+                  <label for="czechoslovakia" class="new-plan__textarea-label">Чехословакия</label>
+                  <img class="new-plan__country-img" src="img/svg/flag-czech.svg" width="35" height="24" alt="Чехословакия">
+                  <textarea class="new-plan__textarea" id="czechoslovakia" name="czechoslovakia-todo" aria-label="План действий"
+                    placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
+                </li>
+              </ul>
+              <button class="new-plan__next-step btn-with-arrow" type="submit">Отправить</button>
+              <a class="new-plan__previous-step" href="#new-plan-step-2">На шаг назад</a>
+            </li>
+          </ul>
+        </form>
       </section>
     </main>
 
@@ -315,6 +462,684 @@
         </p>
       </div>
     </footer>
+
+    <section class="country-modal">
+      <h2 class="visually-hidden">Список стран</h2>
+      <p class="country-modal__title">Выберите страну</p>
+      <button class="country-modal__close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+      <div class="country-modal__letter-wrapper">
+        <button class="country-modal__by-letter country-modal__by-letter--active">А</button>
+        <button class="country-modal__by-letter">Б</button>
+        <button class="country-modal__by-letter">В</button>
+        <button class="country-modal__by-letter">Г</button>
+        <button class="country-modal__by-letter">Д</button>
+        <button class="country-modal__by-letter">Е</button>
+        <button class="country-modal__by-letter">Ё</button>
+        <button class="country-modal__by-letter">Ж</button>
+        <button class="country-modal__by-letter">З</button>
+        <button class="country-modal__by-letter">И</button>
+        <button class="country-modal__by-letter">Й</button>
+        <button class="country-modal__by-letter">К</button>
+        <button class="country-modal__by-letter">Л</button>
+        <button class="country-modal__by-letter">М</button>
+        <button class="country-modal__by-letter">Н</button>
+        <button class="country-modal__by-letter">О</button>
+        <button class="country-modal__by-letter">П</button>
+        <button class="country-modal__by-letter">Р</button>
+        <button class="country-modal__by-letter">С</button>
+        <button class="country-modal__by-letter">Т</button>
+        <button class="country-modal__by-letter">У</button>
+        <button class="country-modal__by-letter">Ф</button>
+        <button class="country-modal__by-letter">Х</button>
+        <button class="country-modal__by-letter">Ц</button>
+        <button class="country-modal__by-letter">Ч</button>
+        <button class="country-modal__by-letter">Ш</button>
+        <button class="country-modal__by-letter">Щ</button>
+        <button class="country-modal__by-letter">Э</button>
+        <button class="country-modal__by-letter">Ю</button>
+        <button class="country-modal__by-letter">Я</button>
+      </div>
+      <div class="country-modal__list-wrapper">
+        <ul class="country-modal__list country-modal__list--active">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Афганистан</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Албания</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Алгерия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Андорра</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Аргентина</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Армения</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Австралия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Австрия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Азербайджан</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Багамские Острова</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Бангладеш</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Барбадос</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Бахрейн</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Белоруссия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Белиз</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Бельгия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Бенин</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Болгария</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Боливия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Босния и Герцеговина</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Ботсвана</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Бразилия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Бруней</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Буркина-Фасо</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Бурунди</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Бутан</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Вануату</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Великобритания</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Венгрия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Венесуэла</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Восточный Тимор</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Вьетнам</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Габон</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гаити</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гайана</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гамбия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гана</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гватемала</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гвинея</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гвинея-Бисау</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Германия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гондурас</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Гренада</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Греция</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Грузия</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Дания</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Джибути</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Доминика</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Доминикана</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Египет</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Надеемся, что после<br> колонизации Марса,<br> все
+              же появятся страны<br> начинающиеся на Ё...</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Надеемся, что после<br> колонизации Марса,<br> все
+              же появятся страны<br> начинающиеся на Ж...</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Замбия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Зимбабве</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Израиль</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Индия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Индонезия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Иордания</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Ирак</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Иран</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Ирландия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Исландия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Испания</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Италия</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Надеемся, что после<br> колонизации Марса,<br> все
+              же появятся страны<br> начинающиеся на Й...</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Кабо-Верде</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Казахстан</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Камбоджа</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Камерун</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Канада</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Катар</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Кения</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Кипр</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Киргизия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Кирибати</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Китай</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Колумбия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Коморы</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Конго</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">КНДР</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Республика Корея</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Коста-Рика</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Кот-д’Ивуар</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Куба</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Кувейт</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Лаос</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Латвия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Лесото</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Либерия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Ливан</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Ливия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Литва</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Лихтенштейн</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Люксембург</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Маврикий</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Мавритания</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Мадагаскар</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Малави</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Малайзия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Мали</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Мальдивы</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Мальта</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Марокко</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Маршалловы Острова</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Мексика</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Мозамбик</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Молдавия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Монако</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Монголия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Мьянма</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Намибия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Науру</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Непал</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Нигер</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Нигерия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Нидерланды</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Никарагуа</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Новая Зеландия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Норвегия</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">ОАЭ</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Оман</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Пакистан</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Палау</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Панама</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Папуа — Новая Гвинея</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Парагвай</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Перу</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Польша</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Португалия</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Республика Ангилья</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Республика Кипр</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Республика Логон</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Россия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Руанда</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Румыния</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сальвадор</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Самоа</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сан-Марино</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сан-Томе и Принсипи</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Саудовская Аравия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Северная Македония</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сейшелы</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сенегал</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сент-Люсия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сербия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сингапур</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сирия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Словакия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Словения</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">США</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сомали</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Судан</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Суринам</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Сьерра-Леоне</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Таджикистан</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Таиланд</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Танзания</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Того</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Тонга</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Тринидад и Тобаго</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Тувалу</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Тунис</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Туркмения</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Турция</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Уганда</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Узбекистан</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Украина</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Уругвай</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Фиджи</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Филиппины</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Финляндия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Франция</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Хорватия</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Надеемся, что после<br> колонизации Марса,<br> все
+              же появятся страны<br> начинающиеся на Ц...</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Чад</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Черногория</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Чехия</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Чили</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Швейцария</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Швеция</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Шри-Ланка</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Надеемся, что после<br> колонизации Марса,<br> все
+              же появятся страны<br> начинающиеся на Щ...</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Эквадор</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Эритрея</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Эсватини</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Эстония</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Эфиопия</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">ЮАР</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Южный Судан</a>
+          </li>
+        </ul>
+        <ul class="country-modal__list">
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Ямайка</a>
+          </li>
+          <li class="country-modal__item">
+            <a class="country-modal__country-link" href="404.html">Япония</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <script src="js/app.js"></script>
 
