@@ -482,6 +482,7 @@
       margin-top: 27px;
       margin-bottom: 15px;
       margin-left: 0;
+
       @include font(21px);
     }
 
@@ -637,6 +638,7 @@
     .user__name {
       margin-top: 31px;
       margin-bottom: 22px;
+
       @include font(24px);
     }
 

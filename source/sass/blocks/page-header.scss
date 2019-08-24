@@ -11,6 +11,10 @@
   &--white {
     background-color: $white;
   }
+
+  /* &--fixed {
+    position: fixed;
+  } */
 }
 
 .page-header--white .main-nav--closed .main-nav__toggle::before {
