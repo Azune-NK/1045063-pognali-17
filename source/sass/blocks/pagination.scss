@@ -41,8 +41,6 @@
 .pagination__wrapper {
   position: relative;
 
-  padding: 15px 63px;
-
   background-color: $white;
   border-radius: 20px;
 
@@ -73,22 +71,6 @@
   justify-content: space-between;
 }
 
-.pagination__left .pagination__btn {
-  display: block;
-
-  border-top: 10px solid transparent;
-  border-right: 10px solid $blue;
-  border-bottom: 10px solid transparent;
-}
-
-.pagination__right .pagination__btn {
-  display: block;
-
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid $blue;
-}
-
 .pagination__btn[href] {
   &:hover,
   &:focus {
@@ -97,6 +79,40 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: 767px) {
+  .pagination__left .pagination__btn {
+    display: block;
+    width: 135px;
+    height: 50px;
+    
+    &::before {
+      top: 15px;
+
+      border-top: 10px solid transparent;
+      border-right: 10px solid $blue;
+      border-bottom: 10px solid transparent;
+
+      @include pseudo;
+    }
+  }
+
+  .pagination__right .pagination__btn {
+    display: block;
+    width: 135px;
+    height: 50px;
+
+    &::before {
+      top: 15px;
+
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid $blue;
+
+      @include pseudo;
+    }
   }
 }
 
@@ -132,6 +148,22 @@
 
   .pagination__arrows {
     width: 53px;
+  }
+
+  .pagination__left .pagination__btn {
+    display: block;
+
+    border-top: 10px solid transparent;
+    border-right: 10px solid $blue;
+    border-bottom: 10px solid transparent;
+  }
+
+  .pagination__right .pagination__btn {
+    display: block;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $blue;
   }
 
   .pagination__list {
