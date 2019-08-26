@@ -46,6 +46,10 @@
 
 .companions-filter__list {
   @include ul-reset;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .companions-filter__item:not(:last-child) {
@@ -62,7 +66,7 @@
   color: $blue;
   text-transform: uppercase;
 
-  background-color: unset;
+  background-color: transparent;
   border: 0;
   cursor: pointer;
 
@@ -115,6 +119,16 @@
 
     &::after {
       border-bottom: 4px solid rgba($grey-blue, 0.3);
+    }
+  }
+
+  &--active {
+    &::before {
+      display: block;
+    }
+
+    &::after {
+      display: none;
     }
   }
 }
@@ -407,14 +421,10 @@ input[type="checkbox"]:focus + .companions-filter__checkbox {
   }
 
   .companions-filter__item {
-    width: 150px;
+    width: 151px;
 
-    &:not(:last-child) {
+    &:not(:nth-of-type(3)) {
       margin-right: 20px;
-    }
-
-    &:nth-of-type(2) {
-      margin-right: 25px;
     }
   }
 
@@ -425,6 +435,7 @@ input[type="checkbox"]:focus + .companions-filter__checkbox {
 
   .companions-filter__list {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 5px;
   }
 
@@ -433,6 +444,7 @@ input[type="checkbox"]:focus + .companions-filter__checkbox {
     align-self: flex-start;
     width: 100px;
     margin-right: 25px;
+    flex-shrink: 0;
 
     text-align: left;
 
@@ -539,6 +551,16 @@ input[type="checkbox"]:focus + .companions-filter__checkbox {
       border-right: 5px solid transparent;
       border-bottom: 5px solid $grey-blue;
       border-left: 5px solid transparent;
+    }
+
+    &--active {
+      &::before {
+        display: block;
+      }
+
+      &::after {
+        display: none;
+      }
     }
   }
 

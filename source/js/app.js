@@ -24,23 +24,23 @@ navMain.classList.add("main-nav--closed");
   }
  })(Element.prototype); */
 
-/* for (var i = 0; i < filterBtns.length; i++) {
+ /* for (var i = 0; i < filterBtns.length; i++) {
  filterBtns[i].addEventListener('click', function(e){
  e.preventDefault();
  var target = e.target.closet('.companions-filter__food');
  if (!target) return;
 
- target.querySelector('.companions-filter__list').classList.add(.companions-filter__list--opened)
+ target.querySelector('.companions-filter__list').classList.add("companions-filter__list--closed")
  })
  } */
 
-/* var blocks = document.querySelectorAll('.companions-filter__food');
+/* var blocks = document.querySelectorAll('.companions-filter__section');
 for (var i = 0; i < blocks.length; i++) {
 blocks[i].addEventListener('click', function(e){
 e.preventDefault();
 if (!e.target.classList.contains('companions-filter__legend-btn')) return;
 
-this.querySelector('.companions-filter__list').classList.add(.companions-filter__list--opened)
+this.querySelector('.companions-filter__list').classList.add("companions-filter__list--closed")
 })
 } */
 
@@ -56,15 +56,19 @@ navToggle.addEventListener("click", function (/* Вопрос почему ту�
   }
 });
 
-bizPricingOpen.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  bizPricingModal.classList.add("modal--opened");
-  bizPricingClose.focus(); /* Вопрос - если так не делать(табиндекс кстати не работает) - то чтобы через таб добраться до кнопки закрытия - уйдут годы - как обычно такой кейс решается? */
-});
+if (bizPricingOpen) {
+  bizPricingOpen.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    bizPricingModal.classList.add("modal--opened");
+    bizPricingClose.focus(); /* Вопрос - если так не делать(табиндекс кстати не работает) - то чтобы через таб добраться до кнопки закрытия - уйдут годы - как обычно такой кейс решается? */
+  });
+}
 
-bizPricingClose.addEventListener("click", function (evt) {
-  bizPricingModal.classList.remove("modal--opened");
-});
+if (bizPricingClose) {
+  bizPricingClose.addEventListener("click", function (evt) {
+    bizPricingModal.classList.remove("modal--opened");
+  });
+}
 
 document.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {

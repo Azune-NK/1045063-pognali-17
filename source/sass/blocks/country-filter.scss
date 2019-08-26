@@ -572,7 +572,7 @@
     }
 
     .country-filter__mainland-btn {
-      display: initial;
+      display: block;
     }
   }
 }
@@ -590,7 +590,7 @@
   }
 
   .country-filter__title {
-    display: initial;
+    display: block;
     margin-right: 40px;
     margin-bottom: 0;
     padding-left: 45px;
@@ -666,11 +666,11 @@
     position: absolute;
     top: 75px;
 
-    display: initial;
+    display: block;
     width: 182px;
 
     &:nth-child(1):not(.country-filter__list--active) {
-      display: initial;
+      display: block;
     }
 
     &:nth-of-type(2) {

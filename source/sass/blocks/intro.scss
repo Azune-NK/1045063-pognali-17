@@ -1,5 +1,4 @@
 .intro {
-  /* Куча проблем была, еще пару осталось, самый большой вопрос с фонами и их поведением на резине */
   position: relative;
   z-index: 7;
 
@@ -9,7 +8,7 @@
 
   background: url("../img/background/traveller-illustration-mobile@1x.png") no-repeat,
     url("../img/background/globe-back-mobile@1x.jpg") no-repeat,
-    linear-gradient(to top, $black-blue, $black-blue); /* Вопрос - пришлось делать так, ибо обычный bgc не закрашивал области, где кончался фон с планетой, норм? */
+    linear-gradient(to top, $black-blue, $black-blue);
   background-position: 80px 150px, 0 -75px;
 }
 
@@ -113,7 +112,7 @@
     background: url("../img/background/traveller-illustration-tablet@1x.png") no-repeat,
       url("../img/background/globe-back-tablet@1x.jpg") no-repeat,
       linear-gradient(to top, $bg-light-blue, $bg-light-blue);
-    background-position: 285px 281px, 50% 100%; /* Вопрос - если первому фону задать по Х 37vw - будет "приятная" резина, до 1440 не успеет залезть за край steps, но в целом ни с px, ни с % не фиксируется на месте, пофиксить поведение можно только задав первый фон обертке? */
+    background-position: 285px 281px, 50% 100%;
   }
 
   .intro__wrapper {

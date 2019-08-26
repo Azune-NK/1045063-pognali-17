@@ -50,7 +50,7 @@
 @media (max-width: 1439px) {
   .main-nav--opened.main-nav--nojs {
     position: relative;
-    top: unset;
+    top: auto;
     bottom: -27px;
     left: -25px;
   }
@@ -58,19 +58,19 @@
   .main-nav--opened {
     position: absolute;
     top: 73px;
-    bottom: unset;
+    bottom: auto;
     left: 0;
   }
 
   .main-nav--closed {
     position: absolute;
     top: -1000%;
-    bottom: unset;
+    bottom: auto;
     left: 0;
   }
 
   .main-nav--closed .main-nav__toggle {
-    top: unset;
+    top: auto;
     bottom: -74.3%;
 
     width: 25px;
@@ -186,7 +186,7 @@
   }
 
   .main-nav__login-btn {
-    top: unset;
+    top: auto;
     right: 40px;
     bottom: -103.5%;
   }
@@ -194,7 +194,7 @@
   .main-nav--opened .main-nav__login-btn {
     top: -151px;
     right: 40px;
-    bottom: unset;
+    bottom: auto;
   }
 }
 
@@ -203,7 +203,7 @@
     margin: 0;
     padding: 0;
 
-    background-color: unset;
+    background-color: transparent;
   }
 
   .main-nav__wrapper {
@@ -232,7 +232,7 @@
   }
 
   .main-nav__login-btn {
-    position: initial;
+    position: static;
 
     order: 1;
     margin: 0;

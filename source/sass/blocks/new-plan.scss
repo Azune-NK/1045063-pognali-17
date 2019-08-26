@@ -867,7 +867,7 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
 
       .new-plan__step-description {
         br {
-          display: initial;
+          display: inline;
         }
       }
     }
@@ -1028,7 +1028,7 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
     @include font(18px, 1);
 
     span {
-      display: initial;
+      display: inline;
     }
   }
 
@@ -1222,7 +1222,7 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
     &::after {
       top: 8px;
       right: 0;
-      left: unset;
+      left: auto;
 
       width: 15px;
       height: 15px;
@@ -1260,7 +1260,7 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
     padding-left: 34px;
 
     vertical-align: middle;
-    text-transform: initial;
+    text-transform: none;
 
     @include font(24px, 1);
 
@@ -1323,7 +1323,7 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
         margin-bottom: 55px;
 
         br {
-          display: initial;
+          display: inline;
         }
       }
     }
@@ -1486,12 +1486,12 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
     @include font(18px);
 
     &:not(&--chosen) span {
-      display: initial;
+      display: inline;
       margin-left: 4px;
     }
 
     &--chosen span {
-      display: initial;
+      display: inline-block;
       width: 100%;
       margin-top: 5px;
 
@@ -1562,7 +1562,7 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
     &:not(:first-child)::before {
       top: calc(-100% + 26px);
       right: 224px;
-      left: unset;
+      left: auto;
 
       display: block;
       width: 3px;
@@ -1576,7 +1576,6 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
 
   .new-plan__textarea-label {
     width: 782px;
-    padding-right: 15px;
 
     &::before {
       display: none;
