@@ -28,19 +28,47 @@
 
 .biz-pricing__service,
 .biz-pricing__offer {
+  position: relative;
+
   color: $grey;
 
   @include font(16px, 1.38, 300);
 }
 
+.biz-pricing__service {
+  &::before {
+    top: -12px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $black;
+    opacity: 0.05;
+
+    @include pseudo;
+  }
+}
+
 .biz-pricing__offer {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+
+  &:last-child::before {
+    bottom: -12px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $black;
+    opacity: 0.05;
+
+    @include pseudo;
+  }
 }
 
 .biz-pricing__button {
   width: 100%;
-  margin-top: 15px;
-  padding: 23px 80px;
+  margin-top: 21px;
+  padding: 18px 0;
 
   color: $blue;
   text-transform: uppercase;
@@ -89,13 +117,40 @@
     @include font(22px, 1.27);
   }
 
+  .biz-pricing__service {
+    &::before {
+      top: -14px;
+
+      width: 506px;
+    }
+
+    &:last-of-type::after {
+      bottom: 16px;
+      left: 0;
+
+      width: 506px;
+      height: 1px;
+
+      background-color: $black;
+      opacity: 0.05;
+
+      @include pseudo;
+    }
+  }
+
   .biz-pricing__offer {
-    text-align: right;
     margin-bottom: 30px;
+
+    text-align: right;
+
+    &:last-child::before {
+      display: none;
+    }
   }
 
   .biz-pricing__button {
-    margin-top: 35px;
+    padding: 42px 0;
+    margin-top: 33px;
 
     text-transform: initial;
 
@@ -110,5 +165,15 @@
 
   .biz-pricing__list {
     padding: 0 60px;
+  }
+
+  .biz-pricing__service {
+    &::before {
+      width: 630px;
+    }
+
+    &:last-of-type::after {
+      width: 630px;
+    }
   }
 }
