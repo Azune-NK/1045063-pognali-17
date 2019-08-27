@@ -4,8 +4,8 @@
 
   width: 320px;
   margin: 0 auto;
-  margin-top: -50px;
-  padding: 120px 25px 30px;
+  margin-top: -30px;
+  padding: 100px 25px 31px;
   overflow: hidden;
 
   background: $grey-blue;
@@ -16,7 +16,7 @@
   position: relative;
 
   &::before {
-    top: -34px;
+    top: -31px;
     right: 0;
     z-index: -1;
 
@@ -24,22 +24,20 @@
     height: 143px;
 
     background: url("../img/background/smolov-back-desktop@1x.png") no-repeat;
-    border-radius: 20px;
+    border-radius: 10px;
 
     @include pseudo;
   }
 
   &::after {
-    top: 230px;
-    left: -40px;
+    top: 241px;
+    left: -35px;
     z-index: -1;
 
-    width: 61px;
+    width: 71px;
     height: 71px;
 
     background: url("../img/background/rogovaya-back-mobile@1x.png") no-repeat;
-    border-radius: 10px;
-    /* Проверить в ФШ */
 
     @include pseudo;
   }
@@ -57,7 +55,7 @@
   @include font(24px, 1);
 
   &::before {
-    top: -34px;
+    top: -31px;
     left: -50px;
     z-index: -1;
 
@@ -74,7 +72,7 @@
 .companions__text {
   width: 215px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 25px;
 
   color: $white;
@@ -88,13 +86,12 @@
 
 .companions__lead {
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 58px;
   margin-left: 25px;
 
   color: $white;
 
   @include font(16px, 1.38, 700);
-  /* На глаз кажется что в макете текст 500, а не 700, хотя в свойствах болд */
 
   br {
     display: none;
@@ -103,7 +100,6 @@
 
 .companions__list {
   display: flex;
-  /* Вопрос - не могу понять, почему без df карточки не воспринимали маргин бот и без него все равно имели отступ вертикальный */
   flex-direction: column;
 
   @include ul-reset;
@@ -116,7 +112,8 @@
 @media (min-width: $tablet-width) {
   .companions--index {
     width: auto;
-    padding: 200px 0 90px;
+    padding: 192px 0 88px;
+    margin-top: -55px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -132,9 +129,9 @@
     }
 
     &::after {
-      top: -63px;
-      right: 77px;
-      left: unset;
+      top: -57px;
+      right: 75px;
+      left: auto;
 
       width: 285px;
       height: 285px;
@@ -145,13 +142,13 @@
   }
 
   .companions__title {
-    margin-bottom: 60px;
+    margin-bottom: 59px;
     margin-left: 0;
 
     @include font(45px, 1);
 
     &::before {
-      top: -63px;
+      top: -57px;
       left: -35px;
 
       width: 213px;
@@ -173,6 +170,7 @@
 
   .companions__lead {
     margin-left: 0;
+    margin-bottom: 61px;
 
     @include font(21px, 1.19);
 
@@ -194,7 +192,7 @@
 
 @media (min-width: $desktop-width) {
   .companions--index {
-    padding: 220px 0 135px;
+    padding: 180px 0 131px;
   }
 
   .companions--index .companions__wrapper {
@@ -205,19 +203,19 @@
     padding-left: 132px;
 
     &::before {
-      top: 0;
-      left: 550px;
+      top: 8px;
+      left: 547px;
     }
 
     &::after {
       top: 260px;
-      left: 195px;
+      left: 191px;
     }
   }
 
   .companions--index .companions__list {
     align-self: flex-start;
-    margin-top: 6px;
+    margin-top: 7px;
   }
 
   .companions__title {
@@ -233,7 +231,7 @@
 
   .companions__btn {
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     left: 132px;
 
     width: 280px;

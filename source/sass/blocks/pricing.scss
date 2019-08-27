@@ -5,7 +5,7 @@
   width: 320px;
   margin: 0 auto;
   margin-top: -30px;
-  padding: 80px 50px 40px;
+  padding: 80px 50px 39px;
 
   background-color: $bg-silver;
   border-radius: 0 0 30px 30px;
@@ -25,15 +25,15 @@
   position: relative;
 
   width: 115px;
-  margin-bottom: 55px;
+  margin-bottom: 56px;
 
   color: $orange;
 
   @include font(24px, 1);
 
   &::before {
-    top: -10px;
-    right: -130px;
+    top: -13px;
+    right: -129px;
 
     width: 99px;
     height: 99px;
@@ -46,7 +46,7 @@
 }
 
 .pricing__btn {
-  margin-top: 30px;
+  margin-top: 20px;
 
   color: $grey-blue;
 
@@ -70,8 +70,8 @@
   position: relative;
 
   &:nth-of-type(1)::after {
-    top: -5px;
-    right: -25px;
+    top: -7px;
+    right: -24px;
 
     width: 34px;
     height: 34px;
@@ -88,8 +88,8 @@
   }
 
   &:nth-of-type(2)::after {
-    top: -5px;
-    right: -25px;
+    top: -7px;
+    right: -24px;
 
     width: 34px;
     height: 34px;
@@ -106,8 +106,8 @@
   }
 
   &:nth-of-type(3)::after {
-    top: -5px;
-    right: -25px;
+    top: -7px;
+    right: -24px;
 
     width: 34px;
     height: 34px;
@@ -127,10 +127,10 @@
 .pricing__offer {
   position: relative;
 
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 
   &:nth-of-type(1)::after {
-    top: -25px;
+    top: -33px;
     right: 20px;
 
     width: 200px;
@@ -142,7 +142,7 @@
   }
 
   &:nth-of-type(2)::after {
-    top: -25px;
+    top: -33px;
     right: 20px;
 
     width: 200px;
@@ -154,7 +154,7 @@
   }
 
   &:nth-of-type(3)::after {
-    top: -25px;
+    top: -33px;
     right: 20px;
 
     width: 200px;
@@ -166,7 +166,7 @@
   }
 
   &:nth-of-type(3)::before {
-    top: 30px;
+    top: 33px;
     right: 20px;
 
     width: 200px;
@@ -181,7 +181,8 @@
 @media (min-width: $tablet-width) {
   .pricing {
     width: auto;
-    padding: 160px 0 85px;
+    padding: 125px 0 88px;
+    margin-top: -55px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -194,15 +195,15 @@
 
   .pricing__lead {
     width: auto;
-    margin-bottom: 90px;
+    margin-bottom: 92px;
 
     text-align: center;
 
     @include font(45px, 1);
 
     &::before {
-      top: 340px;
-      right: 45px;
+      top: 339px;
+      right: 46px;
       z-index: 2;
     }
 
@@ -232,12 +233,12 @@
   .pricing__service {
     position: relative;
 
-    width: 75%;
-    margin-bottom: 35px;
+    width: 70%;
+    margin-bottom: 33px;
     padding-left: 90px;
 
     &:nth-of-type(1)::after {
-      top: -15px;
+      top: -16px;
       left: 0;
 
       width: 67px;
@@ -273,8 +274,8 @@
   .pricing__offer {
     z-index: 3;
 
-    width: 25%;
-    padding-right: 35px;
+    width: 30%;
+    padding-right: 34px;
 
     text-align: right;
 
@@ -311,13 +312,13 @@
     position: relative;
 
     align-self: flex-start;
-    margin-top: 40px;
-    padding-left: 90px;
+    margin-top: 43px;
+    padding-left: 89px;
 
     @include font(20px, 1);
 
     &::before {
-      top: -25px;
+      top: -24px;
       left: 0;
 
       width: 67px;
@@ -334,7 +335,7 @@
 
 @media (min-width: $desktop-width) {
   .pricing {
-    padding: 240px 0 190px;
+    padding: 158px 0 190px;
   }
 
   .pricing__wrapper {
@@ -343,11 +344,11 @@
   }
 
   .pricing__lead {
-    margin-bottom: 150px;
+    margin-bottom: 152px;
 
     &::before {
-      top: 170px;
-      right: 5px;
+      top: 183px;
+      right: 2px;
 
       width: 198px;
       height: 198px;
@@ -356,8 +357,8 @@
     }
 
     &::after {
-      top: 125px;
-      right: 120px;
+      top: 130px;
+      right: 114px;
 
       width: 444px;
       height: 300px;
@@ -370,7 +371,7 @@
 
   .pricing__offer {
     width: 40%;
-    padding-right: 275px;
+    padding-right: 273px;
 
     &:nth-of-type(1)::after {
       top: -15px;

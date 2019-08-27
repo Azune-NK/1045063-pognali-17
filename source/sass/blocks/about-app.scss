@@ -4,7 +4,7 @@
 
   width: 320px;
   margin: 0 auto;
-  padding: 310px 50px 80px;
+  padding: 312px 50px 82px;
   overflow: hidden;
 
   background-color: $grey-blue;
@@ -16,7 +16,7 @@
 
   &::before {
     right: -40px;
-    bottom: -80px;
+    bottom: -82px;
     z-index: -1;
 
     width: 292px;
@@ -56,7 +56,7 @@
 .about-app__text {
   width: 210px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   color: $white;
 
@@ -87,7 +87,7 @@
 @media (min-width: $tablet-width) {
   .about-app {
     width: auto;
-    padding: 280px 0 90px;
+    padding: 274px 0 88px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -98,8 +98,8 @@
     padding: 0 75px;
 
     &::before {
-      right: -25px;
-      bottom: 0;
+      right: 8px;
+      bottom: 1px;
 
       width: 376px;
       height: 548px;
@@ -114,7 +114,7 @@
     @include font(45px, 1);
 
     &::before {
-      top: -43px;
+      top: -40px;
       left: -36px;
 
       width: 688px;
@@ -139,7 +139,7 @@
 
   .about-app__lead {
     width: 295px;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 
     @include font(21px, 1.19);
 
@@ -156,8 +156,8 @@
 
 @media (min-width: $desktop-width) {
   .about-app {
-    margin-top: -60px;
-    padding: 220px 0 160px;
+    margin-top: -55px;
+    padding: 183px 0 163px;
   }
 
   .about-app__wrapper {
@@ -166,7 +166,7 @@
 
     &::before {
       right: 60px;
-      bottom: -160px;
+      bottom: -163px;
 
       width: 630px;
       height: 665px;
@@ -179,7 +179,7 @@
     margin-bottom: 60px;
 
     &::before {
-      top: -62px;
+      top: -57px;
       left: -72px;
 
       width: 213px;
@@ -198,6 +198,6 @@
 
   .about-app__lead {
     width: 410px;
-    margin-bottom: 85px;
+    margin-bottom: 86px;
   }
 }

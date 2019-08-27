@@ -1,7 +1,7 @@
 .login-btn {
+  position: relative;
   display: inline-block;
-  padding: 6px 40px 4px;
-  z-index: 100;
+  padding: 6px 39px 4px;
 
   vertical-align: bottom;
   color: $black-blue;
@@ -25,7 +25,7 @@
 
 @media (min-width: $tablet-width) {
   .login-btn {
-    padding: 12px 30px 8px;
+    padding: 10px 29px;
 
     border-radius: 25px;
 

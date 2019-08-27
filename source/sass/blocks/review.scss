@@ -1,6 +1,6 @@
 .review {
   margin: 0 -25px;
-  padding: 50px 50px 0;
+  padding: 46px 50px 0;
 
   background-color: $black-blue;
 }
@@ -8,7 +8,7 @@
 .review__text {
   width: 155px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   color: $white;
 
@@ -28,7 +28,6 @@
 @media (min-width: $tablet-width) {
   .review {
     margin: 0;
-    margin-top: 5px;
     padding: 0;
 
     background-color: transparent;
@@ -36,7 +35,7 @@
 
   .review__text {
     width: 260px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 
     @include font(28px, 1.18);
   }
@@ -46,4 +45,11 @@
 
     @include font(21px, 1.19);
   }
+}
+
+@media (min-width: $desktop-width) {
+  .review {
+    margin-top: 13px;
+  }
+
 }

@@ -147,7 +147,7 @@
   }
 
   .main-nav__toggle {
-    right: 370px;
+    right: 371px;
   }
 
   .main-nav__login-btn {
@@ -182,13 +182,13 @@
   }
 
   .main-nav--closed .main-nav__toggle {
-    bottom: -100.5%;
+    bottom: -100.6%;
   }
 
   .main-nav__login-btn {
     top: auto;
     right: 40px;
-    bottom: -103.5%;
+    bottom: -103.3%;
   }
 
   .main-nav--opened .main-nav__login-btn {
@@ -202,6 +202,7 @@
   .main-nav {
     margin: 0;
     padding: 0;
+    margin-top: 2px;
 
     background-color: transparent;
   }
@@ -213,7 +214,7 @@
     padding-left: 105px;
 
     &::before {
-      top: 23px;
+      top: 25px;
       left: 0;
 
       width: 60px;

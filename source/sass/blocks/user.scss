@@ -248,6 +248,28 @@
   }
 }
 
+.user__lvl-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  transform: rotate(-90deg);
+  transform-origin: center;
+
+  stroke-dasharray: 358;
+  /*
+    stroke-dashoffset: 8;
+
+    stroke-dashoffset: 72;
+
+    stroke-dashoffset: 268;
+
+    stroke-dashoffset: 179;
+ */
+}
+
 .user__invite-btn.login-btn {
   padding: 7px 79px;
 }
@@ -462,6 +484,8 @@
     align-items: center;
     padding: 0;
 
+    border-radius: 10px;
+
     &:hover,
     &:focus {
       box-shadow: 0 6px 21px 0 rgba(255, 255, 255, 0.16);
@@ -474,13 +498,13 @@
       width: 270px;
       height: 270px;
 
-      border-radius: 20px 20px 0 0;
+      border-radius: 10px 10px 0 0;
     }
 
     .user__name {
       width: auto;
-      margin-top: 27px;
-      margin-bottom: 15px;
+      margin-top: 23px;
+      margin-bottom: 16px;
       margin-left: 0;
 
       @include font(21px);
@@ -488,8 +512,8 @@
 
     .status {
       &::before {
-        top: 8px;
-        left: -15px;
+        top: 9px;
+        left: -16px;
       }
     }
 
@@ -506,7 +530,7 @@
 
       display: flex;
       margin: 0;
-      margin-left: 10px;
+      margin-left: 8px;
     }
 
     .user__travel-mode {
@@ -570,13 +594,25 @@
       @include font(16px, 1.13);
     }
 
+    &:nth-child(2) {
+      .user__tags {
+        margin-bottom: 19px;
+        margin-left: 15px;
+      }
+
+      .user__travel-mode {
+        margin-bottom: 20px;
+        margin-left: -2px;
+      }
+    }
+
     .user__level {
       top: 16px;
       left: 17px;
 
-      width: 57px;
-      height: 57px;
-      padding-top: 7px;
+      width: 60px;
+      height: 60px;
+      padding-top: 9px;
 
       color: $white;
 
@@ -585,8 +621,8 @@
       @include font(24px, 1);
 
       &::before {
-        top: 32px;
-        left: 13px;
+        top: 35px;
+        left: 15px;
 
         color: $white;
 
@@ -595,8 +631,8 @@
       }
 
       &::after {
-        top: 30px;
-        left: 10px;
+        top: 33px;
+        left: 12px;
 
         width: 31px;
         height: 1px;
@@ -612,6 +648,8 @@
 
 @media (min-width: $tablet-width) {
   .user--index {
+    border-radius: 20px;
+
     .user__img-link {
       width: 285px;
       height: 285px;
@@ -636,7 +674,7 @@
     }
 
     .user__name {
-      margin-top: 31px;
+      margin-top: 29px;
       margin-bottom: 22px;
 
       @include font(24px);
@@ -644,10 +682,23 @@
 
     .status {
       &::before {
-        top: 9px;
-        left: -20px;
+        top: 10px;
+        left: -22px;
       }
     }
+
+    &:nth-child(2) {
+      .user__tags {
+        margin-bottom: 25px;
+        margin-left: 0;
+      }
+
+      .user__travel-mode {
+        margin-bottom: 29px;
+        margin-left: 0;
+      }
+    }
+
 
     .user__destination-list {
       top: 273px;
@@ -662,8 +713,8 @@
     }
 
     .user__level {
-      top: 23px;
-      left: 23px;
+      top: 20px;
+      left: 20px;
     }
   }
 }
@@ -676,11 +727,17 @@
     }
 
     .user__name {
-      margin-top: 33px;
+      margin-top: 32px;
+      margin-bottom: 20px;
     }
 
     .user__destination-list {
       left: unset;
+    }
+
+    .user__level {
+      top: 23px;
+      left: 23px;
     }
   }
 }
