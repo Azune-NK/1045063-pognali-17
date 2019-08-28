@@ -4,7 +4,7 @@
 
   width: 320px;
   margin: 0 auto;
-  padding: 47px 25px 60px;
+  padding: 43px 25px 77px;
   margin-top: -20px;
 
   background-color: $blue-light;
@@ -13,7 +13,7 @@
 @media (min-width: $tablet-width) {
   .catalog__container {
     width: auto;
-    padding: 105px 0 110px;
+    padding: 101px 0 117px;
     margin-top: -55px;
   }
 
@@ -26,7 +26,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog__container {
-    padding: 125px 0;
+    padding: 130px 0 132px;
   }
 
   .catalog__wrapper {

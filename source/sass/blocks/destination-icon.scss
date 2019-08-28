@@ -16,7 +16,7 @@
 }
 
 .destination-icon__image {
-  margin-right: 15px;
+  margin-right: 14px;
 }
 
 .destination-icon__tooltip {
@@ -88,7 +88,8 @@
   }
 
   .destination-icon__item:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 28px;
+    margin-bottom: 0;
   }
 
   .destination-icon__tooltip {
@@ -107,7 +108,7 @@
 
   .destination-icon__text {
     width: 100%;
-    margin-left: 46px;
+    margin-left: 48px;
   }
 
   .destination-icon__image {
@@ -130,7 +131,7 @@
         width: 1px;
         height: 187px;
 
-        background: linear-gradient(180deg, rgba(192, 192, 192, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(192, 192, 192, 1) 100%);
+        background: linear-gradient(180deg, rgba(192, 192, 192, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 60%, rgba(192, 192, 192, 1) 100%);
         background-color: $black;
         opacity: 0.1;
 

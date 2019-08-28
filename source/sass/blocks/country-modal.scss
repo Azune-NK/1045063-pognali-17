@@ -1,6 +1,6 @@
 .country-modal {
   position: absolute;
-  bottom: 592px;
+  bottom: 602px;
   left: 50%;
   z-index: 100;
 
@@ -177,7 +177,7 @@
 }
 
 .country-modal__list-wrapper {
-  padding: 18px 20px;
+  padding: 15px 20px;
 }
 
 .country-modal__list {
@@ -207,7 +207,7 @@
 
 @media (min-width: $tablet-width) {
   .country-modal {
-    bottom: 843px;
+    bottom: 835px;
     left: calc(50% + 23px);
     flex-direction: row;
     width: 575px;
@@ -221,7 +221,7 @@
     left: 0;
 
     width: 369px;
-    padding: 26px 27px;
+    padding: 26px 24px;
     padding-right: 44px;
 
     letter-spacing: 2px;
@@ -313,7 +313,7 @@
 
   .country-modal__list-wrapper {
     width: 207px;
-    padding: 35px 25px;
+    padding: 30px 25px;
 
     border-left: 1px solid rgba($grey-border, 0.5);
   }
@@ -325,7 +325,7 @@
 
 @media (min-width: $desktop-width) {
   .country-modal {
-    bottom: 894px;
+    bottom: 943px;
     left: calc(50% - 135px);
 
     width: 730px;
@@ -333,6 +333,7 @@
 
   .country-modal__title {
     width: 730px;
+    padding: 24px 26px 28px;
   }
 
   .country-modal__close {

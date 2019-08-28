@@ -118,7 +118,7 @@
   .user-profile {
     width: auto;
     margin-top: -55px;
-    padding: 120px 0 80px;
+    padding: 120px 0 90px;
   }
 
   .user-profile__wrapper {
@@ -151,7 +151,7 @@
   .user-profile__travel-wrapper {
     order: -1;
     align-self: center;
-    padding: 25px 55px;
+    padding: 23px 55px 25px;
   }
 
   .user-profile__travel-list .travel-checkboxes__item:not(:last-child) {
@@ -175,7 +175,7 @@
   .user-profile__tags {
     width: 618px;
     height: 94px;
-    padding: 34px 40px;
+    padding: 32px 40px;
 
     @include font(20px, 1.2);
   }
@@ -183,7 +183,7 @@
 
 @media (min-width: $desktop-width) {
   .user-profile {
-    padding: 130px 0 120px;
+    padding: 127px 0 120px;
   }
 
   .user-profile__wrapper {
@@ -201,8 +201,8 @@
 
   .user-profile__photo-upload {
     position: absolute;
-    top: -75px;
-    right: 155px;
+    top: -76px;
+    right: 154px;
 
     margin: 0;
     padding: 15px 67px;
@@ -230,6 +230,6 @@
   }
 
   .user-profile__tags-legend {
-    left: 22px;
+    left: 20px;
   }
 }

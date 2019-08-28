@@ -1,7 +1,7 @@
 .user {
   position: relative;
 
-  padding: 15px 20px 22px;
+  padding: 12px 20px 23px;
 
   background-color: $white;
   border-radius: 20px;
@@ -43,7 +43,7 @@
   position: relative;
   z-index: 1;
 
-  margin-bottom: 17px;
+  margin-bottom: 11px;
   margin-left: 5px;
 
   &::before {
@@ -88,7 +88,7 @@
 
   width: 80px;
   margin-bottom: 45px;
-  margin-left: 85px;
+  margin-left: 84px;
 
   @include font(20px, 1, 700);
 }
@@ -108,7 +108,7 @@
 
 .user__img-link {
   position: absolute;
-  top: 15px;
+  top: 14px;
   left: 18px;
 
   width: 70px;
@@ -120,7 +120,7 @@
 
 .user__tags {
   width: 180px;
-  margin-bottom: 17px;
+  margin-bottom: 13px;
   margin-left: 5px;
 
   color: $grey;
@@ -130,8 +130,8 @@
 
 .user__likes {
   position: absolute;
-  top: 65px;
-  left: 67px;
+  top: 60px;
+  left: 66px;
 
   padding: 0;
 
@@ -220,25 +220,24 @@
 
 .user__level {
   position: absolute;
-  right: 23px;
-  bottom: 83px;
+  right: 20px;
+  bottom: 77px;
 
-  width: 42px;
-  height: 42px;
-  padding-top: 10px;
+  width: 45px;
+  height: 45px;
+  padding-top: 14px;
 
   text-align: center;
   color: $blue;
 
   background-color: $white;
-  border: solid 3px $orange;
   border-radius: 50%;
 
   @include font(24px, 0.75, 700);
 
   &::before {
-    top: -30px;
-    left: 0;
+    top: -27px;
+    left: 3px;
     z-index: 1;
 
     color: $grey;
@@ -253,25 +252,53 @@
   top: 0;
   left: 0;
 
-  display: none;
+  width: 45px;
+  height: 45px;
 
   transform: rotate(-90deg);
   transform-origin: center;
 
   stroke-dasharray: 358;
-  /*
-    stroke-dashoffset: 8;
+}
 
-    stroke-dashoffset: 72;
+.user--id104 {
+  .user__lvl-svg {
+    stroke-dashoffset: 12;
+  }
+}
 
+.user--id2579 {
+  .user__lvl-svg {
+    stroke-dashoffset: 48;
+  }
+
+  .user__destination-list {
+    margin-bottom: 17px;
+  }
+}
+
+.user--id5755 {
+  .user__lvl-svg {
     stroke-dashoffset: 268;
+  }
 
+  .user__destination-list {
+    margin-bottom: 14px;
+  }
+}
+
+.user--id4777 {
+  .user__lvl-svg {
     stroke-dashoffset: 179;
- */
+  }
+
+  .user__destination-list {
+    margin-bottom: 17px;
+  }
 }
 
 .user__invite-btn.login-btn {
-  padding: 7px 79px;
+  padding: 6px 79px 5px;
 }
 
 @media (min-width: $tablet-width) {
@@ -279,7 +306,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 35px 35px 25px;
+    padding: 31px 35px 22px;
   }
 
   .user__destination-list {
@@ -295,10 +322,18 @@
     }
   }
 
+  .user--id2579,
+  .user--id5755,
+  .user--id4777 {
+    .user__destination-list {
+      margin-bottom: 0;
+    }
+  }
+
   .user__travel-mode {
     position: absolute;
-    top: 37px;
-    right: 48px;
+    top: 38px;
+    right: 43px;
 
     &::before {
       display: none;
@@ -319,8 +354,8 @@
 
   .user__name {
     width: auto;
-    margin-bottom: 20px;
-    margin-left: 225px;
+    margin-bottom: 18px;
+    margin-left: 223px;
 
     @include font(30px);
   }
@@ -342,7 +377,7 @@
 
   .user__tags {
     width: 225px;
-    margin-bottom: 40px;
+    margin-bottom: 47px;
     margin-left: 225px;
 
     @include font(20px, 1.2);
@@ -354,7 +389,7 @@
   }
 
   .user__likes-count {
-    padding-left: 59px;
+    padding-left: 55px;
 
     @include font(20px, 1.5);
 
@@ -375,18 +410,18 @@
   }
 
   .user__level {
-    right: 30px;
-    bottom: 120px;
+    right: 25px;
+    bottom: 104px;
 
-    width: 57px;
-    height: 57px;
-    padding-top: 7px;
+    width: 60px;
+    height: 60px;
+    padding-top: 12px;
 
     @include font(24px, 1);
 
     &::before {
-      top: 32px;
-      left: 13px;
+      top: 39px;
+      left: 18px;
 
       color: rgba($grey, 0.4);
 
@@ -395,8 +430,8 @@
     }
 
     &::after {
-      top: 30px;
-      left: 10px;
+      top: 36px;
+      left: 15px;
 
       width: 31px;
       height: 1px;
@@ -408,8 +443,20 @@
     }
   }
 
+  .user__lvl-svg {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  .user--id2579 {
+    .user__lvl-svg {
+      stroke-dashoffset: 62;
+    }
+  }
+
   .user__invite-btn.login-btn {
-    margin-bottom: 25px;
+    margin-bottom: 21px;
     margin-left: 219px;
     padding: 10px 33px;
   }
@@ -417,19 +464,20 @@
 
 @media (min-width: $desktop-width) {
   .user {
-    padding: 48px 0;
+    padding: 47px 0;
   }
 
   .user:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 
   .user__name {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     margin-left: 344px;
   }
 
   .user__tags {
+    margin-bottom: 46px;
     margin-left: 347px;
 
     @include font(20px, 1.2);
@@ -440,40 +488,45 @@
     left: 0;
 
     width: 285px;
-    height: 285px;
+    height: 286px;
 
     border-radius: 20px 0 0 20px;
   }
 
   .user__img {
     width: 285px;
-    height: 285px;
+    height: 286px;
   }
 
   .user__invite-btn.login-btn {
     margin-bottom: 0;
     margin-left: 341px;
+    padding-left: 31px;
   }
 
   .user__travel-mode {
-    top: 205px;
-    right: 150px;
+    top: 204px;
+    right: 157px;
   }
 
   .user__destination-list {
     position: absolute;
-    top: 40px;
-    left: 675px;
+    top: 48px;
+    left: 672px;
+
+    .destination-icon__item:not(:last-child) {
+      margin-bottom: 7px;
+    }
   }
 
   .user__level {
-    right: 40px;
-    bottom: 40px;
+    right: 45px;
+    bottom: 42px;
   }
 
   .user__likes {
-    top: 196px;
-    left: 492px;
+    top: 200px;
+    left: 489px;
   }
 }
 
@@ -492,7 +545,7 @@
     }
 
     .user__img-link {
-      position: initial;
+      position: static;
 
       order: -1;
       width: 270px;
@@ -549,7 +602,7 @@
 
         &::before {
           position: relative;
-          left: unset;
+          left: auto;
 
           width: 19px;
           height: 21px;
@@ -587,6 +640,7 @@
     }
 
     .user__tags {
+      margin-bottom: 18px;
       margin-left: 0;
 
       text-align: center;
@@ -612,7 +666,7 @@
 
       width: 60px;
       height: 60px;
-      padding-top: 9px;
+      padding-top: 11px;
 
       color: $white;
 
@@ -621,8 +675,8 @@
       @include font(24px, 1);
 
       &::before {
-        top: 35px;
-        left: 15px;
+        top: 37px;
+        left: 17px;
 
         color: $white;
 
@@ -631,8 +685,8 @@
       }
 
       &::after {
-        top: 33px;
-        left: 12px;
+        top: 35px;
+        left: 14px;
 
         width: 31px;
         height: 1px;
@@ -643,6 +697,15 @@
         @include pseudo;
       }
     }
+
+    .user__lvl-svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .user--index.user--id2579 .user__lvl-svg {
+    stroke-dashoffset: 60;
   }
 }
 
@@ -663,7 +726,7 @@
     }
 
     .user__travel-mode {
-      position: initial;
+      position: static;
 
       flex-direction: row;
       margin-bottom: 29px;
@@ -732,7 +795,7 @@
     }
 
     .user__destination-list {
-      left: unset;
+      left: auto;
     }
 
     .user__level {

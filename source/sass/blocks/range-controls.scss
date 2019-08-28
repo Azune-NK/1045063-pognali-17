@@ -31,11 +31,11 @@
   cursor: pointer;
 
   &--min {
-    right: 139px;
+    right: 143px;
 
     &:hover,
     &:focus {
-      right: 135px;
+      right: 139px;
     }
   }
 
@@ -87,11 +87,20 @@
     height: 13px;
 
     &--min {
-      right: 195px;
+      right: 194px;
 
       &:hover,
       &:focus {
         right: 192px;
+      }
+    }
+
+    &--max {
+      right: -6px;
+
+      &:hover,
+      &:focus {
+        right: -8px;
       }
     }
 
@@ -123,6 +132,15 @@
       &:hover,
       &:focus {
         right: 117px;
+      }
+    }
+
+    &--max {
+      right: 0;
+
+      &:hover,
+      &:focus {
+        right: -2px;
       }
     }
   }

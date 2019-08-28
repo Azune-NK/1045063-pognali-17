@@ -5,7 +5,7 @@
   width: 320px;
   margin: 0 auto;
   margin-top: -20px;
-  padding: 40px 25px 27px;
+  padding: 36px 25px 27px;
 
   background-color: $grey-light;
   border-radius: 0 0 20px 20px;
@@ -20,7 +20,7 @@
 
   margin: 0;
   margin-bottom: 30px;
-  padding-left: 25px;
+  padding-left: 27px;
 
   color: $grey-blue;
   text-transform: uppercase;
@@ -63,7 +63,7 @@
 
   &::before,
   &::after {
-    top: 4px;
+    top: 0;
     left: -2px;
 
     width: 16px;
@@ -142,7 +142,7 @@
 .country-filter__letter-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .country-filter__by-letter {
@@ -337,7 +337,7 @@
 }
 
 .country-filter--closed {
-  padding-bottom: 17px;
+  padding-bottom: 14px;
 
   .country-filter__nav,
   .country-filter__title {
@@ -345,7 +345,7 @@
   }
 
   .country-filter__toggle {
-    top: 49px;
+    top: 45px;
     right: 29px;
 
     width: 17px;
@@ -361,7 +361,7 @@
       background-color: $grey-blue;
       border-radius: 50%;
       box-shadow: 7px 0 0 0 $grey-blue, 14px 0 0 0 $grey-blue;
-      transform: unset;
+      transform: none;
 
       @include pseudo;
     }
@@ -389,7 +389,7 @@
   .country-filter {
     width: auto;
     margin-top: -50px;
-    padding: 110px 0 75px;
+    padding: 106px 0 75px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -405,7 +405,7 @@
 
     display: flex;
     align-items: flex-start;
-    margin-bottom: 62px;
+    margin-bottom: 58px;
   }
 
   .country-filter__title {
@@ -428,7 +428,7 @@
     &::after {
       top: 10px;
       right: 0;
-      left: unset;
+      left: auto;
 
       width: 24px;
       height: 3px;
@@ -443,12 +443,16 @@
     @include font(20px, 1.2);
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 28px;
       margin-bottom: 0;
     }
 
     &:nth-of-type(2) {
-      margin-right: 25px;
+      margin-right: 24px;
+    }
+
+    &:nth-of-type(4) {
+      margin-right: 30px;
     }
   }
 
@@ -461,7 +465,7 @@
   .country-filter__letter-wrapper {
     margin-right: 75px;
     margin-bottom: 0;
-    margin-left: -20px;
+    margin-left: -22px;
   }
 
   .country-filter__by-letter {
@@ -473,7 +477,7 @@
 
 
     &:not(:nth-of-type(n + 25)) {
-      margin-bottom: 30px;
+      margin-bottom: 23px;
     }
 
     &:nth-of-type(7),
@@ -516,15 +520,15 @@
   }
 
   .country-filter__close-btn {
-    margin-top: 76px;
-    padding: 42px 247px 42px 282px;
+    margin-top: 67px;
+    padding: 35px 247px 35px 282px;
 
     @include font(20px, 1.5);
 
     &::before,
     &::after {
-      top: 55px;
-      left: 243px;
+      top: 49px;
+      left: 240px;
 
       width: 24px;
       height: 3px;
@@ -532,7 +536,7 @@
   }
 
   .country-filter--closed {
-    padding-bottom: 57px;
+    padding-bottom: 55px;
 
     .country-filter__toggle {
       top: 0;
@@ -553,7 +557,7 @@
       &::before {
         top: 10px;
         right: 22px;
-        left: unset;
+        left: auto;
 
         width: 5px;
         height: 5px;
@@ -561,7 +565,7 @@
         background-color: $grey-blue;
         border-radius: 50%;
         box-shadow: 11px 0 0 0 $grey-blue, 22px 0 0 0 $grey-blue;
-        transform: unset;
+        transform: none;
 
         @include pseudo;
       }
@@ -585,13 +589,13 @@
 
   .country-filter__nav {
     margin-right: 68px;
-    margin-bottom: 58px;
+    margin-bottom: 57px;
     margin-left: 20px;
   }
 
   .country-filter__title {
     display: block;
-    margin-right: 40px;
+    margin-right: 39px;
     margin-bottom: 0;
     padding-left: 45px;
 
@@ -644,15 +648,33 @@
     }
 
     &:nth-of-type(n+9) {
-      margin-bottom: 685px;
+      margin-bottom: 686px;
     }
 
     &:nth-of-type(n+16) {
-      margin-bottom: 650px;
+      margin-bottom: 651px;
     }
 
     &:nth-of-type(n+23) {
       margin-bottom: 207px;
+    }
+
+    &:nth-of-type(3),
+    &:nth-of-type(12),
+    &:nth-of-type(19),
+    &:nth-of-type(26) {
+      padding-left: 5px;
+    }
+
+    &:nth-of-type(4),
+    &:nth-of-type(5),
+    &:nth-of-type(13),
+    &:nth-of-type(14),
+    &:nth-of-type(20),
+    &:nth-of-type(21),
+    &:nth-of-type(28),
+    &:nth-of-type(29) {
+      margin-right: 7px;
     }
   }
 
@@ -664,17 +686,18 @@
 
   .country-filter__list {
     position: absolute;
-    top: 75px;
+    top: 77px;
+    left: -1px;
 
     display: block;
-    width: 182px;
+    width: 185px;
 
     &:nth-child(1):not(.country-filter__list--active) {
       display: block;
     }
 
     &:nth-of-type(2) {
-      left: 210px;
+      left: 209px;
     }
 
     &:nth-of-type(3) {
@@ -682,11 +705,11 @@
     }
 
     &:nth-of-type(4) {
-      left: 628px;
+      left: 622px;
     }
 
     &:nth-of-type(5) {
-      left: 839px;
+      left: 836px;
     }
 
     &:nth-of-type(6) {
@@ -699,7 +722,7 @@
     &:nth-of-type(13),
     &:nth-of-type(14),
     &:nth-of-type(15) {
-      top: 735px;
+      top: 727px;
     }
 
     &:nth-of-type(7),
@@ -712,7 +735,7 @@
     }
 
     &:nth-of-type(10) {
-      left: 210px;
+      left: 209px;
     }
 
     &:nth-of-type(12) {
@@ -720,11 +743,11 @@
     }
 
     &:nth-of-type(13) {
-      left: 628px;
+      left: 622px;
     }
 
     &:nth-of-type(14) {
-      left: 839px;
+      left: 836px;
     }
 
     &:nth-of-type(15) {
@@ -737,11 +760,11 @@
     &:nth-of-type(20),
     &:nth-of-type(21),
     &:nth-of-type(22) {
-      top: 1480px;
+      top: 1473px;
     }
 
     &:nth-of-type(17) {
-      left: 210px;
+      left: 209px;
     }
 
     &:nth-of-type(19) {
@@ -749,11 +772,11 @@
     }
 
     &:nth-of-type(20) {
-      left: 628px;
+      left: 622px;
     }
 
     &:nth-of-type(21) {
-      left: 839px;
+      left: 836px;
     }
 
     &:nth-of-type(22) {
@@ -766,11 +789,11 @@
     &:nth-of-type(28),
     &:nth-of-type(29),
     &:nth-of-type(30) {
-      top: 2190px;
+      top: 2184px;
     }
 
     &:nth-of-type(25) {
-      left: 210px;
+      left: 209px;
     }
 
     &:nth-of-type(26) {
@@ -778,11 +801,11 @@
     }
 
     &:nth-of-type(28) {
-      left: 628px;
+      left: 622px;
     }
 
     &:nth-of-type(29) {
-      left: 839px;
+      left: 836px;
     }
 
     &:nth-of-type(30) {
@@ -792,13 +815,13 @@
 
 
   .country-filter__close-btn {
-    margin-top: 57px;
+    margin-top: 48px;
     padding-right: 598px;
     padding-left: 633px;
 
     &::before,
     &::after {
-      left: 594px;
+      left: 592px;
     }
   }
 

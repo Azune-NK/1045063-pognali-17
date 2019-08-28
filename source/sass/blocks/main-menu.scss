@@ -1,4 +1,6 @@
 .main-menu {
+  padding-left: 5px;
+
   @include ul-reset;
 }
 
@@ -29,8 +31,8 @@
   position: relative;
 
   display: inline-block;
-
   padding: 0 4px;
+
   white-space: nowrap;
 
   transition: transform 0.3s;
@@ -53,8 +55,17 @@
 
 
 @media (min-width: $tablet-width) {
+  .main-menu {
+    padding-left: 0;
+  }
+
   .main-menu__item {
     text-align: left;
+    letter-spacing: -0.5px;
+
+    &:nth-child(2) {
+      letter-spacing: -1px;
+    }
   }
 
   .main-menu__link {
@@ -70,8 +81,13 @@
 
   .main-menu__item {
     margin-top: 2px;
+
     &:not(:last-child) {
       margin-right: 30px;
+    }
+
+    &:nth-child(n) {
+      letter-spacing: 0;
     }
   }
 

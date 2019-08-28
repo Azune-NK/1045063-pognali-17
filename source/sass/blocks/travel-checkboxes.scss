@@ -42,7 +42,6 @@ input[type="checkbox"]:focus + .travel-checkboxes__checkbox {
       opacity: 0.3;
     }
 
-    /* Вопрос - опять под вопросом 3z вложенность, можно тут как-то уменьшить? */
     input[type="checkbox"]:checked + .travel-checkboxes__checkbox .travel-checkboxes__svg {
       fill: $crazy-black;
     }
@@ -73,8 +72,6 @@ input[type="checkbox"]:focus + .travel-checkboxes__checkbox {
 
   .travel-checkboxes__item {
     &:nth-of-type(1) {
-      margin-right: 13px;
-
       .travel-checkboxes__svg {
         width: 19px;
         height: 21px;
@@ -82,8 +79,6 @@ input[type="checkbox"]:focus + .travel-checkboxes__checkbox {
     }
 
     &:nth-of-type(2) {
-      margin-right: 11px;
-
       .travel-checkboxes__svg {
         width: 17px;
         height: 21px;
@@ -91,8 +86,6 @@ input[type="checkbox"]:focus + .travel-checkboxes__checkbox {
     }
 
     &:nth-of-type(3) {
-      margin-right: 13px;
-
       .travel-checkboxes__svg {
         width: 24px;
         height: 21px;

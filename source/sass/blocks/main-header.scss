@@ -4,7 +4,7 @@
 
   width: 320px;
   margin: 0 auto;
-  padding: 30px 25px 10px;
+  padding: 26px 25px 13px;
 
   background-color: $black-blue;
   border-radius: 0 0 20px 20px;
@@ -26,7 +26,7 @@
   @include font(36px, 1.1, 700);
 
   &::before {
-    bottom: -12.5px;
+    bottom: -14.5px;
 
     width: 173px;
     height: 5px;
@@ -38,13 +38,19 @@
   }
 }
 
+.main-header--form {
+  .main-header__current-page::before {
+    width: 214px;
+  }
+}
+
 .main-header__index-link {
   display: none;
 }
 
 .main-header__user-photo {
   position: absolute;
-  top: 70px;
+  top: 75px;
   right: 17px;
 
   border-radius: 50%;
@@ -53,25 +59,24 @@
 
 .main-header__user-lvl {
   position: absolute;
-  top: 70px;
+  top: 74px;
   left: 19px;
 
-  width: 97px;
-  height: 97px;
+  width: 100px;
+  height: 100px;
   margin: 0;
-  padding-top: 18px;
+  padding-top: 21px;
 
   text-align: center;
   color: $black-blue;
 
-  border: solid 3px $orange;
   border-radius: 50%;
 
   @include font(38px, 1, 700);
 
   &::before {
-    top: 59px;
-    left: 30px;
+    top: 62px;
+    left: 34px;
 
     color: $grey;
 
@@ -80,8 +85,8 @@
   }
 
   &::after {
-    top: 55px;
-    left: 20px;
+    top: 59px;
+    left: 25px;
 
     width: 49px;
     height: 2px;
@@ -92,10 +97,20 @@
   }
 }
 
+.main-header__lvl-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-dasharray: 358;
+  stroke-dashoffset: 60;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
 @media (min-width: $tablet-width) {
   .main-header {
     width: auto;
-    padding: 90px 0 65px;
+    padding: 82px 0 68px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -111,7 +126,7 @@
     @include font(60px, 1.17);
 
     &::before {
-      bottom: -69px;
+      bottom: -72px;
 
       width: 287px;
       height: 8px;
@@ -122,6 +137,7 @@
 
   .main-header__index-link {
     position: relative;
+    margin-top: 10px;
 
     display: initial;
     padding-right: 60px;
@@ -161,25 +177,35 @@
     }
   }
 
+  .main-header--form {
+    .main-header__current-page::before {
+      width: 355px;
+    }
+  }
+
   .main-header__user-lvl {
     top: 200px;
     left: unset;
 
-    width: 91px;
-    height: 91px;
-    padding-top: 14px;
+    width: 94px;
+    height: 94px;
+    padding-top: 18px;
 
     &::before {
-      top: 54px;
-      left: 27px;
+      top: 60px;
+      left: 31px;
     }
 
     &::after {
-      top: 51px;
-      left: 18px;
+      top: 57px;
+      left: 22px;
     }
   }
 
+  .main-header__lvl-svg {
+    width: 94px;
+    height: 94px;
+  }
 
   .main-header__user-photo {
     top: 200px;
@@ -195,7 +221,7 @@
 
 @media (min-width: $desktop-width) {
   .main-header {
-    padding: 100px 0 65px;
+    padding: 95px 0 67px;
   }
 
   .main-header__wrapper {
@@ -206,12 +232,12 @@
 
   .main-header__current-page {
     &::before {
-      left: 130px;
+      left: 126px;
     }
   }
 
   .main-header__user-photo {
-    top: -55px;
+    top: -53px;
     right: 155px;
 
     width: 190px;

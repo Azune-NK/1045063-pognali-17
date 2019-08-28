@@ -65,6 +65,7 @@
 
   &::placeholder {
     color: rgba($grey, 0.3);
+    opacity: 1;
   }
 
   &:hover {
@@ -72,6 +73,7 @@
 
     &::placeholder {
       color: rgba($grey, 0.5);
+      opacity: 1;
     }
   }
 
@@ -91,6 +93,7 @@
 
     &::placeholder {
       color: $white;
+      opacity: 1;
     }
   }
 }
