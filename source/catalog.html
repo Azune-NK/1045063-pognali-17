@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.css">
-
-    <script>
-      document.createElement("picture");
-    </script>
+    <link rel="preload" href="fonts/bloggersans.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff" as="font" crossorigin="anonymous">
+    <script>document.createElement("picture");</script>
     <script src="js/picturefill.js" async></script>
   </head>
   <body>
@@ -54,7 +53,7 @@
             <section class="main-nav__contacts contacts">
               <h2 class="visually-hidden">Наши контакты</h2>
               <a class="contacts__tel" href="tel:+78005558628">
-                <svg class="contacts__tel-svg" width="18" height="18" fill="#010101" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="contacts__tel-svg" width="18" height="18" fill="#010101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 36 36" style="enable-background: new 0 0 36 36;" xml:space="preserve">
                   <path class="st0" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5
                     c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3
@@ -68,7 +67,7 @@
                 8 800 555-86-28
               </a>
               <a class="contacts__email" href="mailto:mail@htmlacademy.ru">
-                <svg class="contacts__email-svg" width="18" height="13" fill="#010101" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="contacts__email-svg" width="18" height="13" fill="#010101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 36 26" style="enable-background: new 0 0 36 26;" xml:space="preserve"><path class="st0"
                   d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
                   c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
@@ -891,7 +890,7 @@
                       <input class="visually-hidden" type="checkbox" name="Plane" checked>
                       <span class="travel-checkboxes__checkbox">
                         <svg class="travel-checkboxes__svg" fill="#1d2e5b" width="14" height="16" version="1.1"
-                          id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                           x="0px" y="0px" viewBox="0 0 19 21" style="enable-background: new 0 0 19 21;"
                           xml:space="preserve">
                           <path
@@ -929,7 +928,7 @@
                       <input class="visually-hidden" type="checkbox" name="Bike">
                       <span class="travel-checkboxes__checkbox">
                         <svg class="travel-checkboxes__svg" fill="#1d2e5b" width="19" height="17" version="1.1"
-                          id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                           x="0px" y="0px" viewBox="0 0 24 21" style="enable-background: new 0 0 24 21;"
                           xml:space="preserve">
                           <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
@@ -1004,8 +1003,8 @@
                   <button class="user__likes user__likes--checked" type="button">
                     <span class="user__likes-count">1,5 М</span>
                   </button>
+                  <p class="user__destination-text">хочет посетить:</p>
                   <ul class="user__destination-list destination-icon">
-                    <p class="destination-icon__text">хочет посетить:</p>
                     <li class="destination-icon__item">
                       <img class="destination-icon__image" src="img/svg/flag-sri-lanka.svg" width="26" height="18" alt="Шри-Ланка">
                       <p class="destination-icon__tooltip">Шри-Ланка</p>
@@ -1019,8 +1018,8 @@
                       <p class="destination-icon__tooltip">Сейшелы</p>
                     </li>
                   </ul>
+                  <p class="user__travel-text">транспорт:</p>
                   <ul class="user__travel-mode travel-mode">
-                    <p class="travel-mode__text">транспорт:</p>
                     <li class="travel-mode__item travel-mode__item--checked">
                       <p class="travel-mode__tooltip">Авиаперелет</p>
                     </li>
@@ -1060,8 +1059,8 @@
                   <button class="user__likes" type="button">
                     <span class="user__likes-count">150</span>
                   </button>
+                  <p class="user__destination-text">хочет посетить:</p>
                   <ul class="user__destination-list destination-icon">
-                    <p class="destination-icon__text">хочет посетить:</p>
                     <li class="destination-icon__item">
                       <img class="destination-icon__image" src="img/svg/flag-belgium.svg" width="26" height="18" alt="Бельгия">
                       <p class="destination-icon__tooltip">Бельгия</p>
@@ -1071,8 +1070,8 @@
                       <p class="destination-icon__tooltip">Чехия</p>
                     </li>
                   </ul>
+                  <p class="user__travel-text">транспорт:</p>
                   <ul class="user__travel-mode travel-mode">
-                    <p class="travel-mode__text">транспорт:</p>
                     <li class="travel-mode__item travel-mode__item--checked">
                       <p class="travel-mode__tooltip">Авиаперелет</p>
                     </li>
@@ -1112,8 +1111,8 @@
                   <button class="user__likes" type="button">
                     <span class="user__likes-count">1700</span>
                   </button>
+                  <p class="user__destination-text">хочет посетить:</p>
                   <ul class="user__destination-list destination-icon">
-                    <p class="destination-icon__text">хочет посетить:</p>
                     <li class="destination-icon__item">
                       <img class="destination-icon__image" src="img/svg/flag-usa.svg" width="26" height="18" alt="США">
                       <p class="destination-icon__tooltip">США</p>
@@ -1127,8 +1126,8 @@
                       <p class="destination-icon__tooltip">Доминикана</p>
                     </li>
                   </ul>
+                  <p class="user__travel-text">транспорт:</p>
                   <ul class="user__travel-mode travel-mode">
-                    <p class="travel-mode__text">транспорт:</p>
                     <li class="travel-mode__item travel-mode__item--checked">
                       <p class="travel-mode__tooltip">Авиаперелет</p>
                     </li>
@@ -1168,8 +1167,8 @@
                   <button class="user__likes" type="button">
                     <span class="user__likes-count">23</span>
                   </button>
+                  <p class="user__destination-text">хочет посетить:</p>
                   <ul class="user__destination-list destination-icon">
-                    <p class="destination-icon__text">хочет посетить:</p>
                     <li class="destination-icon__item">
                       <img class="destination-icon__image" src="img/svg/flag-united-kingdom.svg" width="26" height="18" alt="Великобритания">
                       <p class="destination-icon__tooltip">Великобритания</p>
@@ -1179,8 +1178,8 @@
                       <p class="destination-icon__tooltip">Германия</p>
                     </li>
                   </ul>
+                  <p class="user__travel-text">транспорт:</p>
                   <ul class="user__travel-mode travel-mode">
-                    <p class="travel-mode__text">транспорт:</p>
                     <li class="travel-mode__item travel-mode__item--checked">
                       <p class="travel-mode__tooltip">Авиаперелет</p>
                     </li>
@@ -1256,7 +1255,7 @@
             <li class="social__item">
               <a class="social__link social__link--fb social__link--page-footer" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook</span>
-                <svg class="social__svg" width="11" height="21" fill="#1d2e5b" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="social__svg" width="11" height="21" fill="#1d2e5b" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 11 21" style="enable-background: new 0 0 11 21;" xml:space="preserve">
                   <g>
                     <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
@@ -1269,7 +1268,7 @@
             <li class="social__item">
               <a class="social__link social__link--vk social__link--page-footer" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Vkontakte</span>
-                <svg class="social__svg" width="23" fill="#1d2e5b" height="12" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                <svg class="social__svg" width="23" fill="#1d2e5b" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8"
                   style="enable-background: new 0 0 30 15.8;" xml:space="preserve">
                   <g>
@@ -1296,7 +1295,7 @@
             <li class="social__item">
               <a class="social__link social__link--inst social__link--page-footer" href="https://www.instagram.com/htmlacademy">
                 <span class="visually-hidden">Instagram</span>
-                <svg class="social__svg" width="18" height="18" fill="#1d2e5b" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                <svg class="social__svg" width="18" height="18" fill="#1d2e5b" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23"
                   style="enable-background: new 0 0 23 23;" xml:space="preserve">
                   <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5

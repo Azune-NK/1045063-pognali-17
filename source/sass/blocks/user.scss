@@ -45,20 +45,6 @@
 
   margin-bottom: 11px;
   margin-left: 5px;
-
-  &::before {
-    top: 10px;
-    left: -25px;
-    z-index: -1;
-
-    width: 270px;
-    height: 1px;
-
-    background: linear-gradient(90deg, $bg-silver 0, $bg-silver 14px, $white 14px, $white 132px, $bg-silver 132px, $bg-silver 100%);
-    background-color: $bg-silver;
-
-    @include pseudo;
-  }
 }
 
 .user__travel-mode {
@@ -67,20 +53,6 @@
 
   margin-bottom: 20px;
   margin-left: 5px;
-
-  &::before {
-    top: 10px;
-    left: -25px;
-    z-index: -1;
-
-    width: 270px;
-    height: 1px;
-
-    background: linear-gradient(90deg, $bg-silver 0, $bg-silver 14px, $white 14px, $white 105px, $bg-silver 105px, $bg-silver 196px, $white 196px, $white 259px, $bg-silver 259px, $bg-silver 100%);
-    background-color: $bg-silver;
-
-    @include pseudo;
-  }
 }
 
 .user__name {
@@ -297,6 +269,61 @@
   }
 }
 
+.user__destination-text {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  margin-bottom: 17px;
+  margin-left: 5px;
+
+  color: $grey;
+
+  @include font(15px, 1.2);
+
+  &::before {
+    top: 10px;
+    left: -25px;
+    z-index: -1;
+
+    width: 270px;
+    height: 1px;
+
+    background: linear-gradient(90deg, $bg-silver 0, $bg-silver 14px, $white 14px, $white 132px, $bg-silver 132px, $bg-silver 100%);
+    background-color: $bg-silver;
+
+    @include pseudo;
+  }
+}
+
+.user__travel-text {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-left: 5px;
+
+  color: $grey;
+
+  @include font(15px, 1.2);
+
+  &::before {
+    top: 10px;
+    left: -25px;
+    z-index: -1;
+
+    width: 270px;
+    height: 1px;
+
+    background: linear-gradient(90deg, $bg-silver 0, $bg-silver 14px, $white 14px, $white 105px, $bg-silver 105px, $bg-silver 196px, $white 196px, $white 259px, $bg-silver 259px, $bg-silver 100%);
+    background-color: $bg-silver;
+
+    @include pseudo;
+  }
+}
+
 .user__invite-btn.login-btn {
   padding: 6px 79px 5px;
 }
@@ -312,14 +339,6 @@
   .user__destination-list {
     order: 1;
     margin: 0;
-
-    &::before {
-      left: -36px;
-
-      width: 688px;
-
-      background: linear-gradient(90deg, $bg-silver 0, $bg-silver 71px, $white 71px, $white 189px, $bg-silver 189px, $bg-silver 100%);
-    }
   }
 
   .user--id2579,
@@ -455,6 +474,24 @@
     }
   }
 
+  .user__travel-text {
+    display: none;
+  }
+
+  .user__destination-text {
+    order: 1;
+    width: 100%;
+    margin-left: 48px;
+
+    &::before {
+      left: -84px;
+
+      width: 688px;
+
+      background: linear-gradient(90deg, $bg-silver 0, $bg-silver 71px, $white 71px, $white 189px, $bg-silver 189px, $bg-silver 100%);
+    }
+  }
+
   .user__invite-btn.login-btn {
     margin-bottom: 21px;
     margin-left: 219px;
@@ -527,6 +564,10 @@
   .user__likes {
     top: 200px;
     left: 489px;
+  }
+
+  .user__destination-text {
+    display: none;
   }
 }
 

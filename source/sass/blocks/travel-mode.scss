@@ -3,16 +3,6 @@
   flex-wrap: wrap;
 }
 
-.travel-mode__text {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 15px;
-
-  color: $grey;
-
-  @include font(15px, 1.2);
-}
-
 .travel-mode__item {
   position: relative;
 
@@ -110,10 +100,6 @@
 @media (min-width: $tablet-width) {
   .travel-mode {
     flex-direction: column;
-  }
-
-  .travel-mode__text {
-    display: none;
   }
 
   .travel-mode__item {

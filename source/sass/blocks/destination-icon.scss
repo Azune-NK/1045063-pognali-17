@@ -1,12 +1,3 @@
-.destination-icon__text {
-  margin: 0;
-  margin-bottom: 17px;
-
-  color: $grey;
-
-  @include font(15px, 1.2);
-}
-
 .destination-icon__item {
   display: flex;
 
@@ -106,11 +97,6 @@
     }
   }
 
-  .destination-icon__text {
-    width: 100%;
-    margin-left: 48px;
-  }
-
   .destination-icon__image {
     align-self: center;
     width: 35px;
@@ -138,10 +124,6 @@
         @include pseudo;
       }
     }
-  }
-
-  .destination-icon__text {
-    display: none;
   }
 
   .destination-icon__item:not(:last-child) {
