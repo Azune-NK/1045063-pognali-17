@@ -12,10 +12,6 @@
     background-color: $white;
   }
 
-  /* &--notindex {
-    padding-top: 19px;
-  } */
-
   &--fixed {
     position: fixed;
     z-index: 100;
@@ -93,6 +89,22 @@
     z-index: 7;
 
     padding: 47px 0 20px;
+
+    &--white:not(.page-header--nojs) {
+      padding: 20px 0;
+
+      .main-nav__wrapper::before {
+        left: 15px;
+
+        width: 45px;
+
+        background-color: $grey-blue;
+      }
+
+      .main-menu__link {
+        color: $grey-blue;
+      }
+    }
 
     &--fixed:not(.page-header--nojs) {
       position: fixed;
