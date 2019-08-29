@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   width: 45px;
   height: 45px;
@@ -20,6 +21,8 @@
 
   &--fb {
     &::before {
+      top: 13px;
+      left: 17px;
       width: 11px;
       height: 21px;
 
@@ -31,6 +34,8 @@
 
   &--vk {
     &::before {
+      top: 18px;
+      left: 11px;
       width: 23px;
       height: 12px;
 
@@ -42,6 +47,8 @@
 
   &--inst {
     &::before {
+      top: 14px;
+      left: 14px;
       width: 18px;
       height: 18px;
 
@@ -105,6 +112,8 @@
 
     &--fb {
       &::before {
+        top: 16px;
+        left: 23px;
         width: 14px;
         height: 28px;
       }
@@ -112,6 +121,8 @@
 
     &--vk {
       &::before {
+        top: 23px;
+        left: 14px;
         width: 31px;
         height: 16px;
       }
@@ -119,6 +130,8 @@
 
     &--inst {
       &::before {
+        top: 18px;
+        left: 18px;
         width: 24px;
         height: 24px;
       }

@@ -71,10 +71,12 @@
 
 .user-profile__tags-legend {
   padding: 0 18px;
+  left: 99px;
 }
 
 .user-profile__travel-legend {
   padding: 0 14px;
+  left: 80px;
 }
 
 .user-profile__tags {
@@ -160,7 +162,7 @@
 
   .user-profile__tags-legend,
   .user-profile__travel-legend {
-    top: unset;
+    top: auto;
     bottom: -8px;
 
     letter-spacing: 2px;
@@ -168,8 +170,13 @@
     @include font(20px, 0.9, 500);
   }
 
+  .user-profile__tags-legend {
+    left: 264px;
+  }
+
   .user-profile__travel-legend {
     padding: 0 20px;
+    left: 74px;
   }
 
   .user-profile__tags {
@@ -215,7 +222,7 @@
   }
 
   .user-profile__travel-wrapper {
-    order: initial;
+    order: 0;
     padding: 25px 105px;
   }
 
@@ -231,5 +238,9 @@
 
   .user-profile__tags-legend {
     left: 20px;
+  }
+
+  .user-profile__travel-legend {
+    left: 111px;
   }
 }

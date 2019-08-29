@@ -139,7 +139,7 @@
     position: relative;
     margin-top: 10px;
 
-    display: initial;
+    display: block;
     padding-right: 60px;
 
     color: $white;
@@ -185,7 +185,7 @@
 
   .main-header__user-lvl {
     top: 200px;
-    left: unset;
+    left: auto;
 
     width: 94px;
     height: 94px;

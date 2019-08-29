@@ -16,6 +16,7 @@
   border-radius: 50%;
 
   &:nth-of-type(1)::before {
+    top: 8px;
     left: 8px;
 
     width: 14px;
@@ -28,6 +29,8 @@
   }
 
   &:nth-of-type(2)::before {
+    top: 8px;
+    left: 10px;
     width: 13px;
     height: 16px;
 
@@ -38,6 +41,8 @@
   }
 
   &:nth-of-type(3)::before {
+    top: 7px;
+    left: 7px;
     width: 19px;
     height: 17px;
 
@@ -48,6 +53,8 @@
   }
 
   &:nth-of-type(4)::before {
+    top: 8px;
+    left: 9px;
     width: 15px;
     height: 17px;
 
@@ -113,7 +120,8 @@
 
       &::before {
         position: relative;
-        left: unset;
+        top: auto;
+        left: auto;
 
         width: 19px;
         height: 21px;
@@ -125,6 +133,8 @@
 
       &::before {
         position: relative;
+        top: auto;
+        left: auto;
 
         width: 17px;
         height: 21px;
@@ -136,6 +146,8 @@
 
       &::before {
         position: relative;
+        top: auto;
+        left: auto;
 
         width: 24px;
         height: 21px;
@@ -144,6 +156,8 @@
 
     &:nth-of-type(4)::before {
       position: relative;
+      top: auto;
+      left: auto;
 
       width: 20px;
       height: 21px;

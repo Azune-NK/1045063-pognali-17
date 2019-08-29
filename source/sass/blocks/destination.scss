@@ -188,8 +188,8 @@
 @media (min-width: $tablet-width) {
   .destination {
     width: auto;
-    padding: 123px 0 79px;
     margin-top: -55px;
+    padding: 123px 0 79px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -223,6 +223,15 @@
       border-radius: 20px;
 
       @include pseudo;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .destination__title {
+      &::after {
+        background: url("../img/background/flags-back@2x.png") no-repeat;
+        background-size: 289px auto;
+      }
     }
   }
 
@@ -272,8 +281,9 @@
   }
 
   .destination__name {
-    @include font(24px, 1);
     margin-bottom: 7px;
+
+    @include font(24px, 1);
 
     &::before {
       top: -13px;
@@ -362,8 +372,8 @@
   }
 
   .destination__description-wrapper {
-    padding-top: 21px;
     width: 373px;
+    padding-top: 21px;
   }
 
   .destination__name {

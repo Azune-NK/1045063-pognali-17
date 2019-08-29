@@ -45,6 +45,15 @@
   }
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .pricing__lead {
+    &::before {
+      background: url("../img/background/rates@2x.png") no-repeat;
+      background-size: 99px auto;
+    }
+  }
+}
+
 .pricing__btn {
   margin-top: 20px;
 
@@ -362,6 +371,14 @@
 
       width: 444px;
       height: 300px;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .pricing__lead {
+      &::before {
+        background-size: 198px auto;
+      }
     }
   }
 

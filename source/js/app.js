@@ -1,10 +1,10 @@
 var pageHeader = document.querySelector(".page-header"),
-    navMain = document.querySelector(".main-nav"),
-    navToggle = document.querySelector(".main-nav__toggle"),
-    bizPricingModal = document.querySelector(".modal"),
-    bizPricingOpen = document.querySelector(".pricing__btn"),
-    bizPricingClose = document.querySelector(".biz-pricing__button"),
-    filterBtns = document.querySelectorAll('.companions-filter__legend-btn');
+  navMain = document.querySelector(".main-nav"),
+  navToggle = document.querySelector(".main-nav__toggle"),
+  bizPricingModal = document.querySelector(".modal"),
+  bizPricingOpen = document.querySelector(".pricing__btn"),
+  bizPricingClose = document.querySelector(".biz-pricing__button"),
+  filterBtns = document.querySelectorAll('.companions-filter__legend-btn');
 
 pageHeader.classList.remove("page-header--white");
 pageHeader.classList.remove("page-header--nojs");
@@ -24,15 +24,15 @@ navMain.classList.add("main-nav--closed");
   }
  })(Element.prototype); */
 
- /* for (var i = 0; i < filterBtns.length; i++) {
- filterBtns[i].addEventListener('click', function(e){
- e.preventDefault();
- var target = e.target.closet('.companions-filter__food');
- if (!target) return;
+/* for (var i = 0; i < filterBtns.length; i++) {
+filterBtns[i].addEventListener('click', function(e){
+e.preventDefault();
+var target = e.target.closet('.companions-filter__food');
+if (!target) return;
 
- target.querySelector('.companions-filter__list').classList.add("companions-filter__list--closed")
- })
- } */
+target.querySelector('.companions-filter__list').classList.add("companions-filter__list--closed")
+})
+} */
 
 /* var blocks = document.querySelectorAll('.companions-filter__section');
 for (var i = 0; i < blocks.length; i++) {
@@ -44,7 +44,7 @@ this.querySelector('.companions-filter__list').classList.add("companions-filter_
 })
 } */
 
-navToggle.addEventListener("click", function (/* Вопрос почему тут работает без названия функции, а когда функции ниже тоже были без названия - они не работали? */) {
+navToggle.addEventListener("click", function ( /* Вопрос почему тут работает без названия функции, а когда функции ниже тоже были без названия - они не работали? */ ) {
   if (navMain.classList.contains("main-nav--closed")) {
     pageHeader.classList.add("page-header--white");
     navMain.classList.remove("main-nav--closed");

@@ -16,6 +16,21 @@
   background-position: 54px 130px;
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .intro {
+    background: url("../img/background/globe-back-mobile@2x.jpg") no-repeat,
+      linear-gradient(to top, $black-blue, $black-blue);
+    background-position: 0 -75px;
+    background-size: 320px auto;
+  }
+
+  .intro__wrapper {
+    background: url("../img/background/traveller-illustration-mobile@2x.png") no-repeat;
+    background-position: 54px 130px;
+    background-size: 192px auto;
+  }
+}
+
 .intro__lead {
   display: block;
   margin-bottom: 248px;
@@ -47,6 +62,9 @@
   }
 
   &::after {
+    top: 0;
+    left: 0;
+
     width: 40px;
     height: 40px;
 
@@ -74,6 +92,9 @@
   }
 
   &::after {
+    top: 0;
+    left: 0;
+
     width: 40px;
     height: 40px;
 
@@ -130,6 +151,21 @@
     background-position: 284px 246px;
   }
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .intro {
+      background: url("../img/background/globe-back-tablet@2x.jpg") no-repeat,
+        linear-gradient(to top, $bg-light-blue, $bg-light-blue);
+      background-position: 50% 100%;
+      background-size: 1479px auto;
+    }
+
+    .intro__wrapper {
+      background: url("../img/background/traveller-illustration-tablet@2x.png") no-repeat;
+      background-position: 284px 246px;
+      background-size: 372px auto;
+    }
+  }
+
   .intro__lead {
     width: 395px;
     margin-bottom: 88px;
@@ -155,16 +191,32 @@
   }
 
   .intro__wrapper {
-    background: url("../img/background/traveller-illustration-desktop@1x.png") no-repeat;
-    background-position: 604px 0;
     display: flex;
     justify-content: space-between;
     width: 1440px;
+    margin-top: -9px;
     padding-top: 95px;
     padding-right: 87px;
-    padding-left: 129px;
     padding-bottom: 335px;
-    margin-top: -9px;
+    padding-left: 129px;
+
+    background: url("../img/background/traveller-illustration-desktop@1x.png") no-repeat;
+    background-position: 604px 0;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .intro {
+      background: url("../img/background/globe-back-desktop@2x.jpg") no-repeat,
+        linear-gradient(to top, $black-blue, $black-blue);
+      background-position: 50% 100%;
+      background-size: 1800px auto;
+    }
+
+    .intro__wrapper {
+      background: url("../img/background/traveller-illustration-desktop@2x.png") no-repeat;
+      background-position: 604px 0;
+      background-size: 431px auto;
+    }
   }
 
   .intro__lead {
