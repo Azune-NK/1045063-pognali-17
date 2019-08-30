@@ -1,6 +1,6 @@
 .steps {
   position: absolute;
-  bottom: -252px;
+  bottom: -242px;
 
   width: 270px;
 }
@@ -12,7 +12,7 @@
 .steps__item {
   position: relative;
 
-  padding: 23px 25px 25px;
+  padding: 20px 24px 24px;
 
   color: $black-blue;
 
@@ -23,7 +23,7 @@
     border-radius: 10px 10px 0 0;
 
     &::before {
-      right: 25px;
+      right: 21px;
 
       color: $white;
 
@@ -35,7 +35,7 @@
     background-color: $mango;
 
     &::before {
-      right: 25px;
+      right: 21px;
 
       color: $white;
 
@@ -47,7 +47,7 @@
     background-color: $mango-light;
 
     &::before {
-      right: 25px;
+      right: 21px;
 
       color: $white;
 
@@ -60,7 +60,7 @@
     border-radius: 0 0 10px 10px;
 
     &::before {
-      right: 25px;
+      right: 21px;
 
       color: $white;
 
@@ -74,8 +74,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .steps { /* Вопрос - по какой причине я могу "захотеть" включить этот блок в поток для пк версии? т.е в чем польза тратить время на переопределение тут */
-    bottom: -490px;
+  .steps {
+    bottom: -140px;
     left: 40px;
     width: 708px;
   }
@@ -88,7 +88,7 @@
   }
 
   .steps__item {
-    padding: 31px 31px 62px;
+    padding: 31px 30px 62px 33px;
 
     @include font(24px);
 
@@ -99,27 +99,24 @@
 
     &:nth-child(1) {
       width: 364px;
-      top: 1px;
-      /* Вопрос - без этого появляется зазор между блоками, почему так? на моб версии каждая li без отступов друг к другу шла */
 
       border-radius: 20px 0 0 0;
 
       &::before {
-        bottom: -25px;
-        left: 31px;
+        bottom: -22px;
+        left: 33px;
       }
     }
 
     &:nth-child(2) {
       width: 344px;
-      top: 1px;
       left: -20px;
 
       border-radius: 20px 20px 0 0;
 
       &::before {
-        bottom: -25px;
-        left: 31px;
+        bottom: -22px;
+        left: 33px;
       }
     }
 
@@ -128,8 +125,8 @@
       border-radius: 0 0 0 20px;
 
       &::before {
-        bottom: -25px;
-        left: 31px;
+        bottom: -22px;
+        left: 33px;
       }
     }
 
@@ -140,8 +137,8 @@
       border-radius: 0 0 20px 20px;
 
       &::before {
-        bottom: -25px;
-        left: 31px;
+        bottom: -22px;
+        left: 33px;
       }
     }
   }
@@ -150,7 +147,7 @@
 @media (min-width: $desktop-width) {
   .steps {
     width: 1380px;
-    bottom: -210px;
+    bottom: 122px;
     left: 60px;
   }
 
@@ -159,34 +156,32 @@
   }
 
   .steps__item {
-    padding: 29px 31px 31px;
+    padding: 27px 31px 33px;
 
     &::before {
       @include font(24px, 1);
     }
 
     &:nth-child(1) {
-      top: 0;
-
+      padding-left: 33px;
       width: 335px;
 
       border-radius: 20px 0 0 20px;
 
       &::before {
-        bottom: unset;
-        left: 270px;
+        bottom: auto;
+        left: 268px;
       }
     }
 
     &:nth-child(2) {
       width: 365px;
-      top: 0;
 
       border-radius: 20px 0 0 20px;
 
       &::before {
-        bottom: unset;
-        left: 270px;
+        bottom: auto;
+        left: 300px;
       }
     }
 
@@ -197,19 +192,20 @@
       border-radius: 20px 0 0 20px;
 
       &::before {
-        bottom: unset;
-        left: 270px;
+        bottom: auto;
+        left: 300px;
       }
     }
 
     &:nth-child(4) {
       width: 315px;
       left: -60px;
+      padding-left: 30px;
 
       border-radius: 20px;
 
       &::before {
-        bottom: unset;
+        bottom: auto;
         left: 270px;
       }
     }

@@ -11,9 +11,13 @@
   &--white {
     background-color: $white;
   }
+
+  &--fixed {
+    position: fixed;
+    z-index: 100;
+  }
 }
 
-/* Вопрос - тройная вложенность, если уберу main-nav--closed(так как по сути кнопка хоть бургер хоть крестик должна быть серой на белом меню) - у крестика нет box-shadow - либо иконку бургер делать через svg, а не рисовать или на !important задать main-nav--closed main-nav__toggle box-shadow:none? или не париться и ради исключения норм */
 .page-header--white .main-nav--closed .main-nav__toggle::before {
   background-color: $white-grey;
   box-shadow: 0 8px 0 0 $white-grey;
@@ -82,7 +86,9 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding: 50px 0 20px;
+    z-index: 7;
+
+    padding: 47px 0 20px;
 
     &--white:not(.page-header--nojs) {
       padding: 20px 0;
@@ -99,6 +105,35 @@
         color: $grey-blue;
       }
     }
+
+    &--fixed:not(.page-header--nojs) {
+      position: fixed;
+      z-index: 100;
+
+      padding: 20px 0;
+
+      background-color: $white;
+
+      .main-nav__wrapper::before {
+        left: 15px;
+
+        width: 45px;
+
+        background-color: $grey-blue;
+      }
+
+      .main-menu__link {
+        color: $grey-blue;
+      }
+
+      .page-header__logo-white {
+        display: none;
+      }
+
+      .page-header__logo-blue {
+        display: block;
+      }
+    }
   }
 
   .page-header--nojs {
@@ -106,7 +141,7 @@
   }
 
   .page-header--white.page-header--nojs .page-header__logo-white {
-    display: initial;
+    display: block;
   }
 
   .page-header--white.page-header--nojs .page-header__logo-blue {
@@ -124,7 +159,6 @@
     align-self: center;
     width: 200px;
     margin-right: 40px;
-    /* Вопрос - не понимаю, почему без шринк0 логотип ужимался, у 2го флекс элемента ( пункты меню + блок авторизации) внутри стоит sbetween,  флекс решил что лучше ужать логотип, чем уменьшить размер этого sbetween */
   }
 
   .page-header__logo-white,

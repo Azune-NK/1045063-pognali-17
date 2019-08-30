@@ -1,0 +1,1687 @@
+.new-plan {
+  position: relative;
+  z-index: 3;
+
+  width: 320px;
+  margin: 0 auto;
+  margin-top: -30px;
+  padding: 30px 25px 74px;
+
+  background-color: $bg-sky;
+  border-radius: 30px 30px 0 0;
+}
+
+.new-plan__title,
+.new-plan__step-name,
+.new-plan__step-description {
+  margin: 0;
+}
+
+.new-plan__title {
+  margin-bottom: 30px;
+
+  color: $blue;
+
+  @include font(24px, 1, 700);
+}
+
+.new-plan__list {
+  @include ul-reset;
+}
+
+.new-plan__item {
+  position: relative;
+
+  padding: 22px 25px 10px;
+
+  background-color: $white;
+  border-radius: 10px;
+
+  &:nth-of-type(1) {
+    padding-bottom: 22px;
+
+    .new-plan__step-description {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &--active {
+    .new-plan__progress-list {
+      display: flex;
+    }
+  }
+
+
+  &:nth-of-type(2) {
+    .new-plan__step-description {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    .new-plan__step-description {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.new-plan__progress-list {
+  position: absolute;
+  top: -43px;
+  right: 2px;
+
+  display: none;
+
+  font-size: 0;
+
+  @include ul-reset;
+}
+
+.new-plan__steps {
+  &::before {
+    display: block;
+    width: 6px;
+    height: 5px;
+    margin-right: 15px;
+
+    background-color: rgba($grey-dot, 0.3);
+    border-radius: 50%;
+
+    @include pseudo("", relative);
+  }
+
+  &--active {
+    &::before {
+      background-color: $blue;
+    }
+  }
+}
+
+.new-plan__step-name {
+  margin-bottom: 16px;
+
+  color: $blue;
+
+  @include font(20px, 1, 700);
+}
+
+.new-plan__step-description {
+  margin-bottom: 21px;
+
+  color: $grey;
+
+  @include font(16px, 1.38);
+}
+
+.new-plan__flex-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-plan__calc-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+
+.new-plan__calc-label {
+  margin-bottom: 9px;
+
+  color: $blue;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+
+  @include font(16px, 1, 500);
+}
+
+.new-plan__calc-description {
+  margin: 0;
+
+  color: rgba($blue, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+
+  @include font(16px, 1, 500);
+}
+
+.new-plan__calc-input {
+  width: 220px;
+  height: 43px;
+  padding: 10px 35px;
+
+  text-align: center;
+  color: $blue;
+  letter-spacing: 1.5px;
+
+  border: solid 1px $grey-border;
+  border-radius: 4px;
+  outline: none;
+
+  @include font(15px, 0.9, 500);
+
+  &:hover {
+    border-color: $dark-border;
+  }
+
+  &:focus {
+    border-color: $black-blue;
+  }
+}
+
+.new-plan__minus-btn,
+.new-plan__plus-btn {
+  position: absolute;
+
+  width: 14px;
+  padding: 0;
+
+  border: 0;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.new-plan__minus-btn {
+  top: 46px;
+  left: 15px;
+
+  height: 2px;
+
+  background: url("../img/svg/qty-minus-mobile.svg") no-repeat;
+}
+
+.new-plan__plus-btn {
+  top: 40px;
+  right: 15px;
+
+  height: 14px;
+
+  background: url("../img/svg/qty-plus-mobile.svg") no-repeat;
+}
+
+.new-plan__checkbox-label {
+  position: relative;
+
+  margin-bottom: 21px;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+
+  color: $grey;
+
+  @include font(15px, 1);
+
+  &:hover,
+  &:focus {
+    .new-plan__checkbox {
+      border-color: $dark-border;
+    }
+  }
+
+  &:active {
+    .new-plan__checkbox {
+      background-color: $grey-light;
+      border-color: $grey-light;
+    }
+
+    input[type="checkbox"]:checked + .new-plan__checkbox::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.new-plan__checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+
+  background-color: $white;
+  border: solid 1px $grey-border;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + .new-plan__checkbox {
+  &::before {
+    top: 8px;
+    left: 8px;
+    width: 9px;
+    height: 9px;
+
+    background: url("../img/svg/tick.svg") no-repeat;
+
+    @include pseudo;
+  }
+}
+
+.new-plan__calendar-nav {
+  position: relative;
+
+  padding-top: 9px;
+  padding-bottom: 12px;
+
+  border-top: 1px solid $grey-line;
+  border-bottom: 1px solid $grey-line;
+}
+
+.new-plan__month-arrows {
+  position: absolute;
+  top: 12px;
+
+  width: 9px;
+  height: 17px;
+  padding: 0;
+
+  background: url("../img/svg/month-arrow-left.svg") no-repeat;
+  border: 0;
+  opacity: 0.3;
+
+  &:nth-of-type(2) {
+    right: 0;
+
+    transform: rotate(180deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.new-plan__month-name {
+  margin: 0;
+
+  text-align: center;
+  color: $blue;
+
+  @include font(20px, 1, 700);
+}
+
+.new-plan__calendar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  margin-bottom: 23px;
+}
+
+.new-plan__calendar-weekday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  margin: 0;
+  margin-bottom: 2px;
+
+  color: $grey;
+
+  @include font(14px, 1.29);
+
+  &:nth-of-type(6),
+  &:nth-of-type(7) {
+    color: $almost-red;
+  }
+
+  span {
+    display: none;
+  }
+}
+
+.new-plan__calendar-days {
+  position: relative;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  color: $grey;
+
+  background-color: $blue-light;
+  border: 1px solid $grey-border;
+
+  @include font(14px, 1.29);
+
+  span {
+    display: none;
+  }
+
+  &--disabled {
+    color: rgba($grey, 0.3);
+
+    background-color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    z-index: 2;
+
+    color: $white;
+
+    background-color: $blue;
+    border-color: $almost-red;
+    box-shadow: 0 0 0 1px $almost-red;
+  }
+
+  &--chosen,
+  &:active {
+    color: $white;
+
+    background-color: $crazy-black;
+  }
+
+  &:nth-of-type(7n+2) {
+    left: -1px;
+  }
+
+  &:nth-of-type(7n+3) {
+    left: -2px;
+  }
+
+  &:nth-of-type(7n+4) {
+    left: -3px;
+  }
+
+  &:nth-of-type(7n+5) {
+    left: -4px;
+  }
+
+  &:nth-of-type(7n+6) {
+    left: -5px;
+  }
+
+  &:nth-of-type(7n+7) {
+    left: -6px;
+
+    margin-right: -6px;
+  }
+
+  &:nth-of-type(n+8) {
+    top: -1px;
+  }
+
+  &:nth-of-type(n+15) {
+    top: -2px;
+  }
+
+  &:nth-of-type(n+22) {
+    top: -3px;
+  }
+
+  &:nth-of-type(n+29) {
+    top: -4px;
+  }
+
+  &:nth-of-type(n+36) {
+    top: -5px;
+
+    margin-bottom: -5px;
+  }
+}
+
+.new-plan__select-wrapper {
+  position: relative;
+}
+
+.new-plan__select-country {
+  position: relative;
+
+  margin-bottom: 22px;
+  padding: 11px;
+  padding-right: 73px;
+
+  color: $blue;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+
+  background-color: $white;
+  border: solid 1px $grey-border;
+  border-radius: 4px;
+
+  @include font(14px, 1.29, 500);
+
+  &:hover,
+  &:focus {
+    border-color: $dark-border;
+
+    .new-plan__country-img {
+      border-color: $dark-border;
+    }
+  }
+
+  span {
+    &::before {
+      top: 16px;
+      right: 48px;
+      z-index: 100;
+
+      width: 7px;
+      height: 7px;
+
+      background-color: $white;
+      border: solid 1px $grey-border;
+      border-radius: 50%;
+
+      @include pseudo;
+    }
+
+    &::after {
+      top: 16px;
+      right: 13px;
+      z-index: 100;
+
+      width: 12px;
+      height: 7px;
+
+      background: url("../img/svg/dropdown-form.svg") no-repeat;
+      opacity: 0.3;
+
+      @include pseudo;
+    }
+  }
+
+  &--selected {
+    padding-right: 11px;
+
+    span {
+      display: block;
+      width: 144px;
+      overflow: hidden;
+
+      text-align: left;
+      white-space: nowrap;
+
+      &::before {
+        right: -4px;
+
+        width: 8px;
+        height: 8px;
+
+        background-color: $blue;
+        border: 0;
+      }
+    }
+
+    .new-plan__country-img {
+      position: absolute;
+      top: -1px;
+      right: -51px;
+
+      width: 51px;
+      height: 42px;
+      padding: 8px;
+
+      border: solid 1px $grey-border;
+      border-radius: 4px;
+    }
+
+    &::before {
+      top: 2px;
+      right: 0;
+      z-index: 100;
+
+      width: 49px;
+      height: 36px;
+
+      background-image: linear-gradient(to right, rgba($white, 0.2) 0%, $white 40%);
+
+      @include pseudo;
+    }
+  }
+}
+
+.new-plan__delete-country {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  z-index: 100;
+
+  width: 21px;
+  height: 21px;
+
+  border: 0;
+}
+
+.new-plan__add-country {
+  position: relative;
+
+  margin-bottom: 25px;
+  padding: 12px;
+  padding-right: 73px;
+
+  color: $blue;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+
+  background-color: $blue-light;
+  border: 0;
+  border-radius: 4px;
+
+  @include font(14px, 1.29, 500);
+
+  &::before {
+    top: 18px;
+    right: 49px;
+
+    width: 7px;
+    height: 7px;
+
+    background-color: $blue-light;
+    border: solid 1px $grey-border;
+    border-radius: 50%;
+
+    @include pseudo;
+  }
+
+  &::after {
+    top: 14px;
+    right: 13px;
+
+    width: 14px;
+    height: 14px;
+
+    background: url("../img/svg/qty-plus-mobile.svg") no-repeat;
+    opacity: 0.3;
+
+    @include pseudo;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $bg-light-sky;
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
+}
+
+.new-plan__todo-list {
+  position: relative;
+
+  @include ul-reset;
+}
+
+.new-plan__todo-item {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &:not(:first-child)::before {
+    top: calc(-100% + 12px);
+    left: -15px;
+
+    width: 2px;
+    height: 281px;
+
+    background-color: $blue;
+
+    @include pseudo;
+  }
+
+  &::after {
+    top: 0;
+    right: 35px;
+    z-index: 100;
+
+    width: 38px;
+    height: 24px;
+
+    background-image: linear-gradient(to right, rgba($white, 0.2) 0%, $white 25%);
+
+    @include pseudo;
+  }
+}
+
+.new-plan__textarea-label {
+  position: relative;
+
+  display: block;
+  width: 180px;
+  margin-left: -15px;
+  margin-right: auto;
+  padding-left: 26px;
+  overflow: hidden;
+
+  color: $blue;
+  white-space: nowrap;
+
+  @include font(18px, 1, 500);
+
+
+  &::before {
+    top: 8px;
+    left: 0;
+
+    width: 15px;
+    height: 2px;
+
+    background-color: $blue;
+
+    @include pseudo;
+  }
+
+  &::after {
+    top: 6px;
+    left: 12px;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: $blue;
+    border-radius: 50%;
+
+    @include pseudo;
+  }
+}
+
+.new-plan__textarea {
+  width: 220px;
+  height: 220px;
+  margin-top: 14px;
+  margin-bottom: 24px;
+  padding: 10px 15px;
+
+  border: solid 1px $grey-border;
+  border-radius: 4px;
+  outline: none;
+
+  resize: none;
+
+  @include font(16px, 1.38);
+
+  &::placeholder {
+    color: rgba($grey, 0.3);
+  }
+
+  &:hover {
+    border-color: $dark-border;
+  }
+
+  &:focus {
+    border-color: $black-blue;
+  }
+
+  &:invalid {
+    /* Вопрос - не пойму я стайлгайд, нам надо самим написать текст ошибки и застилизовать его? */
+    border-color: $deep-salmon;
+  }
+}
+
+.new-plan__previous-step {
+  display: block;
+  margin-top: 12px;
+
+  text-align: center;
+  color: $black-blue;
+  text-transform: uppercase;
+
+  @include font(17px, 1.76, 700);
+
+  &:hover,
+  &:focus {
+    color: rgba($black-blue, 0.7);
+  }
+
+  &:active {
+    color: rgba($black-blue, 0.3);
+  }
+}
+
+@media (max-width: 767px) {
+  .new-plan__select-wrapper {
+    &::before {
+      right: 50px;
+      bottom: 5px;
+
+      width: 5px;
+      height: 10px;
+
+      background: url("../img/svg/small-arrow.svg") no-repeat;
+      opacity: 0.3;
+
+      @include pseudo;
+    }
+  }
+
+  .new-plan__delete-country {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $blue-light;
+    border-radius: 50%;
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 21px;
+      height: 21px;
+
+      background: url("../img/svg/small-cross.svg") no-repeat 50% 50%;
+      background-size: 9px 9px;
+      opacity: 0.3;
+
+      @include pseudo;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $bg-light-sky;
+
+      &::before {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.2;
+      }
+    }
+  }
+
+  .new-plan__next-step {
+    width: calc(100% + 10px);
+    margin-left: -5px;
+    padding: 5px 0 6px;
+
+    text-align: center;
+    color: $black-blue;
+    text-transform: uppercase;
+
+    border-radius: 20px;
+
+    @include font(17px, 1.76, 700);
+
+    &::before {
+      display: none;
+    }
+
+    &:active {
+      color: rgba($black-blue, 0.3);
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .new-plan {
+    width: auto;
+    padding: 45px 0 118px;
+
+    border-radius: 30px 30px 0 0;
+  }
+
+  .new-plan__form {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 75px;
+  }
+
+  .new-plan__title {
+    margin-bottom: 52px;
+
+    @include font(36px, 1.39);
+  }
+
+  .new-plan__item {
+    padding: 45px 45px;
+
+    border-radius: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 51px;
+      padding-bottom: 54px;
+
+      .new-plan__step-description {
+        br {
+          display: inline;
+        }
+      }
+    }
+
+    &:first-child {
+      padding-bottom: 55px;
+
+      .new-plan__step-description {
+        margin-bottom: 39px;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 52px;
+
+      .new-plan__step-name {
+        margin-bottom: 35px;
+      }
+
+      .new-plan__next-step {
+        margin-top: 5px;
+        padding-right: 138px;
+      }
+
+      .new-plan__previous-step {
+        margin-top: 3px;
+      }
+
+      .new-plan__step-description {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+
+  .new-plan__step-name {
+    margin-bottom: 35px;
+
+    @include font(36px);
+  }
+
+  .new-plan__progress-list {
+    top: -79px;
+    right: -29px;
+  }
+
+  .new-plan__steps {
+    &::before {
+      margin-right: 28px;
+    }
+  }
+
+  .new-plan__step-description {
+    width: 500px;
+    margin-bottom: 35px;
+
+    @include font(20px, 1.2);
+  }
+
+  .new-plan__calc-wrapper {
+    margin-bottom: 25px;
+
+    border-top: 1px solid $grey-line;
+
+    &:nth-of-type(2) {
+      order: 2;
+      margin-bottom: 59px;
+    }
+  }
+
+  .new-plan__calc-label {
+    margin-bottom: 25px;
+    padding-top: 24px;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 0.9);
+  }
+
+  .new-plan__calc-description {
+    align-self: center;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 0.9);
+  }
+
+  .new-plan__calc-input {
+    width: 531px;
+    height: 70px;
+    padding: 25px 55px;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 0.9);
+  }
+
+  .new-plan__minus-btn,
+  .new-plan__plus-btn {
+    width: 20px;
+  }
+
+  .new-plan__minus-btn {
+    top: 101px;
+    left: 23px;
+
+    height: 2px;
+
+    background: url("../img/svg/qty-minus.svg") no-repeat;
+  }
+
+  .new-plan__plus-btn {
+    top: 92px;
+    right: 20px;
+
+    height: 20px;
+
+    background: url("../img/svg/qty-plus.svg") no-repeat;
+  }
+
+  .new-plan__checkbox-label {
+    margin-bottom: 26px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 58px;
+
+    color: $blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include font(20px, 0.9, 500);
+  }
+
+  .new-plan__checkbox {
+    width: 36px;
+    height: 36px;
+  }
+
+  input[type="checkbox"]:checked + .new-plan__checkbox {
+    &::before {
+      top: 12px;
+      left: 12px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .new-plan__calendar-nav {
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+
+  .new-plan__month-arrows {
+    top: 27px;
+
+    width: 18px;
+    height: 34px;
+
+
+    &:nth-of-type(1) {
+      left: 15px;
+    }
+
+    &:nth-of-type(2) {
+      top: 27px;
+      right: 15px;
+    }
+  }
+
+  .new-plan__month-name {
+    @include font(36px);
+  }
+
+  .new-plan__calendar {
+    margin-top: 27px;
+    margin-bottom: 46px;
+  }
+
+  .new-plan__calendar-weekday {
+    width: 75px;
+    height: 40px;
+    margin-bottom: -2px;
+    padding-left: 6px;
+
+    letter-spacing: 1.8px;
+
+    @include font(18px, 1);
+
+    span {
+      display: inline;
+    }
+  }
+
+  .new-plan__calendar-days {
+    width: 76px;
+    height: 70px;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 1);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 3px $almost-red;
+    }
+  }
+
+  .new-plan__select-wrapper {
+    position: relative;
+
+    &:nth-of-type(1) {
+      padding-top: 42px;
+
+      &::before {
+        top: 0;
+        left: 0;
+
+        width: 529px;
+        height: 1px;
+
+        background-color: $bg-grey-blue;
+
+        @include pseudo;
+      }
+
+      .new-plan__delete-country {
+        top: 66px;
+      }
+    }
+
+    &::after {
+      top: 0;
+      right: 133px;
+
+      width: 1px;
+      height: 205px;
+
+      background-image: linear-gradient(to top, rgba($white, 0.2) 0%, $bg-grey-blue 30%);
+
+      @include pseudo;
+    }
+  }
+
+  .new-plan__select-country {
+    position: relative;
+
+    margin-bottom: 15px;
+    padding: 25px 0;
+    padding-right: 153px;
+    padding-left: 23px;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 0.9);
+
+    span {
+      &::before {
+        top: 25px;
+        right: -34px;
+
+        width: 14px;
+        height: 14px;
+      }
+
+      &::after {
+        top: 30px;
+        right: 27px;
+
+        width: 17px;
+        height: 9px;
+      }
+    }
+
+    &--selected {
+      padding-right: 47px;
+
+      span {
+        width: 296px;
+
+        &::before {
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      .new-plan__country-img {
+        top: 11px;
+        right: -124px;
+
+        width: 70px;
+        height: 47px;
+        padding: 0;
+
+        border: 0;
+        border-radius: 0;
+      }
+
+      &::before {
+        top: 2px;
+        right: 15px;
+
+        width: 65px;
+        height: 65px;
+      }
+    }
+  }
+
+  .new-plan__delete-country {
+    top: 25px;
+    right: -5px;
+
+    width: 17px;
+    height: 17px;
+
+    background: url("../img/svg/small-cross.svg") no-repeat 50% 50%;
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .new-plan__add-country {
+    margin-bottom: 47px;
+    padding: 26px;
+    padding-right: 154px;
+    padding-left: 23px;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 0.9);
+
+    &::before {
+      top: 26px;
+      right: -32px;
+
+      width: 14px;
+      height: 14px;
+    }
+
+    &::after {
+      top: 24px;
+      right: 28px;
+
+      width: 20px;
+      height: 20px;
+
+      background: url("../img/svg/qty-plus.svg") no-repeat;
+      opacity: 0.2;
+    }
+  }
+
+  .new-plan__todo-item {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      right: 118px;
+
+      width: 45px;
+      height: 47px;
+    }
+  }
+
+  .new-plan__textarea-label {
+    width: 425px;
+    margin-left: 0;
+    padding-right: 15px;
+    padding-left: 0;
+
+    @include font(30px, 1);
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      top: 8px;
+      right: 0;
+      left: auto;
+
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .new-plan__country-img {
+    width: 70px;
+    height: 47px;
+  }
+
+  .new-plan__textarea {
+    width: 528px;
+    height: 142px;
+    margin-top: 31px;
+    margin-bottom: 42px;
+    padding: 17px;
+
+    @include font(20px, 1.2);
+  }
+
+  .new-plan__next-step {
+    display: inline-block;
+    margin-right: 61px;
+    padding: 29px 76px 28px 31px;
+
+    vertical-align: middle;
+  }
+
+  .new-plan__previous-step {
+    position: relative;
+
+    display: inline-block;
+    margin-top: 0;
+    margin-right: -5px;
+    padding-left: 34px;
+
+    vertical-align: middle;
+    text-transform: none;
+
+    @include font(24px, 1);
+
+    &::before {
+      top: 5px;
+      left: 0;
+
+      border-top: 7px solid transparent;
+      border-right: 10px solid $blue;
+      border-bottom: 7px solid transparent;
+
+      @include pseudo;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      border-right: 10px solid rgba($blue, 0.7);
+    }
+
+    &:active::before {
+      border-right: 10px solid rgba($blue, 0.3);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .new-plan {
+    margin-top: -55px;
+    padding: 47px 0 127px;
+
+    border-radius: 60px 60px 0 0;
+  }
+
+  .new-plan__form {
+    width: 1440px;
+    padding: 0 60px;
+  }
+
+  .new-plan__title {
+    margin-bottom: 51px;
+    margin-left: 70px;
+  }
+
+  .new-plan__item {
+    padding: 90px 160px 105px;
+
+    border-radius: 60px;
+
+    &:nth-of-type(n) {
+      padding-bottom: 105px;
+
+      .new-plan__step-description {
+        margin-bottom: 56px;
+
+        br {
+          display: inline;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+
+    &:nth-of-type(1) {
+      .new-plan__step-description {
+        width: 580px;
+      }
+    }
+
+    &:last-child {
+      .new-plan__step-name {
+        margin-bottom: 27px;
+      }
+
+      .new-plan__step-description {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  .new-plan__step-name {
+    width: 450px;
+    margin-bottom: 28px;
+
+    @include font(36px, 1.39);
+
+    br {
+      display: none;
+    }
+  }
+
+
+  .new-plan__progress-list {
+    position: absolute;
+    top: 107px;
+    right: 205px;
+
+    display: flex;
+    flex-direction: column;
+
+    letter-spacing: 2px;
+
+    @include font(20px, 1);
+  }
+
+  .new-plan__steps {
+    position: relative;
+
+    margin-bottom: 24px;
+    padding-left: 42px;
+
+    color: rgba($black, 0.6);
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      top: 9px;
+      left: -2px;
+
+      margin-right: 0;
+    }
+
+    &--active {
+      color: $blue;
+
+      &::before {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .new-plan__flex-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+
+    border-top: 1px solid $grey-line;
+  }
+
+  .new-plan__calc-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 14px;
+
+    border-top: 0;
+
+    &:nth-of-type(2) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .new-plan__calc-label {
+    width: 194px;
+  }
+
+  .new-plan__calc-description {
+    order: 2;
+    width: 43px;
+
+    color: $blue;
+  }
+
+  .new-plan__calc-input {
+    width: 181px;
+    height: 70px;
+    margin-right: 39px;
+    margin-left: 25px;
+    padding: 25px 55px;
+  }
+
+  .new-plan__minus-btn,
+  .new-plan__plus-btn {
+    width: 20px;
+  }
+
+  .new-plan__minus-btn {
+    top: 34px;
+    left: 240px;
+
+    height: 2px;
+
+    background: url("../img/svg/qty-minus.svg") no-repeat;
+  }
+
+  .new-plan__plus-btn {
+    top: 25px;
+    right: 100px;
+
+    height: 20px;
+
+    background: url("../img/svg/qty-plus.svg") no-repeat;
+  }
+
+  .new-plan__checkbox-label {
+    top: -7px;
+
+    margin-bottom: 0;
+  }
+
+  .new-plan__month-arrows {
+    top: 30px;
+
+    width: 18px;
+    height: 34px;
+
+    &:nth-of-type(1) {
+      left: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: 30px;
+      right: 0;
+    }
+  }
+
+  .new-plan__calendar {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  .new-plan__calendar-weekday {
+    justify-content: flex-start;
+    width: 142px;
+    height: 50px;
+    margin-bottom: 4px;
+    padding: 15px;
+    padding-left: 17px;
+  }
+
+  .new-plan__calendar-days {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 143px;
+    height: 72px;
+    padding: 14px;
+
+    letter-spacing: 1.8px;
+
+    @include font(18px);
+
+    &:not(&--chosen) span {
+      display: inline;
+      margin-left: 4px;
+    }
+
+    &--chosen span {
+      display: inline-block;
+      width: 100%;
+      margin-top: 5px;
+
+      text-align: left;
+    }
+  }
+
+  .new-plan__select-wrapper {
+    position: relative;
+
+    &:nth-of-type(1) {
+      padding-top: 63px;
+
+      &::before {
+        width: 1000px;
+      }
+
+      .new-plan__delete-country {
+        top: 87px;
+      }
+    }
+
+    &::after {
+      right: 225px;
+
+      height: 300px;
+    }
+  }
+
+  .new-plan__select-country {
+    padding-right: 514px;
+
+    span {
+      &::before {
+        right: -53px;
+      }
+    }
+
+    &--selected {
+      padding-right: 54px;
+
+      span {
+        width: 650px;
+      }
+
+      .new-plan__country-img {
+        right: -154px;
+
+        margin-right: 0;
+      }
+    }
+  }
+
+  .new-plan__delete-country {
+    right: 6px;
+  }
+
+  .new-plan__add-country {
+    margin-bottom: 44px;
+    padding-right: 514px;
+
+    &::before {
+      right: -52px;
+    }
+  }
+
+  .new-plan__todo-list {
+    margin-bottom: 8px;
+    padding-top: 70px;
+
+    &::before {
+      top: 0;
+      left: 0;
+
+      width: 1000px;
+      height: 1px;
+
+      background-color: $bg-grey-blue;
+
+      @include pseudo;
+    }
+  }
+
+  .new-plan__todo-item {
+    position: relative;
+
+    &:not(:first-child)::before {
+      top: calc(-100% + 26px);
+      right: 224px;
+      left: auto;
+
+      display: block;
+      width: 3px;
+      height: 261px;
+    }
+
+    &::after {
+      right: 233px;
+    }
+  }
+
+  .new-plan__textarea-label {
+    width: 782px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .new-plan__country-img {
+    margin-right: 115px;
+  }
+
+  .new-plan__textarea {
+    width: 730px;
+    height: 142px;
+    margin-top: 29px;
+    margin-bottom: 42px;
+    padding: 20px 22px;
+  }
+
+  .new-plan__next-step {
+    margin-top: 10px;
+    margin-right: 533px;
+  }
+
+  .new-plan__previous-step {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 0) {
+  .new-plan__select-country--active + .new-plan__delete-country {
+    display: none;
+  }
+}

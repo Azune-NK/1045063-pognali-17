@@ -4,16 +4,11 @@
 
   width: 320px;
   margin: 0 auto;
-  margin-top: -60px;
-  padding: 110px 25px 35px;
+  margin-top: -30px;
+  padding: 62px 25px 37px;
 
   background-color: $gold;
-  border-radius: 0 0 25px 25px;
-
-  .btn-with-arrow::before {
-    top: 23px;
-    right: 21px;
-  }
+  border-radius: 0 0 30px 30px;
 }
 
 .office__address {
@@ -21,7 +16,7 @@
 
   width: 205px;
   margin-bottom: 35px;
-  padding-left: 60px;
+  padding-left: 61px;
 
   font-style: normal;
   color: $grey-blue;
@@ -46,9 +41,16 @@
 }
 
 .office__pathing-btn {
-  padding: 21px 21px 18px;
+  margin: 0 3px;
+  padding: 19px 21px;
+  border-radius: 6px;
 
   box-shadow: 0 0 0 3px $grey-blue;
+
+  &::before {
+    top: 21px;
+    right: 20px;
+  }
 
   &:hover,
   &:focus {
@@ -72,7 +74,8 @@
 @media (min-width: $tablet-width) {
   .office {
     width: auto;
-    padding: 130px 0 85px;
+    padding: 118px 0 88px;
+    margin-top: -55px;
 
     border-radius: 0 0 60px 60px;
 
@@ -90,13 +93,13 @@
 
   .office__address {
     width: auto;
-    margin-bottom: 65px;
-    padding-left: 95px;
+    margin-bottom: 61px;
+    padding-left: 93px;
 
     @include font(28px, 1.38);
 
     &::before {
-      top: -14px;
+      top: -15px;
 
       width: 67px;
       height: 67px;
@@ -106,14 +109,15 @@
   }
 
   .office__pathing-btn {
-    padding: 28px 34px 25px;
+    padding: 25px 34px 26px;
+    border-radius: 18px;
   }
 }
 
 
 @media (min-width: $desktop-width) {
   .office {
-    padding: 120px 0 60px;
+    padding: 114px 0 64px;
   }
 
   .office__wrapper {
@@ -141,6 +145,6 @@
   }
 
   .office__pathing-btn {
-    padding-right: 67px;
+    padding-right: 65px;
   }
 }

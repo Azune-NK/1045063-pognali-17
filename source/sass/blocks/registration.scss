@@ -4,8 +4,8 @@
 
   width: 320px;
   margin: 0 auto;
-  margin-top: -60px;
-  padding: 130px 25px 30px;
+  margin-top: -30px;
+  padding: 100px 25px 30px;
 
   background-color: $grey-blue;
   border-radius: 0 0 30px 30px;
@@ -39,7 +39,6 @@
   color: $gold;
 
   border-bottom: 1px solid rgba($gold, 0.6);
-  /* Вопрос - ни в ФШ ни в зеплин отдельно не выделить подчеркивание(как в глейси можно было), когда беру цвет пипеткой из-за уже встроенного опасити который не проверить - цвет вбирает часть фона, как быть? я на глаз поставил от цвета ссылки, у нас в макете опасити обычно меняется с 0.6 до 0.3 */
 
   &:hover,
   &:focus {
@@ -56,8 +55,8 @@
 .registration__email {
   width: 270px;
   height: 62px;
-  margin-bottom: 30px;
-  padding: 24px 84px 24px 24px;
+  margin-bottom: 28px;
+  padding: 23px 84px 24px 24px;
 
   border: none;
   border-radius: 10px;
@@ -66,6 +65,7 @@
 
   &::placeholder {
     color: rgba($grey, 0.3);
+    opacity: 1;
   }
 
   &:hover {
@@ -73,6 +73,7 @@
 
     &::placeholder {
       color: rgba($grey, 0.5);
+      opacity: 1;
     }
   }
 
@@ -83,7 +84,7 @@
   }
 
   &:focus {
-    padding: 20px 80px 20px 20px;
+    padding: 19px 80px 21px 20px;
 
     color: $white;
 
@@ -92,6 +93,7 @@
 
     &::placeholder {
       color: $white;
+      opacity: 1;
     }
   }
 }
@@ -117,7 +119,8 @@
 @media (min-width: $tablet-width) {
   .registration {
     width: auto;
-    padding: 185px 0 60px;
+    padding: 127px 0 61px;
+    margin-top: -55px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -129,13 +132,13 @@
   }
 
   .registration__lead {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
 
     @include font(45px, 1);
   }
 
   .registration__text {
-    margin-bottom: 65px;
+    margin-bottom: 66px;
 
     @include font(28px, 1.18);
 
@@ -148,14 +151,15 @@
   .registration__email {
     width: 536px;
     height: 81px;
-    padding: 30px 35px;
+    padding: 30px 35px 31px 34px;
+    margin-bottom: 56px;
 
     border-radius: 20px 0 0 20px;
 
     @include font(24px, 1);
 
     &:focus {
-      padding: 26px 31px;
+      padding: 26px 31px 27px 30px;
     }
   }
 
@@ -169,7 +173,7 @@
 
 @media (min-width: $desktop-width) {
   .registration {
-    padding: 200px 0 105px;
+    padding: 157px 0 105px;
   }
 
   .registration__wrapper {
@@ -184,7 +188,7 @@
   .registration__email {
     width: 850px;
     height: 81px;
-    margin-bottom: 70px;
+    margin-bottom: 66px;
   }
 
   .registration__btn {
@@ -192,7 +196,7 @@
     height: 81px;
 
     span {
-      display: initial;
+      display: inline;
     }
   }
 }

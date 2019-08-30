@@ -1,6 +1,6 @@
 .main-nav {
   width: 320px;
-  padding: 45px 25px 30px;
+  padding: 42px 25px 28px;
 
   background-color: $white;
 }
@@ -14,8 +14,8 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -92px;
-  right: 0;
+  top: -88px;
+  right: 2px;
 
   border: 0;
 }
@@ -25,7 +25,9 @@
 }
 
 .main-nav__login-btn {
-  margin-top: 55px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  margin-top: 52px;
 
   text-align: center;
 
@@ -50,7 +52,7 @@
 @media (max-width: 1439px) {
   .main-nav--opened.main-nav--nojs {
     position: relative;
-    top: unset;
+    top: auto;
     bottom: -27px;
     left: -25px;
   }
@@ -58,20 +60,21 @@
   .main-nav--opened {
     position: absolute;
     top: 73px;
-    bottom: unset;
+    bottom: auto;
     left: 0;
   }
 
   .main-nav--closed {
     position: absolute;
     top: -1000%;
-    bottom: unset;
+    bottom: auto;
     left: 0;
   }
 
   .main-nav--closed .main-nav__toggle {
-    top: unset;
-    bottom: -74.3%;
+    top: auto;
+    bottom: -71.7%;
+    right: 0;
 
     width: 25px;
     height: 11px;
@@ -98,7 +101,6 @@
     height: 19px;
 
     background-color: transparent;
-    /* Вопрос - без этого появляется серый куб, почему? */
 
     &::before,
     &::after {
@@ -130,7 +132,7 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     width: 100%;
-    padding: 60px 0 75px;
+    padding: 48px 0 75px;
   }
 
   .main-nav__wrapper {
@@ -148,7 +150,7 @@
   }
 
   .main-nav__toggle {
-    right: 370px;
+    right: 371px;
   }
 
   .main-nav__login-btn {
@@ -163,7 +165,7 @@
   }
 
   .main-nav__contacts {
-    margin-top: 145px;
+    margin-top: 137px;
   }
 
   .main-nav__social {
@@ -179,23 +181,24 @@
   }
 
   .main-nav__toggle {
-    top: -135px;
+    top: -125px;
   }
 
   .main-nav--closed .main-nav__toggle {
-    bottom: -100.5%;
+    bottom: -104.9%;
+    right: 371px;
   }
 
   .main-nav__login-btn {
-    top: unset;
+    top: auto;
     right: 40px;
-    bottom: -103.5%;
+    bottom: -107.7%;
   }
 
   .main-nav--opened .main-nav__login-btn {
-    top: -151px;
+    top: -140px;
     right: 40px;
-    bottom: unset;
+    bottom: auto;
   }
 }
 
@@ -203,8 +206,9 @@
   .main-nav {
     margin: 0;
     padding: 0;
+    margin-top: 2px;
 
-    background-color: unset;
+    background-color: transparent;
   }
 
   .main-nav__wrapper {
@@ -214,7 +218,7 @@
     padding-left: 105px;
 
     &::before {
-      top: 23px;
+      top: 25px;
       left: 0;
 
       width: 60px;
@@ -233,7 +237,7 @@
   }
 
   .main-nav__login-btn {
-    position: initial;
+    position: static;
 
     order: 1;
     margin: 0;
@@ -265,6 +269,8 @@
     }
 
     &::after {
+      top: 0;
+      left: 0;
       width: 50px;
       height: 50px;
 
@@ -292,6 +298,8 @@
     }
 
     &::after {
+      top: 0;
+      left: 0;
       width: 50px;
       height: 50px;
 
@@ -310,7 +318,6 @@
   .main-nav__contacts .contacts__tel,
   .main-nav__contacts .contacts__email {
     font-size: 0;
-    /* Вопрос - норм так? */
 
     &::before {
       margin: 0;

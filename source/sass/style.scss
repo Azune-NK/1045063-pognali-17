@@ -1,9 +1,10 @@
 @import "normalize";
 @import "variables";
 @import "mixins";
-@import "fonts"; /* Вопрос - посмотри все ли нормально со шрифтами - я скачивал font-kit, он как-то странно написан ( везде fs-fw normal) - попробовал написать сам */
+@import "fonts";
 @import "common";
 @import "./blocks/contacts";
+@import "./blocks/page-main";
 @import "./blocks/page-header";
 @import "./blocks/login-btn";
 @import "./blocks/main-nav";
@@ -21,7 +22,13 @@
 @import "./blocks/travel-mode";
 @import "./blocks/companions-filter";
 @import "./blocks/country-filter";
+@import "./blocks/travel-checkboxes";
+@import "./blocks/range-controls";
 @import "./blocks/companions";
+@import "./blocks/user-profile";
+@import "./blocks/current-plans";
+@import "./blocks/new-plan";
+@import "./blocks/country-modal";
 @import "./blocks/user";
 @import "./blocks/status";
 @import "./blocks/pricing";

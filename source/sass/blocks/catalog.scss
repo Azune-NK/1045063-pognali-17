@@ -4,7 +4,8 @@
 
   width: 320px;
   margin: 0 auto;
-  padding: 30px 25px 60px;
+  padding: 43px 25px 77px;
+  margin-top: -20px;
 
   background-color: $blue-light;
 }
@@ -12,7 +13,8 @@
 @media (min-width: $tablet-width) {
   .catalog__container {
     width: auto;
-    padding: 105px 0 110px;
+    padding: 101px 0 117px;
+    margin-top: -55px;
   }
 
   .catalog__wrapper {
@@ -24,13 +26,19 @@
 
 @media (min-width: $desktop-width) {
   .catalog__container {
-    padding: 125px 0;
+    padding: 130px 0 132px;
   }
 
   .catalog__wrapper {
     width: 1440px;
     padding: 0 60px;
-    /* display: flex;
-    flex-wrap: wrap; */
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .catalog__column {
+    flex-grow: 1;
+    margin-right: 85px;
+    order: -1;
   }
 }

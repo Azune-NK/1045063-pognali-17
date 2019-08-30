@@ -1,6 +1,6 @@
 .modal {
   position: absolute;
-  bottom: 1340px;
+  bottom: 1015px;
   left: 50%;
   z-index: 100;
 
@@ -18,7 +18,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    bottom: unset;
+    bottom: auto;
 
     transform: translate(-50%, -50%);
   }

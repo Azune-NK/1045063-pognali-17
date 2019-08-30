@@ -1,12 +1,14 @@
 .login-btn {
+  position: relative;
   display: inline-block;
-  padding: 6px 40px 4px;
+  padding: 6px 39px 4px;
 
   vertical-align: bottom;
   color: $black-blue;
   text-transform: uppercase;
 
   background-color: $gold;
+  border: 0;
   border-radius: 20px;
 
   @include font(17px, 1.76, 700);
@@ -17,13 +19,13 @@
   }
 
   &:active {
-    color: rgba($grey-blue, 0.3);
+    color: rgba($black-blue, 0.3);
   }
 }
 
 @media (min-width: $tablet-width) {
   .login-btn {
-    padding: 12px 30px 8px;
+    padding: 10px 29px;
 
     border-radius: 25px;
 

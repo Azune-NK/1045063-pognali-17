@@ -1,9 +1,11 @@
 .main-menu {
+  padding-left: 5px;
+
   @include ul-reset;
 }
 
 .main-menu__item {
-  margin-left: -4px; /* Вопрос - нормально ли падинг 0 4px для спана компенсировать для сетки таким способом? */
+  margin-left: -4px;
   overflow: hidden;
 
   text-align: center;
@@ -29,10 +31,9 @@
   position: relative;
 
   display: inline-block;
-
   padding: 0 4px;
+
   white-space: nowrap;
-  /* Вопрос -  в исходнике(ссылка в стайлгайде) padding: 0 4px идет для ссылки, а не спана + нету nowrap - у меня так не работало, падинг я так понимаю нужен для того чтобы помещался bold текст, но как оно все на самом деле работает, и почему не работает без nowrap я не понимаю */
 
   transition: transform 0.3s;
 }
@@ -45,7 +46,6 @@
   font-weight: 700;
 
   transform: translate3d(0, 0, 0);
-  /* Вопрос - зачем нужен translate3d? ведь три нуля это значение по умолчанию */
 }
 
 .main-menu__link:hover[href] span,
@@ -55,8 +55,17 @@
 
 
 @media (min-width: $tablet-width) {
+  .main-menu {
+    padding-left: 0;
+  }
+
   .main-menu__item {
     text-align: left;
+    letter-spacing: -0.5px;
+
+    &:nth-child(2) {
+      letter-spacing: -1px;
+    }
   }
 
   .main-menu__link {
@@ -71,8 +80,14 @@
   }
 
   .main-menu__item {
+    margin-top: 2px;
+
     &:not(:last-child) {
-      margin-right: 36px;
+      margin-right: 30px;
+    }
+
+    &:nth-child(n) {
+      letter-spacing: 0;
     }
   }
 

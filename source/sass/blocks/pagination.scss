@@ -1,5 +1,5 @@
 .pagination {
-  margin-top: 20px;
+  margin-top: 18px;
 
   text-align: center;
 }
@@ -8,8 +8,8 @@
   position: relative;
 
   display: inline-block;
-  margin-bottom: 20px;
-  padding-left: 33px;
+  margin-bottom: 21px;
+  padding-left: 31px;
 
   color: $blue;
   text-transform: uppercase;
@@ -18,7 +18,7 @@
 
   &::before {
     top: 4px;
-    left: 0;
+    left: -2px;
 
     width: 18px;
     height: 18px;
@@ -40,8 +40,6 @@
 
 .pagination__wrapper {
   position: relative;
-
-  padding: 15px 63px;
 
   background-color: $white;
   border-radius: 20px;
@@ -73,22 +71,6 @@
   justify-content: space-between;
 }
 
-.pagination__left .pagination__btn {
-  display: block;
-
-  border-top: 10px solid transparent;
-  border-right: 10px solid $blue;
-  border-bottom: 10px solid transparent;
-}
-
-.pagination__right .pagination__btn {
-  display: block;
-
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid $blue;
-}
-
 .pagination__btn[href] {
   &:hover,
   &:focus {
@@ -100,19 +82,56 @@
   }
 }
 
+@media (max-width: 767px) {
+  .pagination__left .pagination__btn {
+    display: block;
+    width: 135px;
+    height: 50px;
+
+    &::before {
+      top: 15px;
+      left: 63px;
+
+      border-top: 10px solid transparent;
+      border-right: 10px solid $blue;
+      border-bottom: 10px solid transparent;
+
+      @include pseudo;
+    }
+  }
+
+  .pagination__right .pagination__btn {
+    display: block;
+    width: 135px;
+    height: 50px;
+
+    &::before {
+      top: 15px;
+      right: 62px;
+
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid $blue;
+
+      @include pseudo;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .pagination {
     margin-top: 45px;
   }
 
   .pagination__load-more {
-    margin-bottom: 50px;
-    padding-left: 52px;
+    margin-bottom: 48px;
+    padding-left: 42px;
 
     @include font(20px, 1.5);
 
     &::before {
       top: 0;
+      left: -9px;
 
       width: 27px;
       height: 27px;
@@ -123,7 +142,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 44px 25px 28px;
+    padding: 25px 35px 25px 28px;
 
     &::before {
       display: none;
@@ -132,6 +151,22 @@
 
   .pagination__arrows {
     width: 53px;
+  }
+
+  .pagination__left .pagination__btn {
+    display: block;
+
+    border-top: 10px solid transparent;
+    border-right: 10px solid $blue;
+    border-bottom: 10px solid transparent;
+  }
+
+  .pagination__right .pagination__btn {
+    display: block;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $blue;
   }
 
   .pagination__list {
@@ -171,7 +206,17 @@
     margin-top: 65px;
   }
 
+  .pagination__wrapper {
+    padding-right: 45px;
+  }
+
   .pagination__load-more {
-    margin-bottom: 70px;
+    margin-bottom: 67px;
+    padding-left: 0;
+    margin-left: -22px;
+
+    &::before {
+      left: -53px;
+    }
   }
 }

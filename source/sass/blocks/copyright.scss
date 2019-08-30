@@ -10,7 +10,7 @@
   @include font(16px, 1.38, 400);
 
   &::before {
-    top: -11px;
+    top: -4px;
     right: 0;
 
     width: 27px;
@@ -33,11 +33,16 @@
 }
 
 @media (min-width: $tablet-width) {
+  .copyright {
+    padding-bottom: 4px;
+    padding-left: 10px;
+  }
+
   .copyright__link {
     @include font(20px, 1.2);
 
     &::before {
-      top: -5px;
+      top: -1px;
     }
   }
 }
