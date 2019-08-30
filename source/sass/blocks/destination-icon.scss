@@ -44,6 +44,8 @@
   .destination-icon__tooltip {
     position: absolute;
     top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
 
     display: none;
     margin: 0;
