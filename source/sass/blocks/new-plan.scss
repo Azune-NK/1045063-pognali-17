@@ -277,6 +277,10 @@ input[type="checkbox"]:checked + .new-plan__checkbox {
   }
 }
 
+input[type="checkbox"]:focus + .new-plan__checkbox {
+  outline: thin dotted;
+}
+
 .new-plan__calendar-nav {
   position: relative;
 

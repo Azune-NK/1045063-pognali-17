@@ -4,7 +4,7 @@ var pageHeader = document.querySelector(".page-header"),
   bizPricingModal = document.querySelector(".modal"),
   bizPricingOpen = document.querySelector(".pricing__btn"),
   bizPricingClose = document.querySelector(".biz-pricing__button"),
-  filterBtns = document.querySelectorAll('.companions-filter__legend-btn');
+  filterBtns = document.querySelectorAll(".companions-filter__legend-btn");
 
 pageHeader.classList.remove("page-header--white");
 pageHeader.classList.remove("page-header--nojs");
