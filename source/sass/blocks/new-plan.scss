@@ -740,7 +740,6 @@ input[type="checkbox"]:focus + .new-plan__checkbox {
   }
 
   &:invalid {
-    /* Вопрос - не пойму я стайлгайд, нам надо самим написать текст ошибки и застилизовать его? */
     border-color: $deep-salmon;
   }
 }

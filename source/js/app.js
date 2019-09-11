@@ -44,7 +44,7 @@ this.querySelector('.companions-filter__list').classList.add("companions-filter_
 })
 } */
 
-navToggle.addEventListener("click", function ( /* Вопрос почему тут работает без названия функции, а когда функции ниже тоже были без названия - они не работали? */ ) {
+navToggle.addEventListener("click", function () {
   if (navMain.classList.contains("main-nav--closed")) {
     pageHeader.classList.add("page-header--white");
     navMain.classList.remove("main-nav--closed");
@@ -60,7 +60,7 @@ if (bizPricingOpen) {
   bizPricingOpen.addEventListener("click", function (evt) {
     evt.preventDefault();
     bizPricingModal.classList.add("modal--opened");
-    bizPricingClose.focus(); /* Вопрос - если так не делать(табиндекс кстати не работает) - то чтобы через таб добраться до кнопки закрытия - уйдут годы - как обычно такой кейс решается? */
+    bizPricingClose.focus();
   });
 }
 
