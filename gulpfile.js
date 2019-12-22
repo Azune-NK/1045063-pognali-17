@@ -48,7 +48,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/**/vk.svg")
+  return gulp.src("source/img/**/flag-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -90,7 +90,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/img/**/{vk,fb}.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/**/flag-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
